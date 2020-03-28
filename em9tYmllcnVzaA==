@@ -1,0 +1,420 @@
+-- Official Zombie Rush Gui
+-- Created By FunTrator#4964 . Thanks To All The Helpers .
+-- Discord : Discord.Io/SomeoneShark
+
+local ZR = Instance.new("ScreenGui")
+local ZRF = Instance.new("Frame")
+local CR = Instance.new("TextLabel")
+local CR2 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local KA1 = Instance.new("TextButton")
+local KA2 = Instance.new("TextButton")
+local LEVE = Instance.new("TextButton")
+local GPS = Instance.new("TextButton")
+local GDA = Instance.new("TextButton")
+local UAG = Instance.new("TextButton")
+local FB = Instance.new("TextButton")
+local CR_2 = Instance.new("TextLabel")
+local CR2_2 = Instance.new("TextLabel")
+local WS = Instance.new("TextButton")
+local JP = Instance.new("TextButton")
+local AF2 = Instance.new("TextButton")
+local AF1 = Instance.new("TextButton")
+
+ZR.Name = "ZR"
+ZR.Parent = game.CoreGui
+
+ZRF.Name = "ZRF"
+ZRF.Parent = ZR
+ZRF.BackgroundColor3 = Color3.new(1, 1, 1)
+ZRF.Position = UDim2.new(0.284394264, 0, 0.111900531, 0)
+ZRF.Size = UDim2.new(0, 317, 0, 373)
+ZRF.Style = Enum.FrameStyle.RobloxRound
+ZRF.Active = true
+ZRF.Draggable = true
+
+CR.Name = "CR"
+CR.Parent = ZRF
+CR.BackgroundColor3 = Color3.new(1, 1, 1)
+CR.BackgroundTransparency = 1
+CR.Position = UDim2.new(0.0157728717, 0, -0.00729588978, 0)
+CR.Size = UDim2.new(0, 291, 0, 28)
+CR.Font = Enum.Font.SciFi
+CR.Text = "Zombie Rush Gui - By FunTrator"
+CR.TextColor3 = Color3.new(0.0117647, 1, 0.12549)
+CR.TextSize = 18
+
+CR2.Name = "CR2"
+CR2.Parent = CR
+CR2.BackgroundColor3 = Color3.new(0, 1, 0.14902)
+CR2.Position = UDim2.new(-0.000563704409, 0, 0.995450377, 0)
+CR2.Size = UDim2.new(0, 296, 0, 1)
+CR2.Font = Enum.Font.SourceSans
+CR2.Text = ""
+CR2.TextColor3 = Color3.new(0, 0, 0)
+CR2.TextSize = 14
+
+ImageLabel.Parent = CR
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.Position = UDim2.new(-0.0446735397, 0, 1, 0)
+ImageLabel.Size = UDim2.new(0, 317, 0, 306)
+ImageLabel.Image = "rbxassetid://1614557233"
+ImageLabel.ScaleType = Enum.ScaleType.Fit
+
+KA1.Name = "KA1"
+KA1.Parent = ZRF
+KA1.BackgroundColor3 = Color3.new(1, 1, 1)
+KA1.Position = UDim2.new(0.0189274438, 0, 0.101494282, 0)
+KA1.Size = UDim2.new(0, 131, 0, 41)
+KA1.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+KA1.Font = Enum.Font.SciFi
+KA1.Text = "Kill All Zombie [T]"
+KA1.TextColor3 = Color3.new(0, 0, 0)
+KA1.TextSize = 14
+KA1.MouseButton1Down:connect(function()
+
+local hotkey = "e" -- hotkey to turn it on or off
+
+local working = true
+game:GetService('Players').LocalPlayer:GetMouse().KeyDown:connect(function(key)
+if key == string.lower(hotkey) then
+working = not working
+end
+end)
+
+while wait(0.2) do
+if working == true then
+pcall(function()
+local ohthatscomplicated = {
+   ["Name"] = game:GetService('Players').LocalPlayer.Character:FindFirstChildOfClass("Tool").Name,
+   ["HumanoidTables"] = {
+   }
+}
+for i,v in pairs(workspace[".ZombieStorage"]:GetChildren()) do
+   local hm = {
+       ["HeadHits"] = math.huge,
+       ["THumanoid"] = v:FindFirstChildOfClass('Humanoid'),
+       ["BodyHits"] = 0
+   }
+   table.insert(ohthatscomplicated["HumanoidTables"],hm)
+end
+pcall(function()
+game:GetService('Players').LocalPlayer.Character:FindFirstChildOfClass("Tool").GunControllerAlt.RemoteFunction:InvokeServer(ohthatscomplicated)
+end)
+game:GetService('Players').LocalPlayer.Character:FindFirstChildOfClass("Tool").GunController.RemoteFunction:InvokeServer(ohthatscomplicated)
+end)
+end
+end
+end)
+
+KA2.Name = "KA2"
+KA2.Parent = ZRF
+KA2.BackgroundColor3 = Color3.new(1, 1, 1)
+KA2.Position = UDim2.new(0.520504713, 0, 0.1017638, 0)
+KA2.Size = UDim2.new(0, 131, 0, 41)
+KA2.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+KA2.Font = Enum.Font.SciFi
+KA2.Text = "Kill All Zombies"
+KA2.TextColor3 = Color3.new(0, 0, 0)
+KA2.TextSize = 14
+KA2.MouseButton1Down:connect(function()
+local working = true
+game:GetService('Players').LocalPlayer:GetMouse().KeyDown:connect(function(key)
+if key == string.lower(hotkey) then
+working = not working
+end
+end)
+ 
+while wait(0.2) do
+if working == true then
+pcall(function()
+local ohthatscomplicated = {
+    ["Name"] = game:GetService('Players').LocalPlayer.Character:FindFirstChildOfClass("Tool").Name,
+    ["HumanoidTables"] = {
+    }
+}
+for i,v in pairs(workspace[".ZombieStorage"]:GetChildren()) do
+    local hm = {
+        ["HeadHits"] = math.huge,
+        ["THumanoid"] = v:FindFirstChildOfClass('Humanoid'),
+        ["BodyHits"] = 0
+    }
+    table.insert(ohthatscomplicated["HumanoidTables"],hm)
+end
+pcall(function()
+game:GetService('Players').LocalPlayer.Character:FindFirstChildOfClass("Tool").GunControllerAlt.RemoteFunction:InvokeServer(ohthatscomplicated)
+end)
+game:GetService('Players').LocalPlayer.Character:FindFirstChildOfClass("Tool").GunController.RemoteFunction:InvokeServer(ohthatscomplicated)
+end)
+end
+end
+end)
+
+LEVE.Name = "LEVE"
+LEVE.Parent = ZRF
+LEVE.BackgroundColor3 = Color3.new(1, 1, 1)
+LEVE.Position = UDim2.new(0.520504713, 0, 0.24771373, 0)
+LEVE.Size = UDim2.new(0, 131, 0, 41)
+LEVE.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+LEVE.Font = Enum.Font.SciFi
+LEVE.Text = "Level [99999999999]"
+LEVE.TextColor3 = Color3.new(0, 0, 0)
+LEVE.TextSize = 14
+LEVE.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.leaderstats.Level.Value = 99999999999
+end)
+
+GPS.Name = "GPS"
+GPS.Parent = ZRF
+GPS.BackgroundColor3 = Color3.new(1, 1, 1)
+GPS.Position = UDim2.new(0.018927427, 0, 0.24751094, 0)
+GPS.Size = UDim2.new(0, 131, 0, 41)
+GPS.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+GPS.Font = Enum.Font.SciFi
+GPS.Text = "GamePasses"
+GPS.TextColor3 = Color3.new(0, 0, 0)
+GPS.TextSize = 14
+GPS.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Purchased.SpeedyZombie.Value = true
+game.Players.LocalPlayer.Purchased.GhostZombie.Value = true
+game.Players.LocalPlayer.Purchased.MageZombie.Value = true
+game.Players.LocalPlayer.Purchased.ToxicZombie.Value = true
+game.Players.LocalPlayer.Purchased.LightweightZombie.Value = true
+game.Players.LocalPlayer.Purchased.CombatZombie.Value = true
+game.Players.LocalPlayer.Purchased.CombustionZombie.Value = true
+game.Players.LocalPlayer.Purchased.BoomBox.Value = true
+game.Players.LocalPlayer.Purchased.BoomBoxPlus.Value = true
+end)
+
+GDA.Name = "GDA"
+GDA.Parent = ZRF
+GDA.BackgroundColor3 = Color3.new(1, 1, 1)
+GDA.Position = UDim2.new(0.520504713, 0, 0.376183778, 0)
+GDA.Size = UDim2.new(0, 131, 0, 41)
+GDA.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+GDA.Font = Enum.Font.SciFi
+GDA.Text = "God / Freeze All"
+GDA.TextColor3 = Color3.new(0, 0, 0)
+GDA.TextSize = 14
+GDA.MouseButton1Down:connect(function()
+local player=game.Players.LocalPlayer.Character
+player.Humanoid:Remove()
+Instance.new('Humanoid',player)	
+end)
+
+UAG.Name = "UAG"
+UAG.Parent = ZRF
+UAG.BackgroundColor3 = Color3.new(1, 1, 1)
+UAG.Position = UDim2.new(0.520504713, 0, 0.516796887, 0)
+UAG.Size = UDim2.new(0, 131, 0, 41)
+UAG.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+UAG.Font = Enum.Font.SciFi
+UAG.Text = "Unlock All Guns"
+UAG.TextColor3 = Color3.new(0, 0, 0)
+UAG.TextSize = 14
+UAG.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.leaderstats.Level.Value = 1000000
+end)
+
+FB.Name = "FB"
+FB.Parent = ZRF
+FB.BackgroundColor3 = Color3.new(1, 1, 1)
+FB.Position = UDim2.new(0.0189274363, 0, 0.513028383, 0)
+FB.Size = UDim2.new(0, 131, 0, 41)
+FB.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+FB.Font = Enum.Font.SciFi
+FB.Text = "Fly Bypass"
+FB.TextColor3 = Color3.new(0, 0, 0)
+FB.TextSize = 14
+FB.MouseButton1Down:connect(function()
+repeat wait()
+   until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+local mouse = game.Players.LocalPlayer:GetMouse()
+repeat wait() until mouse
+local plr = game.Players.LocalPlayer
+local chr = plr.Character
+local torso = plr.Character.Torso
+local flying = true
+local deb = true
+local ctrl = {f = 0, b = 0, l = 0, r = 0}
+local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+local maxspeed = 50
+local speed = 0
+
+function Fly()
+for i,v in pairs(chr:GetChildren()) do
+   if v:IsA('BasePart') and v.Name ~= "HumanoidRootPart" then
+       chr:WaitForChild(v.Name).CollisionGroupId = 99
+   elseif v:IsA('Accessory') then
+       for g,c in pairs(v:GetChildren()) do
+           if c:IsA('BasePart') then
+               c.CollisionGroupId = 99
+           end
+       end
+   end
+end
+local bg = Instance.new("BodyGyro", torso)
+bg.P = 9e4
+bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+bg.cframe = torso.CFrame
+local bv = Instance.new("BodyVelocity", torso)
+bv.velocity = Vector3.new(0,0.1,0)
+bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+repeat wait()
+plr.Character.Humanoid.PlatformStand = true
+if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+speed = speed+.5+(speed/maxspeed)
+if speed > maxspeed then
+speed = maxspeed
+end
+elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+speed = speed-1
+if speed < 0 then
+speed = 0
+end
+end
+if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+else
+bv.velocity = Vector3.new(0,0.1,0)
+end
+bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+until not flying
+ctrl = {f = 0, b = 0, l = 0, r = 0}
+lastctrl = {f = 0, b = 0, l = 0, r = 0}
+speed = 0
+bg:Destroy()
+bv:Destroy()
+plr.Character.Humanoid.PlatformStand = false
+for i,v in pairs(chr:GetChildren()) do
+   if v:IsA('BasePart') and v.Name ~= "HumanoidRootPart" then
+       chr:WaitForChild(v.Name).CollisionGroupId = 0
+   elseif v:IsA('Accessory') then
+       for g,c in pairs(v:GetChildren()) do
+           if c:IsA('BasePart') then
+               c.CollisionGroupId = 0
+           end
+       end
+   end
+end
+end
+mouse.KeyDown:connect(function(key)
+if key:lower() == "e" then
+if flying then flying = false
+else
+flying = true
+Fly()
+end
+elseif key:lower() == "w" then
+ctrl.f = 1
+elseif key:lower() == "s" then
+ctrl.b = -1
+elseif key:lower() == "a" then
+ctrl.l = -1
+elseif key:lower() == "d" then
+ctrl.r = 1
+end
+end)
+mouse.KeyUp:connect(function(key)
+if key:lower() == "w" then
+ctrl.f = 0
+elseif key:lower() == "s" then
+ctrl.b = 0
+elseif key:lower() == "a" then
+ctrl.l = 0
+elseif key:lower() == "d" then
+ctrl.r = 0
+end
+end)
+Fly()
+end)
+
+CR_2.Name = "CR"
+CR_2.Parent = ZRF
+CR_2.BackgroundColor3 = Color3.new(1, 1, 1)
+CR_2.BackgroundTransparency = 1
+CR_2.Position = UDim2.new(0.0157728717, 0, 0.928450584, 0)
+CR_2.Size = UDim2.new(0, 291, 0, 28)
+CR_2.Font = Enum.Font.SciFi
+CR_2.Text = "DISCORD . IO / SomeoneShark"
+CR_2.TextColor3 = Color3.new(0.0117647, 1, 0.12549)
+CR_2.TextSize = 18
+
+CR2_2.Name = "CR2"
+CR2_2.Parent = CR_2
+CR2_2.BackgroundColor3 = Color3.new(0, 1, 0.14902)
+CR2_2.Position = UDim2.new(-0.000563704409, 0, 0.995450377, 0)
+CR2_2.Size = UDim2.new(0, 296, 0, 1)
+CR2_2.Font = Enum.Font.SourceSans
+CR2_2.Text = ""
+CR2_2.TextColor3 = Color3.new(0, 0, 0)
+CR2_2.TextSize = 14
+
+WS.Name = "WS"
+WS.Parent = ZRF
+WS.BackgroundColor3 = Color3.new(1, 1, 1)
+WS.Position = UDim2.new(0.0189274363, 0, 0.657298088, 0)
+WS.Size = UDim2.new(0, 131, 0, 41)
+WS.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+WS.Font = Enum.Font.SciFi
+WS.Text = "Walkspeed"
+WS.TextColor3 = Color3.new(0, 0, 0)
+WS.TextSize = 14
+WS.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+end)
+
+JP.Name = "JP"
+JP.Parent = ZRF
+JP.BackgroundColor3 = Color3.new(1, 1, 1)
+JP.Position = UDim2.new(0.520504713, 0, 0.662256956, 0)
+JP.Size = UDim2.new(0, 131, 0, 41)
+JP.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+JP.Font = Enum.Font.SciFi
+JP.Text = "JumpPower"
+JP.TextColor3 = Color3.new(0, 0, 0)
+JP.TextSize = 14
+JP.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 300
+end)
+
+AF2.Name = "AF2"
+AF2.Parent = ZRF
+AF2.BackgroundColor3 = Color3.new(1, 1, 1)
+AF2.Position = UDim2.new(0.520504713, 0, 0.807029068, 0)
+AF2.Size = UDim2.new(0, 131, 0, 41)
+AF2.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+AF2.Font = Enum.Font.SciFi
+AF2.Text = "Auto Farm 2 [EquipWep]"
+AF2.TextColor3 = Color3.new(0, 0, 0)
+AF2.TextSize = 11
+AF2.MouseButton1Down:connect(function()
+local plr = game:GetService("Players").LocalPlayer local killEmAll = plr.Character[plr.EquipStorage.Primary.Value].GunController.RemoteFunction
+for _,v in next, workspace[".ZombieStorage"]:GetChildren() do
+    local Table = {["Name"] = plr.EquipStorage.Primary.Value, ["HumanoidTables"] = {[1] = {["HeadHits"] = 500000000,["THumanoid"] = v.Humanoid, ["BodyHits"] = 500000000}}}
+    killEmAll:InvokeServer(Table)
+end
+end)
+
+AF1.Name = "AF1"
+AF1.Parent = ZRF
+AF1.BackgroundColor3 = Color3.new(1, 1, 1)
+AF1.Position = UDim2.new(0.0220820121, 0, 0.807029068, 0)
+AF1.Size = UDim2.new(0, 131, 0, 41)
+AF1.Style = Enum.ButtonStyle.RobloxRoundDropdownButton
+AF1.Font = Enum.Font.SciFi
+AF1.Text = "Auto Farm [Equip Wep]"
+AF1.TextColor3 = Color3.new(0, 0, 0)
+AF1.TextSize = 12
+AF1.MouseButton1Down:connect(function()
+local plr = game:GetService("Players").LocalPlayer local killEmAll = plr.Character[plr.EquipStorage.Primary.Value].GunController.RemoteFunction
+for _,v in next, workspace[".ZombieStorage"]:GetChildren() do
+    local Table = {["Name"] = plr.EquipStorage.Primary.Value, ["HumanoidTables"] = {[1] = {["HeadHits"] = 500000000,["THumanoid"] = v.Humanoid, ["BodyHits"] = 500000000}}}
+    killEmAll:InvokeServer(Table)
+print "credits to Exploioting life"
+end
+end)
