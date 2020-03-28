@@ -1,0 +1,196 @@
+local MainGui = Instance.new("ScreenGui")
+local DragFrame = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Coin = Instance.new("TextButton")
+local Sell = Instance.new("TextButton")
+local Rebirth = Instance.new("TextButton")
+local Shiny = Instance.new("TextButton")
+local Notif = Instance.new("TextButton")
+local Exit = Instance.new("TextButton")
+local Mini = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+--Properties:
+MainGui.Name = "MainGui"
+MainGui.Parent = game.CoreGui
+MainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+DragFrame.Name = "DragFrame"
+DragFrame.Parent = MainGui
+DragFrame.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+DragFrame.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+DragFrame.BorderSizePixel = 0
+DragFrame.Position = UDim2.new(0.214494869, 0, 0.424817532, 0)
+DragFrame.Size = UDim2.new(0, 370, 0, 170)
+DragFrame.Active = true
+DragFrame.Draggable = true
+
+Frame.Parent = DragFrame
+Frame.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Frame.BorderColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Frame.BorderSizePixel = 3
+Frame.Position = UDim2.new(0.0188679472, 0, 0.268341243, 0)
+Frame.Size = UDim2.new(0, 356, 0, 93)
+
+TextLabel.Parent = DragFrame
+TextLabel.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+TextLabel.BorderColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 370, 0, 38)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "   Magnet Simulator Gui"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextSize = 27
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Coin.Name = "Coin"
+Coin.Parent = DragFrame
+Coin.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+Coin.BorderColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Coin.BorderSizePixel = 3
+Coin.Position = UDim2.new(0.0404312685, 0, 0.327679932, 0)
+Coin.Size = UDim2.new(0, 106, 0, 32)
+Coin.Font = Enum.Font.SourceSansBold
+Coin.Text = "Coin Farm"
+Coin.TextColor3 = Color3.new(1, 1, 1)
+Coin.TextSize = 20
+Coin.MouseButton1Down:connect(function()
+	local r = game:GetService('ReplicatedStorage').Events.MagnetEvents['requestGrab']
+	local rs = game:GetService('RunService').RenderStepped
+
+	tool = "Black Lightning Dual Magnet"
+		while rs:wait() do
+	for i = 1,10 do
+	r:FireServer("7", game.ReplicatedStorage.Tools[tool])
+	end
+	end
+end)
+
+Sell.Name = "Sell"
+Sell.Parent = DragFrame
+Sell.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+Sell.BorderColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Sell.BorderSizePixel = 3
+Sell.Position = UDim2.new(0.355936974, 0, 0.327679902, 0)
+Sell.Size = UDim2.new(0, 106, 0, 32)
+Sell.Font = Enum.Font.SourceSansBold
+Sell.Text = "Auto Sell"
+Sell.TextColor3 = Color3.new(1, 1, 1)
+Sell.TextSize = 20
+Sell.MouseButton1Down:connect(function()
+		_G.on = true
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character.HumanoidRootPart
+
+	while _G.on do 
+	game.Workspace.Rings.Sellx2.CanCollide = false
+	game.Workspace.Rings.Sellx2.Transparency = 1
+	game.Workspace.Rings.Sellx2.CFrame = char.CFrame + Vector3.new(0,math.random(-1,1),0)
+	wait(0.1)
+	end
+end)
+
+
+Rebirth.Name = "Rebirth"
+Rebirth.Parent = DragFrame
+Rebirth.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+Rebirth.BorderColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Rebirth.BorderSizePixel = 3
+Rebirth.Position = UDim2.new(0.673712611, 0, 0.327679932, 0)
+Rebirth.Size = UDim2.new(0, 105, 0, 32)
+Rebirth.Font = Enum.Font.SourceSansBold
+Rebirth.Text = "Auto Rebirth"
+Rebirth.TextColor3 = Color3.new(1, 1, 1)
+Rebirth.TextSize = 20
+Rebirth.MouseButton1Down:connect(function()
+		_G.rebirth = true
+	while _G.rebirth do 
+ 	   wait(0.1)
+ 	   local rebirths = 1000 --1000,500,250,100,50,25,5,1
+	    game.ReplicatedStorage.RebirthEvents.requestRebirth:FireServer(rebirths)
+	end
+end)
+
+Shiny.Name = "Shiny"
+Shiny.Parent = DragFrame
+Shiny.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+Shiny.BorderColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Shiny.BorderSizePixel = 3
+Shiny.Position = UDim2.new(0.526895404, 0, 0.583372355, 0)
+Shiny.Size = UDim2.new(0, 159, 0, 32)
+Shiny.Font = Enum.Font.SourceSansBold
+Shiny.Text = "Make All Pets Shiny"
+Shiny.TextColor3 = Color3.new(1, 1, 1)
+Shiny.TextSize = 20
+Shiny.MouseButton1Down:connect(function()
+		_G.shiny = true
+	local Shinys = {"Three-Headed Demon",   "Mad Demon",   "Fallen Bird",   "Demonic Bird",   "Cat Demon",   "Golden Dominus",   "Space Dominus",   "Flame Dominus",   "Frost Dominus",   "Spirit Dominus",   "Super Bear",   "Bat Bear",   "Flashy Bear",   "Storm Bear",   "Captain Bear",   "Cursed Wolf",   "Angel Wolf",   "Sanic",   "Ogre",   "Nyan Cat",   "Doge",   "MLG Bear",   "Rich Bear",   "Noob",   "Fancy Bear",   "Ice Wolf",   "Ghost Wolf",   "Galaxy Wolf",   "Galaxy Bear",   "Spirit Bear",   "Moon Bear",   "Crystal Fox",   "Magnetite Wolf",   "Winged Overseer",   "Overseer Wolf",   "Wizard Overseer",   "Three-Headed Overseer",   "Overseer Overlord",   "Praefectus Overseer", "Lava Wolf", "Magma Gentleman", "Three-Headed Magma Wolf", "Hooded Fire Lord", "Lord of the Magma"}
+	while _G.shiny do
+	wait(0.1)
+	for i = 1,#Shinys do
+	wait()
+	game.ReplicatedStorage.ShinyEvents.requestMakeShiny:FireServer(Shinys[i])
+	end
+	end
+end)
+
+Notif.Name = "Notif"
+Notif.Parent = DragFrame
+Notif.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+Notif.BorderColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Notif.BorderSizePixel = 3
+Notif.Position = UDim2.new(0.0404312536, 0, 0.583372355, 0)
+Notif.Size = UDim2.new(0, 169, 0, 32)
+Notif.Font = Enum.Font.SourceSansBold
+Notif.Text = "Remove Notifications"
+Notif.TextColor3 = Color3.new(1, 1, 1)
+Notif.TextSize = 20
+Notif.MouseButton1Down:connect(function()
+		local plr = game:GetService("Players").LocalPlayer
+	local screengui = plr.PlayerGui.GameHUD
+	screengui.EggHandler.Disabled = true
+	screengui.Notifications.Handler.Disabled = true
+	screengui.FullBackpack.Handler.Disabled = true
+end)
+
+Exit.Name = "Exit"
+Exit.Parent = DragFrame
+Exit.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+Exit.BorderColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Exit.BorderSizePixel = 4
+Exit.Position = UDim2.new(0.914441407, 0, 0.0455300733, 0)
+Exit.Size = UDim2.new(0, 24, 0, 23)
+Exit.Font = Enum.Font.SourceSansBold
+Exit.Text = "X"
+Exit.TextColor3 = Color3.new(1, 1, 1)
+Exit.TextSize = 22
+Exit.TextWrapped = true
+Exit.MouseButton1Click:connect(function()
+	MainGui.Enabled = false
+end)
+
+Mini.Name = "Mini"
+Mini.Parent = DragFrame
+Mini.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+Mini.BorderColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Mini.BorderSizePixel = 4
+Mini.Position = UDim2.new(0.815999925, 0, 0.0458817407, 0)
+Mini.Size = UDim2.new(0, 24, 0, 23)
+Mini.Font = Enum.Font.SourceSansBold
+Mini.Text = "-"
+Mini.TextColor3 = Color3.new(1, 1, 1)
+Mini.TextSize = 35
+Mini.TextWrapped = true
+Mini.Visible = false
+
+TextLabel_2.Parent = DragFrame
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0188679472, 0, 0.870892704, 0)
+TextLabel_2.Size = UDim2.new(0, 278, 0, 15)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "GUI by thejastt & Scripts by iTzSadButNotRad "
+TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_2.TextSize = 16
