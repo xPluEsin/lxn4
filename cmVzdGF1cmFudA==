@@ -1,0 +1,56 @@
+Action = game:GetService("Players").LocalPlayer.PlayerGui.CookingGui.Frame.TextLabel
+
+while wait() do
+if Action.Text == "Move Mouse Left and Right" then
+repeat
+mousemoverel(200, 0)
+wait()
+mousemoverel(-200, 0)
+wait()
+until Action.Text ~= "Move Mouse Left and Right"
+elseif Action.Text == "Spin the Mouse" then
+repeat
+mousemoverel(100, 100)
+wait()
+mousemoverel(-100, 100)
+wait()
+mousemoverel(-100, -100)
+wait()
+mousemoverel(100, -100)
+wait()
+until Action.Text ~= "Spin the Mouse"
+elseif Action.Text == "Click Rapidly" or Action.Text:sub(1, 13) == "Click Rapidly" or Action.Text == "Click" then
+repeat
+mouse1click()
+wait()
+until Action.Text ~= "Click Rapidly" and Action.Text:sub(1, 13) ~= "Click Rapidly" and Action.Text ~= "Click"
+elseif Action.Text:sub(1, 7) == "Press W" then
+repeat
+keypress(0x57)
+wait()
+keyrelease(0x57)
+wait()
+until Action.Text:sub(1, 7) ~= "Press W"
+elseif Action.Text:sub(1, 7) == "Press A" then
+repeat
+keypress(0x41)
+wait()
+keyrelease(0x41)
+wait()
+until Action.Text:sub(1, 7) ~= "Press A"
+elseif Action.Text:sub(1, 7) == "Press S" then
+repeat
+keypress(0x53)
+wait()
+keyrelease(0x53)
+wait()
+until Action.Text:sub(1, 7) ~= "Press S"
+elseif Action.Text:sub(1, 7) == "Press D" then
+repeat
+keypress(0x44)
+wait()
+keyrelease(0x44)
+wait()
+until Action.Text:sub(1, 7) ~= "Press D"
+end
+end
