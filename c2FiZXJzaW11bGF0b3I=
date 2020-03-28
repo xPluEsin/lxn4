@@ -1,0 +1,39 @@
+lp = game.Players.LocalPlayer
+
+spawn(function()
+while wait() do
+for i,v in pairs(workspace.CoinsHolder:GetChildren()) do 
+	wait()
+lp.Character.HumanoidRootPart.CFrame = v.CFrame
+end
+end
+end)
+
+
+spawn(function()
+while wait() do
+if lp.Backpack:FindFirstChildOfClass("Tool") then
+lp.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+end
+	spawn(function()
+local tbl_main = 
+{
+}
+game:GetService("ReplicatedStorage").Events.Clicked:FireServer(unpack(tbl_main))
+end)
+	spawn(function()
+local tbl_main = 
+{
+}
+game:GetService("Workspace")[lp.Name].Starter.RemoteClick:FireServer(unpack(tbl_main))
+end)
+end
+end)
+
+spawn(function()
+while wait() do 
+lp.Character.HumanoidRootPart.CFrame = CFrame.new(532.856628, 183.835846, 148.075882)
+lp.Character.HumanoidRootPart.CFrame = CFrame.new(532.856628, 183.835846, 148.075882)
+lp.Character.HumanoidRootPart.CFrame = CFrame.new(532.856628, 183.835846, 148.075882)
+end
+end)
