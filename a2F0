@@ -1,0 +1,107 @@
+-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local top = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local aim = Instance.new("TextButton")
+local aim2 = Instance.new("TextButton")
+local xray = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+--Properties:
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.new(0.243137, 0.243137, 0.243137)
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0.451790631, 0, 0.297427654, 0)
+main.Size = UDim2.new(0, 170, 0, 270)
+
+top.Name = "top"
+top.Parent = main
+top.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+top.BorderSizePixel = 0
+top.Size = UDim2.new(0, 170, 0, 43)
+
+TextLabel.Parent = top
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Size = UDim2.new(0, 170, 0, 43)
+TextLabel.Font = Enum.Font.SourceSansLight
+TextLabel.Text = "KAT Raper"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+
+aim.Name = "aim"
+aim.Parent = main
+aim.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+aim.BorderSizePixel = 0
+aim.Position = UDim2.new(0.111764707, 0, 0.25555557, 0)
+aim.Size = UDim2.new(0, 132, 0, 39)
+aim.Font = Enum.Font.SourceSansLight
+aim.Text = "Aimbot 1 (Left ALT)"
+aim.TextColor3 = Color3.new(1, 1, 1)
+aim.TextScaled = true
+aim.TextSize = 14
+aim.TextWrapped = true
+aim.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/HrDj4AJi",true))()
+end)
+
+aim2.Name = "aim2"
+aim2.Parent = main
+aim2.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+aim2.BorderSizePixel = 0
+aim2.Position = UDim2.new(0.111764707, 0, 0.455555558, 0)
+aim2.Size = UDim2.new(0, 132, 0, 39)
+aim2.Font = Enum.Font.SourceSansLight
+aim2.Text = "Aimbot 2"
+aim2.TextColor3 = Color3.new(1, 1, 1)
+aim2.TextScaled = true
+aim2.TextSize = 14
+aim2.TextWrapped = true
+aim2.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/2c9Jv7EjS",true))()
+end)
+
+xray.Name = "xray"
+xray.Parent = main
+xray.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+xray.BorderSizePixel = 0
+xray.Position = UDim2.new(0.111764707, 0, 0.65925926, 0)
+xray.Size = UDim2.new(0, 132, 0, 39)
+xray.Font = Enum.Font.SourceSansLight
+xray.Text = "XRay (X)"
+xray.TextColor3 = Color3.new(1, 1, 1)
+xray.TextScaled = true
+xray.TextSize = 14
+xray.TextWrapped = true
+xray.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/8BVQtMvr",true))()
+end)
+
+TextLabel_2.Parent = main
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Position = UDim2.new(0.31764707, 0, 0.888888896, 0)
+TextLabel_2.Size = UDim2.new(0, 116, 0, 30)
+TextLabel_2.Font = Enum.Font.SourceSansLight
+TextLabel_2.Text = "Shaggy#9854"
+TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14
+TextLabel_2.TextWrapped = true
+-- Scripts:
+function SCRIPT_LSQC69_FAKESCRIPT() -- main.LocalScript
+local script = Instance.new('LocalScript')
+script.Parent = main
+script.Parent.Active = true
+script.Parent.Draggable = true
+
+end
+coroutine.resume(coroutine.create(SCRIPT_LSQC69_FAKESCRIPT))
