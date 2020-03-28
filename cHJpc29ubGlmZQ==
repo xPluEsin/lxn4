@@ -1,0 +1,738 @@
+local Sirvelt = Instance.new("ScreenGui")
+local Welcome = Instance.new("Frame") 
+local UstCizgi = Instance.new("Frame")
+local AltCizgi = Instance.new("Frame")
+local Ustbilgi = Instance.new("TextLabel")
+local AltCizgi2 = Instance.new("Frame")
+local AltCizgi2_2 = Instance.new("Frame")
+local Ustbilgi_2 = Instance.new("TextLabel")
+local killall = Instance.new("TextButton")
+local superpunch = Instance.new("TextButton")
+local allguns = Instance.new("TextButton")
+local arrestall = Instance.new("TextButton")
+local btools = Instance.new("TextButton")
+local invgun = Instance.new("TextButton")
+local deldoor = Instance.new("TextButton")
+local respawn = Instance.new("TextButton")
+local fly = Instance.new("TextButton")
+local guard = Instance.new("TextButton")
+local inmate = Instance.new("TextButton")
+local criminal = Instance.new("TextButton")
+local neutral = Instance.new("TextButton")
+local faster = Instance.new("TextButton")
+local noob = Instance.new("TextButton")
+local antibunny = Instance.new("TextButton")
+local bunny = Instance.new("TextButton")
+local removetools = Instance.new("TextButton")
+local tpname = Instance.new("TextBox")
+local tpbutton = Instance.new("TextButton")
+local criminalarea = Instance.new("TextButton")
+local guardarea = Instance.new("TextButton")
+local exit = Instance.new("TextButton")
+local open = Instance.new("TextButton")
+
+Sirvelt.Name = "Sirvelt"
+Sirvelt.Parent = game.CoreGui
+Sirvelt.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Welcome.Draggable = true
+
+Welcome.Name = "Welcome"
+Welcome.Parent = Sirvelt
+Welcome.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Welcome.BorderSizePixel = 0
+Welcome.Position = UDim2.new(0.705228686, 0, 0.466830462, 0)
+Welcome.Size = UDim2.new(0.28641203, 0, 0.533169508, 0)
+
+UstCizgi.Name = "UstCizgi"
+UstCizgi.Parent = Welcome
+UstCizgi.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+UstCizgi.BorderSizePixel = 0
+UstCizgi.Size = UDim2.new(1, 0, 0.0456110612, 0)
+
+AltCizgi.Name = "AltCizgi"
+AltCizgi.Parent = UstCizgi
+AltCizgi.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+AltCizgi.BorderSizePixel = 0
+AltCizgi.Position = UDim2.new(0, 0, 1.02340162, 0)
+AltCizgi.Size = UDim2.new(0.999999881, 0, 0.204680234, 0)
+
+Ustbilgi.Name = "Ustbilgi"
+Ustbilgi.Parent = UstCizgi
+Ustbilgi.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Ustbilgi.BackgroundTransparency = 1.000
+Ustbilgi.BorderSizePixel = 0
+Ustbilgi.Size = UDim2.new(0.873907387, 0, 1, 0)
+Ustbilgi.Font = Enum.Font.SourceSans
+Ustbilgi.Text = "{txms} Prison Life"
+Ustbilgi.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ustbilgi.TextScaled = true
+Ustbilgi.TextSize = 14.000
+Ustbilgi.TextStrokeTransparency = 0.000
+Ustbilgi.TextWrapped = true
+
+AltCizgi2.Name = "AltCizgi2"
+AltCizgi2.Parent = UstCizgi
+AltCizgi2.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+AltCizgi2.BorderSizePixel = 0
+AltCizgi2.Position = UDim2.new(0, 0, 21.71311, 0)
+AltCizgi2.Size = UDim2.new(0.999999881, 0, 0.211400017, 0)
+
+AltCizgi2_2.Name = "AltCizgi2"
+AltCizgi2_2.Parent = UstCizgi
+AltCizgi2_2.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+AltCizgi2_2.BorderSizePixel = 0
+AltCizgi2_2.Position = UDim2.new(0.873907387, 0, 1.22808194, 0)
+AltCizgi2_2.Size = UDim2.new(0.126092479, 0, 20.4850292, 0)
+
+Ustbilgi_2.Name = "Ustbilgi"
+Ustbilgi_2.Parent = UstCizgi
+Ustbilgi_2.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Ustbilgi_2.BackgroundTransparency = 1.000
+Ustbilgi_2.BorderSizePixel = 0
+Ustbilgi_2.Position = UDim2.new(0.865279377, 0, 1.2073586, 0)
+Ustbilgi_2.Size = UDim2.new(0.134720653, 0, 20.5057545, 0)
+Ustbilgi_2.Font = Enum.Font.SourceSans
+Ustbilgi_2.Text = "V1.0.1, txmshub 2020"
+Ustbilgi_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ustbilgi_2.TextScaled = true
+Ustbilgi_2.TextSize = 14.000
+Ustbilgi_2.TextStrokeTransparency = 0.000
+Ustbilgi_2.TextWrapped = true
+
+killall.Name = "killall"
+killall.Parent = Welcome
+killall.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+killall.BorderColor3 = Color3.fromRGB(170, 0, 255)
+killall.Position = UDim2.new(0.0133421309, 0, 0.0638298094, 0)
+killall.Size = UDim2.new(0.419618547, 0, 0.07133919, 0)
+killall.Font = Enum.Font.GothamBold
+killall.Text = "Kill All"
+killall.TextColor3 = Color3.fromRGB(170, 0, 255)
+killall.TextScaled = true
+killall.TextSize = 14.000
+killall.TextWrapped = true
+
+superpunch.Name = "superpunch"
+superpunch.Parent = Welcome
+superpunch.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+superpunch.BorderColor3 = Color3.fromRGB(170, 0, 255)
+superpunch.Position = UDim2.new(0.0133421309, 0, 0.13516897, 0)
+superpunch.Size = UDim2.new(0.419618547, 0, 0.07133919, 0)
+superpunch.Font = Enum.Font.GothamBold
+superpunch.Text = "Super Punch"
+superpunch.TextColor3 = Color3.fromRGB(170, 0, 255)
+superpunch.TextScaled = true
+superpunch.TextSize = 14.000
+superpunch.TextWrapped = true
+
+allguns.Name = "allguns"
+allguns.Parent = Welcome
+allguns.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+allguns.BorderColor3 = Color3.fromRGB(170, 0, 255)
+allguns.Position = UDim2.new(0.0133421309, 0, 0.20650816, 0)
+allguns.Size = UDim2.new(0.419618547, 0, 0.07133919, 0)
+allguns.Font = Enum.Font.GothamBold
+allguns.Text = "All Guns"
+allguns.TextColor3 = Color3.fromRGB(170, 0, 255)
+allguns.TextScaled = true
+allguns.TextSize = 14.000
+allguns.TextWrapped = true
+
+arrestall.Name = "arrestall"
+arrestall.Parent = Welcome
+arrestall.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+arrestall.BorderColor3 = Color3.fromRGB(170, 0, 255)
+arrestall.Position = UDim2.new(0.0133421309, 0, 0.27784735, 0)
+arrestall.Size = UDim2.new(0.419618547, 0, 0.07133919, 0)
+arrestall.Font = Enum.Font.GothamBold
+arrestall.Text = "Arrest All"
+arrestall.TextColor3 = Color3.fromRGB(170, 0, 255)
+arrestall.TextScaled = true
+arrestall.TextSize = 14.000
+arrestall.TextWrapped = true
+
+btools.Name = "btools"
+btools.Parent = Welcome
+btools.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+btools.BorderColor3 = Color3.fromRGB(170, 0, 255)
+btools.Position = UDim2.new(0.0133421309, 0, 0.34918654, 0)
+btools.Size = UDim2.new(0.419618547, 0, 0.07133919, 0)
+btools.Font = Enum.Font.GothamBold
+btools.Text = "Btools"
+btools.TextColor3 = Color3.fromRGB(170, 0, 255)
+btools.TextScaled = true
+btools.TextSize = 14.000
+btools.TextWrapped = true
+
+invgun.Name = "invgun"
+invgun.Parent = Welcome
+invgun.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+invgun.BorderColor3 = Color3.fromRGB(170, 0, 255)
+invgun.Position = UDim2.new(0.0133421309, 0, 0.42052573, 0)
+invgun.Size = UDim2.new(0.419618547, 0, 0.07133919, 0)
+invgun.Font = Enum.Font.GothamBold
+invgun.Text = "Invisible Gun"
+invgun.TextColor3 = Color3.fromRGB(170, 0, 255)
+invgun.TextScaled = true
+invgun.TextSize = 14.000
+invgun.TextWrapped = true
+
+deldoor.Name = "deldoor"
+deldoor.Parent = Welcome
+deldoor.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+deldoor.BorderColor3 = Color3.fromRGB(170, 0, 255)
+deldoor.Position = UDim2.new(0.0133421309, 0, 0.49186492, 0)
+deldoor.Size = UDim2.new(0.419618547, 0, 0.07133919, 0)
+deldoor.Font = Enum.Font.GothamBold
+deldoor.Text = "Delete Doors"
+deldoor.TextColor3 = Color3.fromRGB(170, 0, 255)
+deldoor.TextScaled = true
+deldoor.TextSize = 14.000
+deldoor.TextWrapped = true
+
+respawn.Name = "respawn"
+respawn.Parent = Welcome
+respawn.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+respawn.BorderColor3 = Color3.fromRGB(170, 0, 255)
+respawn.Position = UDim2.new(0.0133421309, 0, 0.56320411, 0)
+respawn.Size = UDim2.new(0.419618547, 0, 0.07133919, 0)
+respawn.Font = Enum.Font.GothamBold
+respawn.Text = "Respawn"
+respawn.TextColor3 = Color3.fromRGB(170, 0, 255)
+respawn.TextScaled = true
+respawn.TextSize = 14.000
+respawn.TextWrapped = true
+
+fly.Name = "fly"
+fly.Parent = Welcome
+fly.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+fly.BorderColor3 = Color3.fromRGB(170, 0, 255)
+fly.Position = UDim2.new(0.0133421309, 0, 0.6345433, 0)
+fly.Size = UDim2.new(0.419618547, 0, 0.07133919, 0)
+fly.Font = Enum.Font.GothamBold
+fly.Text = "Fly [E]"
+fly.TextColor3 = Color3.fromRGB(170, 0, 255)
+fly.TextScaled = true
+fly.TextSize = 14.000
+fly.TextWrapped = true
+
+guard.Name = "guard"
+guard.Parent = Welcome
+guard.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+guard.BorderColor3 = Color3.fromRGB(170, 0, 255)
+guard.Position = UDim2.new(0.432960689, 0, 0.0638298094, 0)
+guard.Size = UDim2.new(0.418052346, 0, 0.0700877011, 0)
+guard.Font = Enum.Font.GothamBold
+guard.Text = "Guard"
+guard.TextColor3 = Color3.fromRGB(170, 0, 255)
+guard.TextScaled = true
+guard.TextSize = 14.000
+guard.TextWrapped = true
+
+inmate.Name = "inmate"
+inmate.Parent = Welcome
+inmate.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+inmate.BorderColor3 = Color3.fromRGB(170, 0, 255)
+inmate.Position = UDim2.new(0.432960689, 0, 0.135168985, 0)
+inmate.Size = UDim2.new(0.418052346, 0, 0.0700877011, 0)
+inmate.Font = Enum.Font.GothamBold
+inmate.Text = "Inmate"
+inmate.TextColor3 = Color3.fromRGB(170, 0, 255)
+inmate.TextScaled = true
+inmate.TextSize = 14.000
+inmate.TextWrapped = true
+
+criminal.Name = "criminal"
+criminal.Parent = Welcome
+criminal.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+criminal.BorderColor3 = Color3.fromRGB(170, 0, 255)
+criminal.Position = UDim2.new(0.432960689, 0, 0.20650816, 0)
+criminal.Size = UDim2.new(0.418052346, 0, 0.0700877011, 0)
+criminal.Font = Enum.Font.GothamBold
+criminal.Text = "Criminal"
+criminal.TextColor3 = Color3.fromRGB(170, 0, 255)
+criminal.TextScaled = true
+criminal.TextSize = 14.000
+criminal.TextWrapped = true
+
+neutral.Name = "neutral"
+neutral.Parent = Welcome
+neutral.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+neutral.BorderColor3 = Color3.fromRGB(170, 0, 255)
+neutral.Position = UDim2.new(0.432960689, 0, 0.27784735, 0)
+neutral.Size = UDim2.new(0.418052346, 0, 0.0700877011, 0)
+neutral.Font = Enum.Font.GothamBold
+neutral.Text = "Neutral"
+neutral.TextColor3 = Color3.fromRGB(170, 0, 255)
+neutral.TextScaled = true
+neutral.TextSize = 14.000
+neutral.TextWrapped = true
+
+faster.Name = "faster"
+faster.Parent = Welcome
+faster.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+faster.BorderColor3 = Color3.fromRGB(170, 0, 255)
+faster.Position = UDim2.new(0.432960689, 0, 0.34918654, 0)
+faster.Size = UDim2.new(0.418052346, 0, 0.0700877011, 0)
+faster.Font = Enum.Font.GothamBold
+faster.Text = "2x Speed"
+faster.TextColor3 = Color3.fromRGB(170, 0, 255)
+faster.TextScaled = true
+faster.TextSize = 14.000
+faster.TextWrapped = true
+
+noob.Name = "noob"
+noob.Parent = Welcome
+noob.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+noob.BorderColor3 = Color3.fromRGB(170, 0, 255)
+noob.Position = UDim2.new(0.432960689, 0, 0.42052573, 0)
+noob.Size = UDim2.new(0.418052346, 0, 0.0700877011, 0)
+noob.Font = Enum.Font.GothamBold
+noob.Text = "Normal Speed"
+noob.TextColor3 = Color3.fromRGB(170, 0, 255)
+noob.TextScaled = true
+noob.TextSize = 14.000
+noob.TextWrapped = true
+
+antibunny.Name = "antibunny"
+antibunny.Parent = Welcome
+antibunny.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+antibunny.BorderColor3 = Color3.fromRGB(170, 0, 255)
+antibunny.Position = UDim2.new(0.432960689, 0, 0.56320405, 0)
+antibunny.Size = UDim2.new(0.418052346, 0, 0.0700877011, 0)
+antibunny.Font = Enum.Font.GothamBold
+antibunny.Text = "Normal Jump"
+antibunny.TextColor3 = Color3.fromRGB(170, 0, 255)
+antibunny.TextScaled = true
+antibunny.TextSize = 14.000
+antibunny.TextWrapped = true
+
+bunny.Name = "bunny"
+bunny.Parent = Welcome
+bunny.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+bunny.BorderColor3 = Color3.fromRGB(170, 0, 255)
+bunny.Position = UDim2.new(0.432960689, 0, 0.49186489, 0)
+bunny.Size = UDim2.new(0.418052346, 0, 0.0700877011, 0)
+bunny.Font = Enum.Font.GothamBold
+bunny.Text = "2x Jump"
+bunny.TextColor3 = Color3.fromRGB(170, 0, 255)
+bunny.TextScaled = true
+bunny.TextSize = 14.000
+bunny.TextWrapped = true
+
+removetools.Name = "removetools"
+removetools.Parent = Welcome
+removetools.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+removetools.BorderColor3 = Color3.fromRGB(170, 0, 255)
+removetools.Position = UDim2.new(0.432960689, 0, 0.63454324, 0)
+removetools.Size = UDim2.new(0.418052346, 0, 0.071339272, 0)
+removetools.Font = Enum.Font.GothamBold
+removetools.Text = "Remove Tools"
+removetools.TextColor3 = Color3.fromRGB(170, 0, 255)
+removetools.TextScaled = true
+removetools.TextSize = 14.000
+removetools.TextWrapped = true
+
+tpname.Name = "tpname"
+tpname.Parent = Welcome
+tpname.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+tpname.BorderColor3 = Color3.fromRGB(170, 0, 255)
+tpname.Position = UDim2.new(0.0133421309, 0, 0.718397975, 0)
+tpname.Size = UDim2.new(0.83798635, 0, 0.0513141416, 0)
+tpname.Font = Enum.Font.SourceSans
+tpname.Text = ""
+tpname.TextColor3 = Color3.fromRGB(170, 0, 255)
+tpname.TextScaled = true
+tpname.TextSize = 14.000
+tpname.TextWrapped = true
+
+tpbutton.Name = "tpbutton"
+tpbutton.Parent = Welcome
+tpbutton.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+tpbutton.BorderColor3 = Color3.fromRGB(170, 0, 255)
+tpbutton.Position = UDim2.new(0.0133420853, 0, 0.779724717, 0)
+tpbutton.Size = UDim2.new(0.837986529, 0, 0.0463079773, 0)
+tpbutton.Font = Enum.Font.GothamBold
+tpbutton.Text = "Teleport"
+tpbutton.TextColor3 = Color3.fromRGB(170, 0, 255)
+tpbutton.TextScaled = true
+tpbutton.TextSize = 14.000
+tpbutton.TextWrapped = true
+
+criminalarea.Name = "criminalarea"
+criminalarea.Parent = Welcome
+criminalarea.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+criminalarea.BorderColor3 = Color3.fromRGB(170, 0, 255)
+criminalarea.Position = UDim2.new(0.0126846051, 0, 0.838548362, 0)
+criminalarea.Size = UDim2.new(0.83832854, 0, 0.071339272, 0)
+criminalarea.Font = Enum.Font.GothamBold
+criminalarea.Text = "TP Criminal Area"
+criminalarea.TextColor3 = Color3.fromRGB(170, 0, 255)
+criminalarea.TextScaled = true
+criminalarea.TextSize = 14.000
+criminalarea.TextWrapped = true
+
+guardarea.Name = "guardarea"
+guardarea.Parent = Welcome
+guardarea.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+guardarea.BorderColor3 = Color3.fromRGB(170, 0, 255)
+guardarea.Position = UDim2.new(0.0130000003, 0, 0.908742189, 0)
+guardarea.Size = UDim2.new(0.83832854, 0, 0.071339272, 0)
+guardarea.Font = Enum.Font.GothamBold
+guardarea.Text = "TP Guard Area"
+guardarea.TextColor3 = Color3.fromRGB(170, 0, 255)
+guardarea.TextScaled = true
+guardarea.TextSize = 14.000
+guardarea.TextWrapped = true
+
+exit.Name = "exit"
+exit.Parent = Welcome
+exit.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+exit.BorderColor3 = Color3.fromRGB(255, 0, 0)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.865279377, 0, 0, 0)
+exit.Size = UDim2.new(0.134720504, 0, 0.0466783792, 0)
+exit.Font = Enum.Font.GothamBold
+exit.Text = "X"
+exit.TextColor3 = Color3.fromRGB(0, 0, 0)
+exit.TextScaled = true
+exit.TextSize = 14.000
+exit.TextWrapped = true
+exit.MouseButton1Down:connect(function()
+    Welcome.Visible = false
+    open.Visible = true
+    end)
+
+open.Name = "open"
+open.Parent = Sirvelt
+open.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+open.Position = UDim2.new(0, 0, 0.712530732, 0)
+open.Size = UDim2.new(0, 92, 0, 39)
+open.Font = Enum.Font.SourceSans
+open.Text = "Open"
+open.TextColor3 = Color3.fromRGB(0, 0, 0)
+open.TextScaled = true
+open.TextSize = 14.000
+open.TextWrapped = true
+open.Visible = false
+open.MouseButton1Down:connect(function()
+    Welcome.Visible = true
+    open.Visible = false
+    end)
+
+killall.MouseButton1Down:connect(function()
+    while wait(.0001) do
+    workspace.Remote.TeamEvent:FireServer("Medium stone grey")
+
+game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)	
+
+wait(0.5)
+function kill(a)
+local A_1 =
+{
+[1] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-391.152252, 8.65560055, -83.2166901)),
+["Distance"] = 3.2524313926697,
+["Cframe"] = CFrame.new(840.310791, 101.334137, 2267.87988, 0.0636406094, 0.151434347, -0.986416459, 0, 0.988420188, 0.151741937, 0.997972965, -0.00965694897, 0.0629036576),
+["Hit"] = a.Character.Head
+},
+   [2] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-392.481476, -8.44939327, -76.7261353)),
+["Distance"] = 3.2699294090271,
+["Cframe"] = CFrame.new(840.290466, 101.184189, 2267.93506, 0.0964837447, 0.0589403138, -0.993587971, 4.65661287e-10, 0.998245299, 0.0592165813, 0.995334625, -0.00571343815, 0.0963144377),
+["Hit"] = a.Character.Head
+},
+[3] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-389.21701, -2.50536323, -92.2163162)),
+["Distance"] = 3.1665518283844,
+["Cframe"] = CFrame.new(840.338867, 101.236496, 2267.80371, 0.0166504811, 0.0941716284, -0.995416701, 1.16415322e-10, 0.995554805, 0.0941846818, 0.999861419, -0.00156822044, 0.0165764652),
+["Hit"] = a.Character.Head
+},
+[4] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-393.353973, 3.13988972, -72.5452042)),
+["Distance"] = 3.3218522071838,
+["Cframe"] = CFrame.new(840.277222, 101.285957, 2267.9707, 0.117109694, 0.118740402, -0.985994935, -1.86264515e-09, 0.992826641, 0.119563118, 0.993119001, -0.0140019981, 0.116269611),
+["Hit"] = a.Character.Head
+},
+[5] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-390.73172, 3.2097764, -85.5477524)),
+["Distance"] = 3.222757101059,
+["Cframe"] = CFrame.new(840.317993, 101.286423, 2267.86035, 0.0517584644, 0.123365127, -0.991010666, 0, 0.992340803, 0.123530701, 0.99865967, -0.00639375951, 0.0513620302),
+["Hit"] = a.Character.Head
+}
+}
+local A_2 = game.Players.LocalPlayer.Backpack["Remington 870"]
+local Event = game:GetService("ReplicatedStorage").ShootEvent
+Event:FireServer(A_1, A_2)
+Event:FireServer(A_1, A_2)
+end
+
+for i,v in pairs(game.Players:GetChildren())do
+if v.Name ~= game.Players.LocalPlayer.Name then
+kill(v)
+end
+end
+wait(1)
+workspace.Remote.TeamEvent:FireServer("Bright orange")
+end
+end)
+
+
+tpbutton.MouseButton1Down:connect(function()
+	Target = tpname.Text
+	
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Target].Character.HumanoidRootPart.CFrame
+end)
+
+
+fly.MouseButton1Down:connect(function()
+	repeat wait()
+    until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+ local mouse = game.Players.LocalPlayer:GetMouse()
+ repeat wait() until mouse
+ local plr = game.Players.LocalPlayer
+ local torso = plr.Character.Torso
+ local flying = true
+ local deb = true
+ local ctrl = {f = 0, b = 0, l = 0, r = 0}
+ local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+ local maxspeed = 50
+ local speed = 0
+ 
+ function Fly()
+ local bg = Instance.new("BodyGyro", torso)
+ bg.P = 9e4
+ bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+ bg.cframe = torso.CFrame
+ local bv = Instance.new("BodyVelocity", torso)
+ bv.velocity = Vector3.new(0,0.1,0)
+ bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+ repeat wait()
+ plr.Character.Humanoid.PlatformStand = true
+ if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+ speed = speed+.5+(speed/maxspeed)
+ if speed > maxspeed then
+ speed = maxspeed
+ end
+ elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+ speed = speed-1
+ if speed < 0 then
+ speed = 0
+ end
+ end
+ if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+ bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+ lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+ elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+ bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+ else
+ bv.velocity = Vector3.new(0,0.1,0)
+ end
+ bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+ until not flying
+ ctrl = {f = 0, b = 0, l = 0, r = 0}
+ lastctrl = {f = 0, b = 0, l = 0, r = 0}
+ speed = 0
+ bg:Destroy()
+ bv:Destroy()
+ plr.Character.Humanoid.PlatformStand = false
+ end
+ mouse.KeyDown:connect(function(key)
+ if key:lower() == "e" then
+ if flying then flying = false
+ else
+ flying = true
+ Fly()
+ end
+ elseif key:lower() == "w" then
+ ctrl.f = 1
+ elseif key:lower() == "s" then
+ ctrl.b = -1
+ elseif key:lower() == "a" then
+ ctrl.l = -1
+ elseif key:lower() == "d" then
+ ctrl.r = 1
+ end
+ end)
+ mouse.KeyUp:connect(function(key)
+ if key:lower() == "w" then
+ ctrl.f = 0
+ elseif key:lower() == "s" then
+ ctrl.b = 0
+ elseif key:lower() == "a" then
+ ctrl.l = 0
+ elseif key:lower() == "d" then
+ ctrl.r = 0
+ end
+ end)
+ Fly()
+ end)
+
+ superpunch.MouseButton1Down:connect(function()
+    mainRemotes = game.ReplicatedStorage
+    meleeRemote = mainRemotes['meleeEvent']
+    mouse = game.Players.LocalPlayer:GetMouse()
+    punching = false
+    cooldown = false
+    
+    function punch()
+    cooldown = true
+    local part = Instance.new("Part", game.Players.LocalPlayer.Character)
+    part.Transparency = 1
+    part.Size = Vector3.new(5, 2, 3)
+    part.CanCollide = false
+    local w1 = Instance.new("Weld", part)
+    w1.Part0 = game.Players.LocalPlayer.Character.Torso
+    w1.Part1 = part
+    w1.C1 = CFrame.new(0,0,2)
+    part.Touched:connect(function(hit)
+    if game.Players:FindFirstChild(hit.Parent.Name) then
+    local plr = game.Players:FindFirstChild(hit.Parent.Name)
+    if plr.Name ~= game.Players.LocalPlayer.Name then
+    part:Destroy()
+    
+    for i = 1,100 do
+    meleeRemote:FireServer(plr)
+    end
+    end
+    end
+    end)
+    
+    wait(1)
+    cooldown = false
+    part:Destroy()
+    end
+    
+    
+    mouse.KeyDown:connect(function(key)
+    if cooldown == false then
+    if key:lower() == "f" then
+    
+    punch()
+    
+    end
+    end
+    end)
+    end)
+inmate.MouseButton1Down:connect(function()
+    Workspace.Remote.TeamEvent:FireServer("Bright orange")
+end)
+guard.MouseButton1Down:connect(function()
+    Workspace.Remote.TeamEvent:FireServer("Bright blue")
+end)
+criminal.MouseButton1Down:connect(function()
+    LCS = game.Workspace["Criminals Spawn"].SpawnLocation
+
+LCS.CanCollide = false
+LCS.Size = Vector3.new(51.05, 24.12, 54.76)
+LCS.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+LCS.Transparency = 1
+wait(0.5)
+LCS.CFrame = CFrame.new(-920.510803, 92.2271957, 2138.27002, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+LCS.Size = Vector3.new(6, 0.2, 6)
+LCS.Transparency = 0
+end)
+
+invgun.MouseButton1Down:connect(function()
+    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants())do
+        if v.ClassName == "Model" then
+            v:Destroy()
+        end
+    end
+    
+    game.Players.LocalPlayer.Backpack.M9.Part:Destroy()
+    
+    game.Players.LocalPlayer.Backpack.M9.Part:Destroy()
+end)
+
+neutral.MouseButton1Down:connect(function()
+    Workspace.Remote.TeamEvent:FireServer("Medium stone grey")
+end)
+
+btools.MouseButton1Down:connect(function()
+    local tool1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+	local tool2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+	local tool3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+	local tool4 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+	local tool5 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
+	tool1.BinType = "Clone"
+	tool2.BinType = "GameTool"
+	tool3.BinType = "Hammer"
+	tool4.BinType = "Script"
+	tool5.BinType = "Grab"
+end)
+
+deldoor.MouseButton1Down:connect(function()
+    Workspace.Prison_Cellblock.doors:Destroy()
+			
+			for i,v in pairs(workspace:GetChildren())do
+					if v.Name == "Doors" then
+				v:Destroy()
+			end
+    end
+end)
+
+allguns.MouseButton1Down:connect(function()
+    for i,v in pairs(Workspace.Prison_ITEMS.giver:GetChildren()) do
+
+        OwO = Workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
+        end
+end)
+
+respawn.MouseButton1Down:connect(function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -496, 0)
+end)
+
+arrestall.MouseButton1Down:connect(function()
+	wait(0.1)
+	Player = game.Players.LocalPlayer
+	Pcf = Player.Character.HumanoidRootPart.CFrame
+	for i,v in pairs(game.Teams.Criminals:GetPlayers()) do
+	if v.Name ~= Player.Name then
+	local i = 10
+    repeat
+    wait()
+    i = i-1
+    game.Workspace.Remote.arrest:InvokeServer(v.Character.HumanoidRootPart)
+    Player.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 1)
+    until i == 0
+end
+end
+end)
+
+removetools.MouseButton1Down:connect(function()
+	for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren())do
+		if v.ClassName == "Tool" then
+			v:Destroy()
+		end
+	end
+end)
+
+guardarea.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(802,99,2270)
+end)
+
+criminalarea.MouseButton1Down:connect(function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-943, 96, 2055)
+end)
+
+bunny.MouseButton1Down:connect(function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 80
+end)
+
+antibunny.MouseButton1Down:connect(function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+faster.MouseButton1Down:connect(function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 32
+end)
+
+noob.MouseButton1Down:connect(function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
