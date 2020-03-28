@@ -1,0 +1,27 @@
+local player = game.Players.LocalPlayer
+local library = loadstring(game:HttpGet("https://pastebinp.com/raw/JsdM2jiP",true))()
+library.options.underlinecolor = "rainbow"
+
+-- Ranch Tab
+local Ranch = library:CreateWindow("Ranch")
+Ranch:Section("- Ranch -")
+local Upgrade = Ranch:Toggle("Auto Upgrade Ranch", {flag = "RU"})
+local EquipBest = Ranch:Toggle("Auto Equip Pets", {flag = "EP"})
+
+-- Auto Upgrade
+spawn(function()
+while wait(.01) do
+if Ranch.flags.RU then
+game:GetService("ReplicatedStorage").RemoteFunctions.MainRemoteFunction:InvokeServer("UpgradeRanch", false)
+end
+end
+end)
+
+-- Auto Equip
+spawn(function()
+while wait(.01) do
+if Ranch.flags.EP then
+game:GetService("ReplicatedStorage").RemoteFunctions.MainRemoteFunction:InvokeServer("EquipTopPets")
+end
+end
+end)
