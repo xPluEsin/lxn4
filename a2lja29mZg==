@@ -1,0 +1,63 @@
+-- Objects
+
+local KickoffGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+
+-- Properties
+
+KickoffGui.Name = "Kick off Gui"
+KickoffGui.Parent = game.CoreGui
+KickoffGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = KickoffGui
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.new(0.505882, 1, 0.623529)
+Frame.BackgroundTransparency = 0.25
+Frame.Position = UDim2.new(0.0428571515, 0, 0.789946139, 0)
+Frame.Size = UDim2.new(0, 277, 0, 105)
+Frame.Draggable = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.184115529, 0, 0.095238097, 0)
+TextLabel.Size = UDim2.new(0, 175, 0, 34)
+TextLabel.Font = Enum.Font.Highway
+TextLabel.Text = "Kick Off GUI"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.new(0.54902, 0.54902, 0.54902)
+TextButton.Position = UDim2.new(0.274368227, 0, 0.504761934, 0)
+TextButton.Size = UDim2.new(0, 125, 0, 30)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Bring Ball"
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextWrapped = true
+TextButton.MouseButton1Click:connect(function()
+	while true do
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.SoccerBall.CFrame
+end
+end)
+
+function onKeyPress(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.Q then
+            if Frame.Visible == false then
+        Frame.Visible = true
+    else
+        Frame.Visible = false
+    end
+    end
+end
+
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)
