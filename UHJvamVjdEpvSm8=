@@ -1,0 +1,126 @@
+wait(3)
+if game.Workspace:FindFirstChild("DungeonFolder") == nil then 
+	game.ReplicatedStorage:WaitForChild("Remotes")
+	game.Players.LocalPlayer:WaitForChild("leaderstats")
+	function start()
+	print("Starting")
+	local Event = game:GetService("ReplicatedStorage").Remotes.Squads.Start
+	Event:FireServer()
+	end
+	function join(area,dif)
+	local Event = game:GetService("ReplicatedStorage").Remotes.RequestPrizeClaim
+	Event:InvokeServer()
+	local A_1 = area
+	local A_2 = dif
+	local A_3 = "Solo"
+	local Event = game:GetService("ReplicatedStorage").Remotes.Squads.Create
+	Event:FireServer(A_1, A_2, A_3)
+	print("made lobby in "..area..' on difficulty '.. dif..'.')
+	wait(1)
+	start()
+	end
+	local l = game.Players.LocalPlayer:WaitForChild("leaderstats").Level.Value
+	if l < 5 then 
+		join('Ancient Jungle','Easy')
+	elseif l >= 5 and l < 10 then 
+		join('Ancient Jungle','Medium')
+	elseif l >= 10 and l <15 then 
+		join('Coral Kingdom','Easy')
+	elseif l >= 15 and l < 20 then 
+		join('Coral Kingdom','Medium')
+	elseif l >= 20 and l < 25 then 
+		join('Crystal Cave','Easy')
+	elseif l >= 25 and l < 30 then 
+		join('Crystal Cave','Medium')
+	elseif l >= 30 and l < 35 then 
+		join('Sacred Sands','Easy')
+	elseif l >= 35 and l < 40 then 
+		join('Sacred Sands','Medium')
+	elseif l >= 40 and l < 45 then 
+		join('Candy Land','Easy')
+	elseif l >= 45 and l < 50 then 
+		join('Candy Land','Medium')
+	elseif l >= 50 and l < 55 then 
+		join('Candy Land','Hard')
+	elseif l >= 50 and l < 55 then 
+		join('Candy Land','Demon')
+	elseif l >= 60 then 
+		join('Candy Land','Impossible')
+	end
+else
+
+	game:GetService("ReplicatedStorage").Remotes.Dungeon.Begin:FireServer()
+
+
+	function attack()
+		while wait(.5) do
+			for _,v in pairs(game.Workspace.DungeonFolder:GetChildren()) do     
+				if v:FindFirstChild("Monsters") ~= nil then 
+					for _,v in pairs(v.Monsters:GetChildren()) do
+						if v:FindFirstChild("Head") ~= nil then
+								local TweenService = game:GetService("TweenService")
+ 
+								local tweenInfo = TweenInfo.new(
+									1, -- Time
+									Enum.EasingStyle.Linear, -- EasingStyle
+									Enum.EasingDirection.Out, -- EasingDirection
+									1, -- RepeatCount (when less than zero the tween will loop indefinitely)
+									false, -- Reverses (tween will reverse once reaching it's goal)
+									0 -- DelayTime
+								)
+								
+								local tween = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = v.Head.CFrame + Vector3.new(0,15,0)})
+								
+								tween:Play()
+								local pos = v.Head.Position
+								
+							repeat
+								wait()
+								game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+								game:GetService("ReplicatedStorage").Remotes.Attack:FireServer()
+								game:GetService("ReplicatedStorage").Remotes.HitMonster:FireServer(game:GetService("Workspace").PlayerWeapons[game.Players.LocalPlayer.Name],v.Head)
+								
+							until v.Humanoid.Health == 0 
+						end
+					end
+				end
+			end
+		end
+	end
+	function at()
+		while wait(.5) do
+			for _,v in pairs(game.Workspace.DungeonFolder:GetChildren()) do     
+				if v:FindFirstChild("Monsters") ~= nil then 
+					for _,v in pairs(v.Monsters:GetChildren()) do
+						if v:FindFirstChild("Head") ~= nil then
+								game:GetService("ReplicatedStorage").Remotes.Attack:FireServer()
+								game:GetService("ReplicatedStorage").Remotes.HitMonster:FireServer(game:GetService("Workspace").PlayerWeapons[game.Players.LocalPlayer.Name],v.Head)
+
+						end
+					end
+				end
+			end
+		end
+	end
+	function bil()
+		while wait(.5) do
+			game:GetService("ReplicatedStorage").Remotes.Ability:FireServer()
+		end
+	end	
+	function heal()
+		while wait(.5) do 
+			for _,v in pairs(game.Workspace:GetDescendants()) do 
+				if v.Name == 'TouchInterest' and v.Parent.ClassName == 'MeshPart' or v.Name == 'TouchInterest' and v.Parent.ClassName =='Part' then 
+					v.Parent.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+				end
+			end
+		end
+	end
+	spawn(bil)
+	spawn(attack)
+	spawn(at)
+	spawn(heal)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation = Vector3.new(-80,78,0)
+	game.Workspace.DungeonFolder:WaitForChild("EndRoom"):WaitForChild("Finish").CFrame = game.Players.LocalPlayer.Character.Head.CFrame
+
+end
