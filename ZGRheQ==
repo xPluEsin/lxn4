@@ -1,0 +1,13 @@
+while true do
+wait()
+for i , v in pairs (game.Players:GetChildren()) do
+if v.Character and v.Team ~= game.Players.LocalPlayer.Team and v.Character:FindFirstChild("Head") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("Humanoid") then
+local oh1 = game:GetService("Players").LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+local oh2 = v.Character.Head
+local oh3 = v.Character.Humanoid
+local oh4 = v.Character.HumanoidRootPart
+local oh5 = v.Character.Head.Position
+local oh7 = 5000000
+game:GetService("ReplicatedStorage").Remote["Attempt_Fire"]:FireServer(oh1, oh2, oh3, oh4, oh5, oh6, oh7)
+end;end
+end
