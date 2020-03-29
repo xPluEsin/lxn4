@@ -1,0 +1,72 @@
+local players = game:service'Players';
+local tweenService = game:service'TweenService';
+local runService = game:service'RunService';
+local replicatedStorage = game:service'ReplicatedStorage';
+local virtualUser = game:service'VirtualUser';
+local camera = workspace.CurrentCamera
+local player = players.LocalPlayer;
+local playerGui = player.PlayerGui;
+local vec3New = Vector3.new;
+local vec2New = Vector2.new;
+local cframeNew = CFrame.new;
+local tweenInfoNew = TweenInfo.new;
+local constVec = vec3New(0, 5, 0);
+local constVec2 = vec2New(0, 0);
+local mouse = player:GetMouse();
+
+local equipRemote = replicatedStorage.Remotes.E;
+
+local function punch()
+    virtualUser:Button1Down(constVec2, camera.CFrame);
+end
+local function equip()
+    if player.Character:WaitForChild('Humanoid').Equip.Value then return end;
+    local headBillGui = player.Character.Head:FindFirstChild("HeadBillGui");
+    if headBillGui then
+        headBillGui:Destroy();
+    end
+    equipRemote:FireServer(true);
+    wait(1.1);
+end
+
+local function getNearestMob()
+    local nearestM, nearest = 9e9;
+    local playerHum = player.Character.HumanoidRootPart;
+    local workspaceChild = workspace:GetChildren();
+    for i = 1, #workspaceChild do
+        local v = workspaceChild[i];
+        local mobHum = v:FindFirstChild("Humanoid");
+        if v:IsA'Model' and v.Name:find'Demon' and not players:FindFirstChild(v.Name) and mobHum and mobHum.Health > 0 then 
+            local mobRootPart = v.HumanoidRootPart;
+            local magnitude = (playerHum.Position - mobRootPart.Position).Magnitude;
+            if magnitude < nearestM then 
+                nearestM = magnitude;
+                nearest = mobRootPart;
+            end
+        end
+    end
+    return nearest, nearestM, playerHum
+end
+
+runService.Stepped:Connect(function()
+    local humanoid = player.Character:WaitForChild("Humanoid");
+    humanoid:ChangeState(11);
+    equip();
+    punch();
+end)
+
+while true do 
+    local nearest, distance, playerHum = getNearestMob();
+    if nearest then
+        local mob = nearest.Parent;
+        repeat
+            local playerCFrame = playerHum.CFrame;
+            local mobPos = nearest.Position;
+            local tpCFrame = cframeNew((mobPos - constVec), mobPos)
+            local tweenBase = tweenService:Create(playerHum, tweenInfoNew(distance / 200), {CFrame = tpCFrame});
+            tweenBase:Play();
+            tweenBase.Completed:Wait();
+        until mob.Humanoid.Health <= 0;
+    end
+    wait(3.5);
+end;
