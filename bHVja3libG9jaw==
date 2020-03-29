@@ -1,0 +1,3 @@
+for i=1, 100 do --This number means that you'll get 100 gears (you can change this)
+game.ReplicatedStorage.SpawnRainbowBlock:FireServer()
+end
