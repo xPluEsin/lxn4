@@ -1,0 +1,34 @@
+local oh1 = CFrame.new(-2170.64014, 2053.3479, 155.939972)
+local oh2 = game:GetService("Players")
+local oh3 = oh2.LocalPlayer.Character.HumanoidRootPart
+oh3.CFrame = oh1
+wait(0.2)
+local oh4 = CFrame.new(-1991.64001, 2092.3479, 339.939972)
+local oh5 = game:GetService("Players")
+local oh6 = oh5.LocalPlayer.Character.HumanoidRootPart
+oh6.CFrame = oh4
+wait(0.2)
+local oh7 = CFrame.new(-2448.78516, 2114.3479, 290.184998)
+local oh8 = game:GetService("Players")
+local oh9 = oh8.LocalPlayer.Character.HumanoidRootPart
+oh9.CFrame = oh7
+wait(0.2)
+local oh10 = CFrame.new(-2304, 2144.64795, 391.499695)
+local oh11 = game:GetService("Players")
+local oh12 = oh11.LocalPlayer.Character.HumanoidRootPart
+oh12.CFrame = oh10
+wait(0.2)
+local oh13 = CFrame.new(-2019.99988, 2117.3479, 50.9996796)
+local oh14 = game:GetService("Players")
+local oh15 = oh14.LocalPlayer.Character.HumanoidRootPart
+oh15.CFrame = oh13
+wait(0.2)
+local oh16 = CFrame.new(-2320, 2172.3479, 17.4996796)
+local oh17 = game:GetService("Players")
+local oh18 = oh17.LocalPlayer.Character.HumanoidRootPart
+oh18.CFrame = oh16
+wait(0.2)
+local oh19 = CFrame.new(-2275.13916, 2262.34766, 274.940826)
+local oh20 = game:GetService("Players")
+local oh21 = oh20.LocalPlayer.Character.HumanoidRootPart
+oh21.CFrame = oh19
