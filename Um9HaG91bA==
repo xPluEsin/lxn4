@@ -1,0 +1,632 @@
+--[[
+     Gui to Lua Converter
+-- Revamped by:HoIyScript
+--]]
+
+
+
+-- Instances:
+local UserIS = game:GetService("UserInputService")
+local HotKey = "J"
+local Toggle = false
+
+UserIS.InputBegan:Connect(function(LocalInput)
+if LocalInput.KeyCode == Enum.KeyCode[HotKey] then
+Toggle = not Toggle
+while wait() do
+if Toggle == true then
+mouse1click(MOUSE_CLICK)
+else
+mouse1click(MOUSE_UP)
+end
+end
+end
+end)
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local TextButton_5 = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local TextButton_6 = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--[[
+    Properties:
+--]]
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.new(0.203922, 0.145098, 0.145098)
+Frame.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.103912197, 0, 0.104422659, 0)
+Frame.Size = UDim2.new(0.0613453835, 0, 0.23710072, 0)
+Frame.Active = true
+Frame.Draggable = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.new(0.345098, 0.345098, 0.345098)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0804498047, 0, 0.16580309, 0)
+TextButton.Size = UDim2.new(0.839100361, 0, 0.0984454527, 0)
+TextButton.Font = Enum.Font.SourceSansSemibold
+TextButton.Text = "Ghoul"
+TextButton.TextColor3 = Color3.new(1, 1, 1)
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextWrapped = true
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.new(0.345098, 0.345098, 0.345098)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.0804498047, 0, 0.31088081, 0)
+TextButton_2.Size = UDim2.new(0.839100361, 0, 0.0984454527, 0)
+TextButton_2.Font = Enum.Font.SourceSansSemibold
+TextButton_2.Text = "Human"
+TextButton_2.TextColor3 = Color3.new(1, 1, 1)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14
+TextButton_2.TextWrapped = true
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.new(0.345098, 0.345098, 0.345098)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0.0804498047, 0, 0.450777233, 0)
+TextButton_3.Size = UDim2.new(0.839100361, 0, 0.0984454527, 0)
+TextButton_3.Font = Enum.Font.SourceSansSemibold
+TextButton_3.Text = "CCG"
+TextButton_3.TextColor3 = Color3.new(1, 1, 1)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14
+TextButton_3.TextWrapped = true
+
+TextButton_4.Parent = Frame
+TextButton_4.BackgroundColor3 = Color3.new(0.345098, 0.345098, 0.345098)
+TextButton_4.BorderSizePixel = 0
+TextButton_4.Position = UDim2.new(0.0804498047, 0, 0.590673625, 0)
+TextButton_4.Size = UDim2.new(0.839100361, 0, 0.0984454527, 0)
+TextButton_4.Font = Enum.Font.SourceSansSemibold
+TextButton_4.Text = "SCCG"
+TextButton_4.TextColor3 = Color3.new(1, 1, 1)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 14
+TextButton_4.TextWrapped = true
+
+TextButton_5.Parent = Frame
+TextButton_5.BackgroundColor3 = Color3.new(0.345098, 0.345098, 0.345098)
+TextButton_5.BorderSizePixel = 0
+TextButton_5.Position = UDim2.new(0.0804498047, 0, 0.725388646, 0)
+TextButton_5.Size = UDim2.new(0.839100361, 0, 0.0984454527, 0)
+TextButton_5.Font = Enum.Font.SourceSansSemibold
+TextButton_5.Text = "Boss"
+TextButton_5.TextColor3 = Color3.new(1, 1, 1)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 14
+TextButton_5.TextWrapped = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(0.203922, 0.145098, 0.145098)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(1, 0, 0.113989636, 0)
+TextLabel.Font = Enum.Font.SourceSansSemibold
+TextLabel.Text = "Ro Ghoul"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+
+TextButton_6.Parent = Frame
+TextButton_6.BackgroundColor3 = Color3.new(0.345098, 0.345098, 0.345098)
+TextButton_6.BorderSizePixel = 0
+TextButton_6.Position = UDim2.new(0.0804498047, 0, 0.865285039, 0)
+TextButton_6.Size = UDim2.new(0.839100361, 0, 0.0984454527, 0)
+TextButton_6.Font = Enum.Font.SourceSansSemibold
+TextButton_6.Text = "STOP"
+TextButton_6.TextColor3 = Color3.new(1, 0, 0)
+TextButton_6.TextScaled = true
+TextButton_6.TextSize = 14
+TextButton_6.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.new(1, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0, 0, 0.113989472, 0)
+TextLabel_2.Size = UDim2.new(1, 0, 0.010362695, 0)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = ""
+TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_2.TextSize = 14
+
+--[[
+     Scripts:
+--]]
+
+local function ZCWB_fake_script() -- TextButton.LocalScript 
+    local script = Instance.new('LocalScript', TextButton)
+
+    script.Parent.MouseButton1Click:Connect(function()
+        local mob = "Ghoul"
+    local distanceFromMob = -3 -- How far you want to be behind the mob
+    local travelSpeed = 140 -- higher = faster -- 140 won't kill you, but if you go too high you will die lol
+    
+    --[[
+        Mobs to pick from -
+        -- Ghoul
+        -- Human
+        -- CCG
+        -- SCCG
+        -- Boss
+    ]]--
+    
+    local mobName
+    
+    if mob == "Ghoul" then
+        mobName = "GhoulSpawns"
+    elseif mob == "Human" then
+        mobName = "HumanSpawns"
+    elseif mob == "CCG" then
+        mobName = "CCGSpawns"
+    elseif mob == "SCCG" then
+        mobName = "AggroSpawns"
+    elseif mob == "Boss" then
+        mobName = "BossSpawns"
+    else
+        mobName = "Made by dah GoobsGoobies Big Grin"
+    end
+    
+    local tweenS = game:GetService("TweenService")
+    local player = game.Players.LocalPlayer
+    local playerHRP = player.Character:WaitForChild("HumanoidRootPart")
+    local playerHumanoid = player.Character:WaitForChild("Humanoid")
+    
+    function farm()
+    while true do
+        if playerHumanoid.Health ~= 0 then
+        for i,v in pairs(workspace.NPCSpawns:GetChildren()) do
+            if v:FindFirstChildWhichIsA("Model") and v.Name == mobName and not v:FindFirstChild("Athlete") then
+                while true do
+                    if v:FindFirstChildWhichIsA("Model") then
+                        local parent = v:FindFirstChildWhichIsA("Model")
+                        if parent:FindFirstChild("Humanoid") then
+                            if parent.Humanoid.Health ~= 0 then
+                            local distance = (playerHRP.Position - parent.HumanoidRootPart.Position).magnitude
+                            local tweenInfo = TweenInfo.new(distance/travelSpeed)
+                            local tweenGoal = {}
+                            tweenGoal.CFrame = parent.HumanoidRootPart.CFrame + parent.HumanoidRootPart.CFrame.LookVector * distanceFromMob
+                            local playTween = tweenS:Create(playerHRP,tweenInfo,tweenGoal)
+                                if distance <= 10 then
+                                    local parentHRP = parent:WaitForChild("HumanoidRootPart")
+                                    if mob == "Human" then
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * distanceFromMob
+                                        wait()
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * ((distanceFromMob * -1) + 2)
+                                        playerHRP.CFrame = CFrame.new(playerHRP.Position,parentHRP.Position)
+                                        else
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * distanceFromMob
+                                    end
+                                else
+                                playTween:Play()
+                                end
+                            wait()
+                            elseif parent.Humanoid.Health == 0 then
+wait(2)
+                                break
+                            end
+                        elseif not parent:FindFirstChild("Humanoid") then
+wait(2)
+                            break
+                        end
+    
+                        elseif not v:FindFirstChildWhichIsA("Model") or v:FindFirstChildWhichIsA("Model").Humanoid.Health == 0 then
+wait(2)
+                            break
+                    end
+            end
+            end
+            end
+            elseif player.Character.Humanoid.Health == 0 then
+wait(2)
+                break
+            end
+        wait()
+        end
+    end
+    
+    farm()
+    end)
+end
+coroutine.wrap(ZCWB_fake_script)()
+local function JIGTNFS_fake_script() -- TextButton_2.LocalScript 
+    local script = Instance.new('LocalScript', TextButton_2)
+
+    script.Parent.MouseButton1Click:Connect(function()
+        local mob = "Human"
+    local distanceFromMob = -3 -- How far you want to be behind the mob
+    local travelSpeed = 140 -- higher = faster -- 140 won't kill you, but if you go too high you will die lol
+    
+    --[[
+        Mobs to pick from -
+        -- Ghoul
+        -- Human
+        -- CCG
+        -- SCCG
+        -- Boss
+    ]]--
+    
+    local mobName
+    
+    if mob == "Ghoul" then
+        mobName = "GhoulSpawns"
+    elseif mob == "Human" then
+        mobName = "HumanSpawns"
+    elseif mob == "CCG" then
+        mobName = "CCGSpawns"
+    elseif mob == "SCCG" then
+        mobName = "AggroSpawns"
+    elseif mob == "Boss" then
+        mobName = "BossSpawns"
+    else
+        mobName = "Made by dah GoobsGoobies Big Grin"
+    end
+    
+    local tweenS = game:GetService("TweenService")
+    local player = game.Players.LocalPlayer
+    local playerHRP = player.Character:WaitForChild("HumanoidRootPart")
+    local playerHumanoid = player.Character:WaitForChild("Humanoid")
+    
+    function farm()
+    while true do
+        if playerHumanoid.Health ~= 0 then
+        for i,v in pairs(workspace.NPCSpawns:GetChildren()) do
+            if v:FindFirstChildWhichIsA("Model") and v.Name == mobName and not v:FindFirstChild("Athlete") then
+                while true do
+                    if v:FindFirstChildWhichIsA("Model") then
+                        local parent = v:FindFirstChildWhichIsA("Model")
+                        if parent:FindFirstChild("Humanoid") then
+                            if parent.Humanoid.Health ~= 0 then
+                            local distance = (playerHRP.Position - parent.HumanoidRootPart.Position).magnitude
+                            local tweenInfo = TweenInfo.new(distance/travelSpeed)
+                            local tweenGoal = {}
+                            tweenGoal.CFrame = parent.HumanoidRootPart.CFrame + parent.HumanoidRootPart.CFrame.LookVector * distanceFromMob
+                            local playTween = tweenS:Create(playerHRP,tweenInfo,tweenGoal)
+                                if distance <= 10 then
+                                    local parentHRP = parent:WaitForChild("HumanoidRootPart")
+                                    if mob == "Human" then
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * distanceFromMob
+                                        wait()
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * ((distanceFromMob * -1) + 2)
+                                        playerHRP.CFrame = CFrame.new(playerHRP.Position,parentHRP.Position)
+                                        else
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * distanceFromMob
+                                    end
+                                else
+                                playTween:Play()
+                                end
+                            wait()
+                            elseif parent.Humanoid.Health == 0 then
+                            wait(2)
+                                break
+                            end
+                        elseif not parent:FindFirstChild("Humanoid") then
+                            wait(2)
+                            break
+                        end
+    
+                        elseif not v:FindFirstChildWhichIsA("Model") or v:FindFirstChildWhichIsA("Model").Humanoid.Health == 0 then
+                        wait(2)
+                            break
+                    end
+            end
+            end
+            end
+            elseif player.Character.Humanoid.Health == 0 then
+           wait(2)
+                break
+            end
+        wait()
+        end
+    end
+    
+    farm()
+    end)
+end
+coroutine.wrap(JIGTNFS_fake_script)()
+local function SMNVS_fake_script() -- TextButton_3.LocalScript 
+    local script = Instance.new('LocalScript', TextButton_3)
+
+    script.Parent.MouseButton1Click:Connect(function()
+        local mob = "CCG"
+    local distanceFromMob = -3 -- How far you want to be behind the mob
+    local travelSpeed = 140 -- higher = faster -- 140 won't kill you, but if you go too high you will die lol
+    
+    --[[
+        Mobs to pick from -
+        -- Ghoul
+        -- Human
+        -- CCG
+        -- SCCG
+        -- Boss
+    ]]--
+    
+    local mobName
+    
+    if mob == "Ghoul" then
+        mobName = "GhoulSpawns"
+    elseif mob == "Human" then
+        mobName = "HumanSpawns"
+    elseif mob == "CCG" then
+        mobName = "CCGSpawns"
+    elseif mob == "SCCG" then
+        mobName = "AggroSpawns"
+    elseif mob == "Boss" then
+        mobName = "BossSpawns"
+    else
+        mobName = "Made by dah GoobsGoobies Big Grin"
+    end
+    
+    local tweenS = game:GetService("TweenService")
+    local player = game.Players.LocalPlayer
+    local playerHRP = player.Character:WaitForChild("HumanoidRootPart")
+    local playerHumanoid = player.Character:WaitForChild("Humanoid")
+    
+    function farm()
+    while true do
+        if playerHumanoid.Health ~= 0 then
+        for i,v in pairs(workspace.NPCSpawns:GetChildren()) do
+            if v:FindFirstChildWhichIsA("Model") and v.Name == mobName and not v:FindFirstChild("Athlete") then
+                while true do
+                    if v:FindFirstChildWhichIsA("Model") then
+                        local parent = v:FindFirstChildWhichIsA("Model")
+                        if parent:FindFirstChild("Humanoid") then
+                            if parent.Humanoid.Health ~= 0 then
+                            local distance = (playerHRP.Position - parent.HumanoidRootPart.Position).magnitude
+                            local tweenInfo = TweenInfo.new(distance/travelSpeed)
+                            local tweenGoal = {}
+                            tweenGoal.CFrame = parent.HumanoidRootPart.CFrame + parent.HumanoidRootPart.CFrame.LookVector * distanceFromMob
+                            local playTween = tweenS:Create(playerHRP,tweenInfo,tweenGoal)
+                                if distance <= 10 then
+                                    local parentHRP = parent:WaitForChild("HumanoidRootPart")
+                                    if mob == "Human" then
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * distanceFromMob
+                                        wait()
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * ((distanceFromMob * -1) + 2)
+                                        playerHRP.CFrame = CFrame.new(playerHRP.Position,parentHRP.Position)
+                                        else
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * distanceFromMob
+                                    end
+                                else
+                                playTween:Play()
+                                end
+                            wait()
+                            elseif parent.Humanoid.Health == 0 then
+wait(2)
+                                break
+                            end
+                        elseif not parent:FindFirstChild("Humanoid") then
+wait(2)
+                            break
+                        end
+    
+                        elseif not v:FindFirstChildWhichIsA("Model") or v:FindFirstChildWhichIsA("Model").Humanoid.Health == 0 then
+wait(2)
+                            break
+                    end
+            end
+            end
+            end
+            elseif player.Character.Humanoid.Health == 0 then
+wait(2)
+                break
+            end
+        wait()
+        end
+    end
+    
+    farm()
+    end)
+end
+coroutine.wrap(SMNVS_fake_script)()
+local function LSXJJCB_fake_script() -- TextButton_4.LocalScript 
+    local script = Instance.new('LocalScript', TextButton_4)
+
+    script.Parent.MouseButton1Click:Connect(function()
+        local mob = "SCCG"
+    local distanceFromMob = -3 -- How far you want to be behind the mob
+    local travelSpeed = 140 -- higher = faster -- 140 won't kill you, but if you go too high you will die lol
+    
+    --[[
+        Mobs to pick from -
+        -- Ghoul
+        -- Human
+        -- CCG
+        -- SCCG
+        -- Boss
+    ]]--
+    
+    local mobName
+    
+    if mob == "Ghoul" then
+        mobName = "GhoulSpawns"
+    elseif mob == "Human" then
+        mobName = "HumanSpawns"
+    elseif mob == "CCG" then
+        mobName = "CCGSpawns"
+    elseif mob == "SCCG" then
+        mobName = "AggroSpawns"
+    elseif mob == "Boss" then
+        mobName = "BossSpawns"
+    else
+        mobName = "Made by dah GoobsGoobies Big Grin"
+    end
+    
+    local tweenS = game:GetService("TweenService")
+    local player = game.Players.LocalPlayer
+    local playerHRP = player.Character:WaitForChild("HumanoidRootPart")
+    local playerHumanoid = player.Character:WaitForChild("Humanoid")
+    
+    function farm()
+    while true do
+        if playerHumanoid.Health ~= 0 then
+        for i,v in pairs(workspace.NPCSpawns:GetChildren()) do
+            if v:FindFirstChildWhichIsA("Model") and v.Name == mobName and not v:FindFirstChild("Athlete") then
+                while true do
+                    if v:FindFirstChildWhichIsA("Model") then
+                        local parent = v:FindFirstChildWhichIsA("Model")
+                        if parent:FindFirstChild("Humanoid") then
+                            if parent.Humanoid.Health ~= 0 then
+                            local distance = (playerHRP.Position - parent.HumanoidRootPart.Position).magnitude
+                            local tweenInfo = TweenInfo.new(distance/travelSpeed)
+                            local tweenGoal = {}
+                            tweenGoal.CFrame = parent.HumanoidRootPart.CFrame + parent.HumanoidRootPart.CFrame.LookVector * distanceFromMob
+                            local playTween = tweenS:Create(playerHRP,tweenInfo,tweenGoal)
+                                if distance <= 10 then
+                                    local parentHRP = parent:WaitForChild("HumanoidRootPart")
+                                    if mob == "Human" then
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * distanceFromMob
+                                        wait()
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * ((distanceFromMob * -1) + 2)
+                                        playerHRP.CFrame = CFrame.new(playerHRP.Position,parentHRP.Position)
+                                        else
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * distanceFromMob
+                                    end
+                                else
+                                playTween:Play()
+                                end
+                            wait()
+                            elseif parent.Humanoid.Health == 0 then
+wait(2)
+                                break
+                            end
+                        elseif not parent:FindFirstChild("Humanoid") then
+wait(2)
+                            break
+                        end
+    
+                        elseif not v:FindFirstChildWhichIsA("Model") or v:FindFirstChildWhichIsA("Model").Humanoid.Health == 0 then
+wait(2)
+                            break
+                    end
+            end
+            end
+            end
+            elseif player.Character.Humanoid.Health == 0 then
+wait(2)
+                break
+            end
+        wait()
+        end
+    end
+    
+    farm()
+    end)
+end
+coroutine.wrap(LSXJJCB_fake_script)()
+local function NCRI_fake_script() -- TextButton_5.LocalScript 
+    local script = Instance.new('LocalScript', TextButton_5)
+
+    script.Parent.MouseButton1Click:Connect(function()
+        local mob = "Boss"
+    local distanceFromMob = -3 -- How far you want to be behind the mob
+    local travelSpeed = 140 -- higher = faster -- 140 won't kill you, but if you go too high you will die lol
+    
+    --[[
+        Mobs to pick from -
+        -- Ghoul
+        -- Human
+        -- CCG
+        -- SCCG
+        -- Boss
+    ]]--
+    
+    local mobName
+    
+    if mob == "Ghoul" then
+        mobName = "GhoulSpawns"
+    elseif mob == "Human" then
+        mobName = "HumanSpawns"
+    elseif mob == "CCG" then
+        mobName = "CCGSpawns"
+    elseif mob == "SCCG" then
+        mobName = "AggroSpawns"
+    elseif mob == "Boss" then
+        mobName = "BossSpawns"
+    else
+        mobName = "Made by dah GoobsGoobies Big Grin"
+    end
+    
+    local tweenS = game:GetService("TweenService")
+    local player = game.Players.LocalPlayer
+    local playerHRP = player.Character:WaitForChild("HumanoidRootPart")
+    local playerHumanoid = player.Character:WaitForChild("Humanoid")
+    
+    function farm()
+    while true do
+        if playerHumanoid.Health ~= 0 then
+        for i,v in pairs(workspace.NPCSpawns:GetChildren()) do
+            if v:FindFirstChildWhichIsA("Model") and v.Name == mobName and not v:FindFirstChild("Athlete") then
+                while true do
+                    if v:FindFirstChildWhichIsA("Model") then
+                        local parent = v:FindFirstChildWhichIsA("Model")
+                        if parent:FindFirstChild("Humanoid") then
+                            if parent.Humanoid.Health ~= 0 then
+                            local distance = (playerHRP.Position - parent.HumanoidRootPart.Position).magnitude
+                            local tweenInfo = TweenInfo.new(distance/travelSpeed)
+                            local tweenGoal = {}
+                            tweenGoal.CFrame = parent.HumanoidRootPart.CFrame + parent.HumanoidRootPart.CFrame.LookVector * distanceFromMob
+                            local playTween = tweenS:Create(playerHRP,tweenInfo,tweenGoal)
+                                if distance <= 10 then
+                                    local parentHRP = parent:WaitForChild("HumanoidRootPart")
+                                    if mob == "Human" then
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * distanceFromMob
+                                        wait()
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * ((distanceFromMob * -1) + 2)
+                                        playerHRP.CFrame = CFrame.new(playerHRP.Position,parentHRP.Position)
+                                        else
+                                        playerHRP.CFrame = parentHRP.CFrame + parentHRP.CFrame.LookVector * distanceFromMob
+                                    end
+                                else
+                                playTween:Play()
+                                end
+                            wait()
+                            elseif parent.Humanoid.Health == 0 then
+wait(2)
+                                break
+                            end
+                        elseif not parent:FindFirstChild("Humanoid") then
+wait(2)
+                            break
+                        end
+    
+                        elseif not v:FindFirstChildWhichIsA("Model") or v:FindFirstChildWhichIsA("Model").Humanoid.Health == 0 then
+wait(2)
+                            break
+                    end
+            end
+            end
+            end
+            elseif player.Character.Humanoid.Health == 0 then
+wait(2)
+                break
+            end
+        wait()
+        end
+    end
+    
+    farm()
+    end)
+end
+coroutine.wrap(NCRI_fake_script)()
+local function EHVD_fake_script() -- TextButton_6.LocalScript 
+    local script = Instance.new('LocalScript', TextButton_6)
+
+    script.Parent.MouseButton1Click:Connect(function()
+     game.Players.LocalPlayer.Character.Humanoid.Health = 0
+    end)
+end
+coroutine.wrap(EHVD_fake_script)()
