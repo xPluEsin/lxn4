@@ -1,0 +1,12 @@
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character:findFirstChildOfClass("Humanoid"):ChangeState(11)
+end)
+while wait() do
+for i,v in pairs(game.workspace.Storage.Coins:GetDescendants()) do
+if v.Name == "CoinClone" or v.Name == "CoinBox" or v.Name == "Balloon" then
+     pl.CFrame = v.CFrame
+ wait(0.1)
+ end
+ end
+ end
