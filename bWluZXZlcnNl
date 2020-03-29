@@ -1,0 +1,29 @@
+workspace.FallenPartsDestroyHeight = -1000
+while wait() do
+if game.Players.LocalPlayer.Character:findFirstChild("HumanoidRootPart") then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(50000,100,50000)
+end
+local stages = workspace.Stages:getChildren()
+for i=1,#stages do
+stages[i].SpawnLocation.CanCollide = false
+if game.Players.LocalPlayer.Character:findFirstChild("HumanoidRootPart") then
+stages[i].SpawnLocation.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+spawn(function()
+local coins = workspace.Coins:getChildren()
+for i=1,#coins do
+local coinparts = coins[i]:getChildren()
+for i=1,#coinparts do
+if coinparts[i]:findFirstChild("Sound") then
+coinparts[i].Sound.Volume = 0
+end
+if game.Players.LocalPlayer.Character:findFirstChild("HumanoidRootPart") then
+coinparts[i].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end
+end)
+
+end
+game.ReplicatedStorage.Remotes.Rebirth:InvokeServer()
+end
