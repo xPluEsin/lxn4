@@ -1,0 +1,134 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local xprotecty = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+xprotecty.Name = "xprotecty"
+xprotecty.Parent = game.CoreGui
+xprotecty.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageLabel.Parent = xprotecty
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.417176247, 0, 0.636189163, 0)
+ImageLabel.Size = UDim2.new(0.164744645, 0, 0.24570024, 0)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=4832856487"
+ImageLabel.ImageTransparency = 1.000
+
+TextLabel.Parent = xprotecty
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.373146623, 0, 0.436117917, 0)
+TextLabel.Size = UDim2.new(0.331136733, 0, 0.12776418, 0)
+TextLabel.Font = Enum.Font.Cartoon
+TextLabel.Text = "txmsz"
+TextLabel.TextColor3 = Color3.fromRGB(149, 186, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextTransparency = 1.000
+TextLabel.TextWrapped = true
+
+-- Scripts:
+
+local function OWRNZQF_fake_script() -- xprotecty.Script 
+	local script = Instance.new('Script', xprotecty)
+
+	script.Parent.ImageLabel.ImageTransparency = 1
+	wait(0.1)
+	script.Parent.ImageLabel.ImageTransparency = 0.9
+	wait(0.1)
+	script.Parent.ImageLabel.ImageTransparency = 0.8
+	wait(0.1)
+	script.Parent.ImageLabel.ImageTransparency = 0.7
+	wait(0.1)
+	script.Parent.ImageLabel:TweenPosition(UDim2.new(0.418, 0,0.377, 0), "Out", "Quint", 1, true)
+	script.Parent.ImageLabel.ImageTransparency = 0.6
+	wait(0.1)
+	script.Parent.ImageLabel.ImageTransparency = 0.5
+	wait(0.1)
+	script.Parent.ImageLabel.ImageTransparency = 0.4
+	wait(0.1)
+	script.Parent.ImageLabel.ImageTransparency = 0.3
+	wait(0.1)
+	script.Parent.ImageLabel.ImageTransparency = 0.2
+	wait(0.1)
+	script.Parent.ImageLabel.ImageTransparency = 0.1
+	wait(0.1)
+	script.Parent.ImageLabel.ImageTransparency = 0
+	
+	
+	wait(0.5)
+	script.Parent.ImageLabel:TweenPosition(UDim2.new(0.294, 0,0.377, 0), "Out", "Quint", 1, true)
+	--kes sesini puuu--
+	script.Parent.TextLabel.TextTransparency = 1
+	script.Parent.TextLabel.TextStrokeTransparency = 1
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.9
+	script.Parent.TextLabel.TextStrokeTransparency = 0.9
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.8
+	script.Parent.TextLabel.TextStrokeTransparency = 0.9
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.7
+	script.Parent.TextLabel.TextStrokeTransparency = 0.7
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.6
+	script.Parent.TextLabel.TextStrokeTransparency = 0.6
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.5
+	script.Parent.TextLabel.TextStrokeTransparency = 0.5
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.4
+	script.Parent.TextLabel.TextStrokeTransparency = 0.4
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.3
+	script.Parent.TextLabel.TextStrokeTransparency = 0.3
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.2
+	script.Parent.TextLabel.TextStrokeTransparency = 0.2
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.1
+	script.Parent.TextLabel.TextStrokeTransparency = 0.1
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0
+	script.Parent.TextLabel.TextStrokeTransparency = 0
+	wait(2)
+	script.Parent.TextLabel.TextTransparency = 0.1
+	script.Parent.TextLabel.TextStrokeTransparency = 0.1
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.2
+	script.Parent.TextLabel.TextStrokeTransparency = 0.2
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.3
+	script.Parent.TextLabel.TextStrokeTransparency = 0.3
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.4
+	script.Parent.TextLabel.TextStrokeTransparency = 0.4
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.5
+	script.Parent.TextLabel.TextStrokeTransparency = 0.5
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.6
+	script.Parent.TextLabel.TextStrokeTransparency = 0.6
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.7
+	script.Parent.TextLabel.TextStrokeTransparency = 0.7
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.8
+	script.Parent.TextLabel.TextStrokeTransparency = 0.8
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 0.9
+	script.Parent.TextLabel.TextStrokeTransparency = 0.9
+	wait(0.1)
+	script.Parent.TextLabel.TextTransparency = 1
+	script.Parent.TextLabel.TextStrokeTransparency = 1
+	wait(0.1)
+	script.Parent.ImageLabel:TweenPosition(UDim2.new(1.418, 0,0.377, 0), "Out", "Quint", 1, true)
+end
+coroutine.wrap(OWRNZQF_fake_script)()
