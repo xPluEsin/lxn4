@@ -1,0 +1,2561 @@
+-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local ScreenGui = Instance.new("ScreenGui")
+local Earth = Instance.new("Frame")
+local EARTHMAIN = Instance.new("TextButton")
+local ESCP = Instance.new("Frame")
+local EARTHU = Instance.new("TextButton")
+local XPFARM = Instance.new("TextButton")
+local SOON = Instance.new("TextButton")
+local EARTH = Instance.new("TextLabel")
+local EARTH2 = Instance.new("TextLabel")
+local XE = Instance.new("TextButton")
+local ToyLand = Instance.new("Frame")
+local TOYMAIN = Instance.new("TextButton")
+local TSCP = Instance.new("Frame")
+local TOYUNLOCK = Instance.new("TextButton")
+local BRICKFARM = Instance.new("TextButton")
+local EGGS = Instance.new("TextButton")
+local TOY = Instance.new("TextLabel")
+local TOY2 = Instance.new("TextLabel")
+local XT = Instance.new("TextButton")
+local CandyLand = Instance.new("Frame")
+local CANDYMAIN = Instance.new("TextButton")
+local CSCP = Instance.new("Frame")
+local CANDYUNLOCK = Instance.new("TextButton")
+local CANDYFARM = Instance.new("TextButton")
+local EGGSC = Instance.new("TextButton")
+local CANDY = Instance.new("TextLabel")
+local CANDY2 = Instance.new("TextLabel")
+local XCL = Instance.new("TextButton")
+local Credits = Instance.new("Frame")
+local CREDITSMAIN = Instance.new("TextButton")
+local CREDITSINFO = Instance.new("Frame")
+local CREDITS2 = Instance.new("TextLabel")
+local CREDITS = Instance.new("TextLabel")
+local XC = Instance.new("TextButton")
+local CREDITSTO = Instance.new("TextLabel")
+local CRED = Instance.new("TextLabel")
+local CREDI = Instance.new("TextLabel")
+--Properties:
+ScreenGui.Parent = game.CoreGui
+
+CSCP.Draggable = true
+CREDITSINFO.Draggable = true
+ESCP.Draggable = true
+TSCP.Draggable = true
+CSCP.Active = true
+CREDITSINFO.Active = true
+ESCP.Active = true
+TSCP.Active = true
+
+Earth.Name = "Earth"
+Earth.Parent = ScreenGui
+Earth.BackgroundColor3 = Color3.new(1, 1, 1)
+Earth.Position = UDim2.new(0, 0, 0.418918908, 0)
+Earth.Size = UDim2.new(0, 77, 0, 65)
+Earth.Style = Enum.FrameStyle.DropShadow
+
+EARTHMAIN.Name = "EARTHMAIN"
+EARTHMAIN.Parent = Earth
+EARTHMAIN.BackgroundColor3 = Color3.new(1, 1, 1)
+EARTHMAIN.Position = UDim2.new(-0.0541406646, 0, 0.17796348, 0)
+EARTHMAIN.Size = UDim2.new(0, 66, 0, 31)
+EARTHMAIN.SizeConstraint = Enum.SizeConstraint.RelativeYY
+EARTHMAIN.Style = Enum.ButtonStyle.RobloxRoundButton
+EARTHMAIN.Font = Enum.Font.ArialBold
+EARTHMAIN.Text = "EARTH"
+EARTHMAIN.TextColor3 = Color3.new(0, 0, 0)
+EARTHMAIN.TextSize = 14
+EARTHMAIN.MouseButton1Click:connect(function()
+	ESCP.Visible = true
+end)
+
+ESCP.Name = "ESCP"
+ESCP.Parent = Earth
+ESCP.BackgroundColor3 = Color3.new(0.12549, 0.686275, 0.498039)
+ESCP.Position = UDim2.new(2.24388599, 0, -0.155266389, 0)
+ESCP.Size = UDim2.new(0, 200, 0, 297)
+ESCP.Visible = false
+ESCP.Style = Enum.FrameStyle.DropShadow
+
+EARTHU.Name = "EARTHU"
+EARTHU.Parent = ESCP
+EARTHU.BackgroundColor3 = Color3.new(1, 1, 1)
+EARTHU.Position = UDim2.new(-0.0449999981, 0, 0.75757575, 0)
+EARTHU.Size = UDim2.new(0, 200, 0, 50)
+EARTHU.Style = Enum.ButtonStyle.RobloxRoundButton
+EARTHU.Font = Enum.Font.ArialBold
+EARTHU.Text = "EARTH UNLOCK"
+EARTHU.TextColor3 = Color3.new(0, 0, 0)
+EARTHU.TextSize = 14
+EARTHU.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace.FloatingIslands.Overworld:GetChildren()) do 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Collision.CFrame 
+    wait(1)
+end
+end)
+
+XPFARM.Name = "XPFARM"
+XPFARM.Parent = ESCP
+XPFARM.BackgroundColor3 = Color3.new(1, 1, 1)
+XPFARM.Position = UDim2.new(-0.0449999981, 0, 0.0606060624, 0)
+XPFARM.Size = UDim2.new(0, 200, 0, 50)
+XPFARM.Style = Enum.ButtonStyle.RobloxRoundButton
+XPFARM.Font = Enum.Font.ArialBold
+XPFARM.Text = "XPFARM"
+XPFARM.TextColor3 = Color3.new(0, 0, 0)
+XPFARM.TextSize = 14
+XPFARM.MouseButton1Click:connect(function()
+	
+for i , v in pairs(game.Workspace.FloatingIslands.Overworld["XP Island"]:GetChildren()) do 
+    if v.ClassName == "Model" then 
+        for i , b in pairs(v:GetChildren()) do 
+            if b.ClassName ~= "Model" then 
+                if b.ClassName ~= "BillboardGui" then
+                    b.CanCollide = false
+                end
+            end
+            if b.ClassName == "Model" then 
+                for i , c in pairs(b:GetChildren()) do
+                    if c.ClassName ~= "Model" then 
+                        c.CanCollide = false
+                    end 
+                    if c.ClassName == "Model" then 
+                        for i , d in pairs(c:GetChildren()) do 
+                            if d.ClassName ~= "Model" then
+                                d.CanCollide = false
+                            end
+                    end
+                end    
+            end
+        end
+    end
+end
+end
+for i , v in pairs(game.Workspace.FloatingIslands.Overworld["XP Island"].Decore.Shrine.Decore.Model:GetChildren()) do 
+    if v.ClassName ~= "Model" then
+        v.CanCollide = false
+    else
+        for i,b in pairs(v:GetChildren()) do 
+            b.CanCollide = false
+    end
+    end
+
+end
+for i , v in pairs(game.Workspace.Eggs:GetChildren()) do 
+    for i , b in pairs(v:GetChildren()) do 
+        if b.ClassName == "Model" then 
+            for i , c in pairs(b:GetChildren()) do 
+                if c.ClassName == "Model" then 
+                    for i , as in pairs(c:GetChildren()) do
+                        if as.ClassName ~= "Script" then 
+                            as.CanCollide = false
+                        end
+                    end
+                else
+                    if c.ClassName ~= "StringValue" then
+                        c.CanCollide = false
+                    end
+                end
+            end
+        else
+            b.CanCollide = false
+        end
+    end
+end
+
+    
+while wait() do 
+local hum = game:GetService("Players").LocalPlayer.Character.Humanoid
+for i , v in pairs(game.Workspace.Pickups:GetChildren()) do 
+if v.ClassName ~= "Model" then
+if game.Players.LocalPlayer:DistanceFromCharacter(v.Position) < 100 then 
+hum:MoveTo(v.Position)
+hum.MoveToFinished:wait()
+end
+end
+end
+end
+end)
+
+SOON.Name = "SOON"
+SOON.Parent = ESCP
+SOON.BackgroundColor3 = Color3.new(1, 1, 1)
+SOON.Position = UDim2.new(-0.0449999981, 0, 0.404040396, 0)
+SOON.Size = UDim2.new(0, 200, 0, 50)
+SOON.Style = Enum.ButtonStyle.RobloxRoundButton
+SOON.Font = Enum.Font.ArialBold
+SOON.Text = "GEM GEMIE AUTOFARM"
+SOON.TextColor3 = Color3.new(0, 0, 0)
+SOON.TextSize = 14
+SOON.MouseButton1Click:connect(function()
+    while wait(1) do
+local function GetObject()
+        local least = math.huge
+        local Object    
+        for _,Stuff in pairs (workspace:GetDescendants()) do
+            if Stuff:IsA("MeshPart") then
+                if Stuff.MeshId == "rbxassetid://2542638609" or Stuff.MeshId == "rbxassetid://2542638609" or Stuff.MeshId == "rbxassetid://2558194071" or Stuff.MeshId == "rbxassetid://2558179804" then
+                    local Distance = game.Players.LocalPlayer:DistanceFromCharacter(Stuff.Position)
+                    if Distance < least and Distance < 100 then
+                        least = Distance
+                        Object = Stuff
+                    end
+                end
+            end
+        end
+        return Object
+    end
+  
+       if GetObject() ~= nil then game.Players.LocalPlayer.Character.Humanoid:MoveTo(GetObject().Position)
+    end
+    
+    local VirtualUser=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+    end
+end)
+
+EARTH.Name = "EARTH"
+EARTH.Parent = ESCP
+EARTH.BackgroundColor3 = Color3.new(0, 0, 0)
+EARTH.Position = UDim2.new(-0.0509999879, 0, -0.0844811797, 0)
+EARTH.Size = UDim2.new(0, 201, 0, 22)
+EARTH.Font = Enum.Font.ArialBold
+EARTH.Text = "EARTH SCRIPTS"
+EARTH.TextColor3 = Color3.new(1, 1, 1)
+EARTH.TextSize = 14
+
+EARTH2.Name = "EARTH2"
+EARTH2.Parent = ESCP
+EARTH2.BackgroundColor3 = Color3.new(0, 0, 0)
+EARTH2.Position = UDim2.new(-0.0509999879, 0, 0.966023862, 0)
+EARTH2.Size = UDim2.new(0, 201, 0, 22)
+EARTH2.Font = Enum.Font.ArialBold
+EARTH2.Text = "EARTH SCRIPTS"
+EARTH2.TextColor3 = Color3.new(1, 1, 1)
+EARTH2.TextSize = 14
+
+XE.Name = "XE"
+XE.Parent = ESCP
+XE.BackgroundColor3 = Color3.new(0, 0, 0)
+XE.Position = UDim2.new(0.898800254, 0, -0.0823158771, 0)
+XE.Size = UDim2.new(0, 20, 0, 21)
+XE.Font = Enum.Font.ArialBold
+XE.Text = "X"
+XE.TextColor3 = Color3.new(1, 1, 1)
+XE.TextSize = 14
+XE.MouseButton1Click:connect(function()
+	ESCP.Visible = false
+end)
+
+ToyLand.Name = "ToyLand"
+ToyLand.Parent = ScreenGui
+ToyLand.BackgroundColor3 = Color3.new(1, 1, 1)
+ToyLand.Position = UDim2.new(0, 0, 0.585995078, 0)
+ToyLand.Size = UDim2.new(0, 77, 0, 64)
+ToyLand.Style = Enum.FrameStyle.DropShadow
+
+TOYMAIN.Name = "TOYMAIN"
+TOYMAIN.Parent = ToyLand
+TOYMAIN.BackgroundColor3 = Color3.new(1, 1, 1)
+TOYMAIN.Position = UDim2.new(-0.0541406646, 0, 0.17796348, 0)
+TOYMAIN.Size = UDim2.new(0, 66, 0, 31)
+TOYMAIN.SizeConstraint = Enum.SizeConstraint.RelativeYY
+TOYMAIN.Style = Enum.ButtonStyle.RobloxRoundButton
+TOYMAIN.Font = Enum.Font.ArialBold
+TOYMAIN.Text = "TOY LAND"
+TOYMAIN.TextColor3 = Color3.new(0, 0, 0)
+TOYMAIN.TextSize = 12
+TOYMAIN.MouseButton1Click:connect(function()
+	TSCP.Visible = true 
+end)
+
+TSCP.Name = "TSCP"
+TSCP.Parent = ToyLand
+TSCP.BackgroundColor3 = Color3.new(0.12549, 0.686275, 0.498039)
+TSCP.Position = UDim2.new(2.73739243, 0, -2.99901628, 0)
+TSCP.Size = UDim2.new(0, 200, 0, 297)
+TSCP.Visible = false
+TSCP.Style = Enum.FrameStyle.DropShadow
+
+TOYUNLOCK.Name = "TOYUNLOCK"
+TOYUNLOCK.Parent = TSCP
+TOYUNLOCK.BackgroundColor3 = Color3.new(1, 1, 1)
+TOYUNLOCK.Position = UDim2.new(-0.0449999981, 0, 0.75757575, 0)
+TOYUNLOCK.Size = UDim2.new(0, 200, 0, 50)
+TOYUNLOCK.Style = Enum.ButtonStyle.RobloxRoundButton
+TOYUNLOCK.Font = Enum.Font.ArialBold
+TOYUNLOCK.Text = "TOY LAND UNLOCK"
+TOYUNLOCK.TextColor3 = Color3.new(0, 0, 0)
+TOYUNLOCK.TextSize = 14
+TOYUNLOCK.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace.FloatingIslands["Toy Land"]:GetChildren()) do 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Collision.CFrame 
+    wait(1)
+end
+end)
+
+BRICKFARM.Name = "BRICKFARM"
+BRICKFARM.Parent = TSCP
+BRICKFARM.BackgroundColor3 = Color3.new(1, 1, 1)
+BRICKFARM.Position = UDim2.new(-0.0449999981, 0, 0.0606060624, 0)
+BRICKFARM.Size = UDim2.new(0, 200, 0, 50)
+BRICKFARM.Style = Enum.ButtonStyle.RobloxRoundButton
+BRICKFARM.Font = Enum.Font.ArialBold
+BRICKFARM.Text = "BRICK FARM"
+BRICKFARM.TextColor3 = Color3.new(0, 0, 0)
+BRICKFARM.TextSize = 14
+BRICKFARM.MouseButton1Click:connect(function()
+	-- This is made for the last toy land area
+for i , v in pairs(game.Workspace.FloatingIslands["Toy Land"]["Treasure Isle"]:GetChildren()) do
+    if v.ClassName == "Model" then
+        for i , b in pairs(v:GetChildren()) do
+            if b.ClassName ~= "Model" then
+                if b.ClassName ~= "BillboardGui" then
+                    b.CanCollide = false
+                end
+            end
+            if b.ClassName == "Model" then
+                for i , c in pairs(b:GetChildren()) do
+                    if c.ClassName ~= "Model" then
+                        c.CanCollide = false
+                    end
+                    if c.ClassName == "Model" then
+                        for i , d in pairs(c:GetChildren()) do
+                            if d.ClassName ~= "Model" then
+                                d.CanCollide = false
+                            end
+                    end
+                end    
+            end
+        end
+    end
+end
+end
+for i , v in pairs(game.Workspace.FloatingIslands["Toy Land"]["Treasure Isle"].Decore.Shrine.Decore.Mountains:GetChildren()) do
+    if v.ClassName ~= "Model" then
+        v.CanCollide = false
+    else
+        for i,b in pairs(v:GetChildren()) do
+            b.CanCollide = false
+    end
+    end
+ 
+end
+for i , v in pairs(game.Workspace.Eggs:GetChildren()) do
+    for i , b in pairs(v:GetChildren()) do
+        if b.ClassName == "Model" then
+            for i , c in pairs(b:GetChildren()) do
+                if c.ClassName == "Model" then
+                    for i , as in pairs(c:GetChildren()) do
+                        if as.ClassName ~= "Script" then
+                            as.CanCollide = false
+                        end
+                    end
+                else
+                    if c.ClassName ~= "StringValue" then
+                        c.CanCollide = false
+                    end
+                end
+            end
+        else
+            b.CanCollide = false
+        end
+    end
+end
+ 
+   
+while wait() do
+local hum = game:GetService("Players").LocalPlayer.Character.Humanoid
+for i , v in pairs(game.Workspace.Pickups:GetChildren()) do
+if v.ClassName ~= "Model" then
+if game.Players.LocalPlayer:DistanceFromCharacter(v.Position) < 100 then
+hum:MoveTo(v.Position)
+hum.MoveToFinished:wait()
+end
+end
+end
+end
+end)
+
+EGGS.Name = "EGGS"
+EGGS.Parent = TSCP
+EGGS.BackgroundColor3 = Color3.new(1, 1, 1)
+EGGS.Position = UDim2.new(-0.0449999981, 0, 0.404040396, 0)
+EGGS.Size = UDim2.new(0, 200, 0, 50)
+EGGS.Style = Enum.ButtonStyle.RobloxRoundButton
+EGGS.Font = Enum.Font.ArialBold
+EGGS.Text = "AUTO OPEN & DELETE EGGS"
+EGGS.TextColor3 = Color3.new(0, 0, 0)
+EGGS.TextSize = 14
+EGGS.MouseButton1Click:connect(function()
+	--[[ #Credits
+	#Developer: Titanium Developer#9736
+	#Discord Server: https://discord.gg/6qcVZcU
+	#Update 2 [2/5/2019]:
+		* Auto Bubble blower is faster if you own the gamepass "Fast Chewer"
+		* Fixed performance issues and crashing issue
+		* I ran the script constantly opening eggs for 11 hours without any issue
+	#Update [1/15/2019]:
+		#Credit: Stevee#7213
+		#1) Remade UI and added settings to UI
+		#2) Automatically determine if the player owns Triple Egg Pass ("Multi Hatch") and updates if bought in game
+		#3) Supports the new crate update and deletes the hats that aren't wanted according to users settings.
+		#4) Supports anti-lag by using "faster open"
+]]
+
+--[[
+	!! NOTE: CLICK "COMMON EGG" TO SELECT THE EGG OR CRATE YOU WANT TO OPEN
+	SEND ANY BUGS TO Stevee#7213
+	UPDATES WILL BE POSTED ON THIS EXACT PASTEBIN THREAD
+]]
+
+-- Instances:
+local BubbleGUI = Instance.new("ScreenGui")
+local Main = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Outline = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local Outline2 = Instance.new("ImageLabel")
+local ChooseEgg = Instance.new("ImageButton")
+local Object = Instance.new("TextLabel")
+local AutoOpenerButton = Instance.new("ImageButton")
+local AutoBubbleBlowerText = Instance.new("TextLabel")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local TemplateButton = Instance.new("TextButton")
+local AutoBlowerDesc = Instance.new("TextLabel")
+local AutoBubbleBlowerTitle = Instance.new("TextLabel")
+local AutoEggDesc = Instance.new("TextLabel")
+local AutoPetTitle = Instance.new("TextLabel")
+local AutoBlowBubble = Instance.new("ImageButton")
+local AutoBubbleBlowerText_2 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local EggScroller = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local Settings = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local Outline_2 = Instance.new("ImageLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local Outline2_2 = Instance.new("ImageLabel")
+local TripleEgg = Instance.new("TextLabel")
+local TripleEggStatus = Instance.new("TextLabel")
+local KeepEpic = Instance.new("TextLabel")
+local KeepLegendary = Instance.new("TextLabel")
+local AutoBlowBubble_2 = Instance.new("ImageButton")
+local AutoBubbleBlowerText_3 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local AutoBlowBubble_3 = Instance.new("ImageButton")
+local AutoBubbleBlowerText_4 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local AutoEggDesc_2 = Instance.new("TextLabel")
+local FastOpenLabel = Instance.new("TextLabel")
+local FastOpenButton = Instance.new("ImageButton")
+local FastOpenButtonText = Instance.new("TextLabel")
+local FastOpenUIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Log = Instance.new("ImageButton")
+local LogText = Instance.new("TextLabel")
+local _VERSION = 2
+--Properties:
+BubbleGUI.Name = "BubbleGUI"
+BubbleGUI.Parent = game.CoreGui
+Main.Name = "Main"
+Main.Parent = BubbleGUI
+Main.BackgroundTransparency = 1
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.324999988, 0, 0.224999994, 0)
+Main.Size = UDim2.new(0.35, 0, 0.55, 0)
+Main.ZIndex = 2
+Main.Image = "rbxassetid://1285673399"
+Main.ImageColor3 = Color3.new(0.2, 0.505882, 1)
+Main.ScaleType = Enum.ScaleType.Slice
+Main.SliceCenter = Rect.new(8, 8, 247, 247)
+Main.Visible = false
+
+UIAspectRatioConstraint.Parent = Main
+UIAspectRatioConstraint.DominantAxis = Enum.DominantAxis.Height
+
+Outline.Name = "Outline"
+Outline.Parent = Main
+Outline.BackgroundTransparency = 1
+Outline.BorderSizePixel = 0
+Outline.Position = UDim2.new(0, 0, 0.0199999996, 0)
+Outline.Size = UDim2.new(1, 0, 1, 0)
+Outline.Image = "rbxassetid://1285673399"
+Outline.ImageColor3 = Color3.new(0.137255, 0.356863, 0.701961)
+Outline.ScaleType = Enum.ScaleType.Slice
+Outline.SliceCenter = Rect.new(8, 8, 247, 247)
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.0749999881, 0, -0.0700000003, 0)
+TextLabel.Size = UDim2.new(0.85, 0, 0.15, 0)
+TextLabel.ZIndex = 2
+TextLabel.Font = Enum.Font.Cartoon
+TextLabel.Text = string.format(" AUTO [V.0.%d]", _VERSION) --"AUTO [V.0.1]"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextStrokeTransparency = 0.80000001192093
+TextLabel.TextWrapped = true
+
+Outline2.Name = "Outline2"
+Outline2.Parent = Main
+Outline2.BackgroundTransparency = 1
+Outline2.BorderSizePixel = 0
+Outline2.Position = UDim2.new(0.0749999881, 0, -0.0599999987, 0)
+Outline2.Size = UDim2.new(0.850000024, 0, 1, 0)
+Outline2.Image = "rbxassetid://1285673399"
+Outline2.ImageColor3 = Color3.new(0.2, 0.505882, 1)
+Outline2.ScaleType = Enum.ScaleType.Slice
+Outline2.SliceCenter = Rect.new(8, 8, 247, 247)
+
+ChooseEgg.Name = "ChooseEgg"
+ChooseEgg.Parent = Main
+ChooseEgg.BackgroundColor3 = Color3.new(1, 1, 1)
+ChooseEgg.BackgroundTransparency = 1
+ChooseEgg.Position = UDim2.new(0.099999994, 0, 0.699999988, 0)
+ChooseEgg.Size = UDim2.new(0.800000012, 0, 0.119999997, 0)
+ChooseEgg.ZIndex = 3
+ChooseEgg.Image = "rbxassetid://1285673399"
+ChooseEgg.ImageColor3 = Color3.new(0.137255, 0.356863, 0.701961)
+ChooseEgg.ScaleType = Enum.ScaleType.Slice
+ChooseEgg.SliceCenter = Rect.new(8, 8, 247, 247)
+
+Object.Name = "Object"
+Object.Parent = ChooseEgg
+Object.BackgroundColor3 = Color3.new(1, 1, 1)
+Object.BackgroundTransparency = 1
+Object.Position = UDim2.new(0.025000006, 0, 0.0500000119, 0)
+Object.Size = UDim2.new(0.949999988, 0, 0.899999976, 0)
+Object.ZIndex = 3
+Object.Font = Enum.Font.Cartoon
+Object.Text = "Common Egg"
+Object.TextColor3 = Color3.new(1, 1, 1)
+Object.TextScaled = true
+Object.TextSize = 14
+Object.TextStrokeTransparency = 0.80000001192093
+Object.TextWrapped = true
+
+AutoOpenerButton.Name = "AutoOpenerButton"
+AutoOpenerButton.Parent = Main
+AutoOpenerButton.AnchorPoint = Vector2.new(0, 1)
+AutoOpenerButton.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+AutoOpenerButton.BackgroundTransparency = 1
+AutoOpenerButton.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoOpenerButton.Position = UDim2.new(0.349999994, 0, 0.949999988, 0)
+AutoOpenerButton.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+AutoOpenerButton.ZIndex = 2
+AutoOpenerButton.Image = "rbxassetid://1511196841"
+AutoOpenerButton.ImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+AutoOpenerButton.ScaleType = Enum.ScaleType.Slice
+AutoOpenerButton.SliceCenter = Rect.new(9, 11, 91, 89)
+
+AutoBubbleBlowerText.Name = "AutoBubbleBlowerText"
+AutoBubbleBlowerText.Parent = AutoOpenerButton
+AutoBubbleBlowerText.AnchorPoint = Vector2.new(0.5, 0.5)
+AutoBubbleBlowerText.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText.BackgroundTransparency = 1
+AutoBubbleBlowerText.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBubbleBlowerText.Position = UDim2.new(0.5, 0, 0.5, -2)
+AutoBubbleBlowerText.Size = UDim2.new(0.899999976, 0, 0.850000024, 0)
+AutoBubbleBlowerText.ZIndex = 2
+AutoBubbleBlowerText.Font = Enum.Font.Cartoon
+AutoBubbleBlowerText.Text = "DISABLED"
+AutoBubbleBlowerText.TextColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText.TextScaled = true
+AutoBubbleBlowerText.TextSize = 14
+AutoBubbleBlowerText.TextStrokeTransparency = 0.75
+AutoBubbleBlowerText.TextWrapped = true
+
+UIAspectRatioConstraint_2.Parent = AutoOpenerButton
+UIAspectRatioConstraint_2.AspectRatio = 3
+
+TemplateButton.Name = "TemplateButton"
+TemplateButton.Parent = Main
+TemplateButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TemplateButton.BackgroundTransparency = 1
+TemplateButton.Position = UDim2.new(8, 0, 0.100000001, 0)
+TemplateButton.Size = UDim2.new(0.800000012, 0, 0.045, 0)
+TemplateButton.Visible = false
+TemplateButton.ZIndex = 5
+TemplateButton.Font = Enum.Font.Cartoon
+TemplateButton.TextColor3 = Color3.new(1, 1, 1)
+TemplateButton.TextScaled = true
+TemplateButton.TextSize = 14
+TemplateButton.TextStrokeTransparency = 0.80000001192093
+TemplateButton.TextWrapped = true
+
+AutoBlowerDesc.Name = "AutoBlowerDesc"
+AutoBlowerDesc.Parent = Main
+AutoBlowerDesc.AnchorPoint = Vector2.new(1, 0.5)
+AutoBlowerDesc.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoBlowerDesc.BackgroundTransparency = 1
+AutoBlowerDesc.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBlowerDesc.Position = UDim2.new(0.967238188, 0, 0.25, 0)
+AutoBlowerDesc.Size = UDim2.new(0.92200011, 0, 0.115160845, 0)
+AutoBlowerDesc.ZIndex = 2
+AutoBlowerDesc.Font = Enum.Font.Arial
+AutoBlowerDesc.Text = "Automatically blows and sells bubbles for you."
+AutoBlowerDesc.TextColor3 = Color3.new(1, 1, 1)
+AutoBlowerDesc.TextScaled = true
+AutoBlowerDesc.TextSize = 14
+AutoBlowerDesc.TextStrokeTransparency = 0.75
+AutoBlowerDesc.TextWrapped = true
+
+AutoBubbleBlowerTitle.Name = "AutoBubbleBlowerTitle"
+AutoBubbleBlowerTitle.Parent = Main
+AutoBubbleBlowerTitle.AnchorPoint = Vector2.new(1, 0.5)
+AutoBubbleBlowerTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerTitle.BackgroundTransparency = 1
+AutoBubbleBlowerTitle.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBubbleBlowerTitle.Position = UDim2.new(0.781523764, 0, 0.150000006, 0)
+AutoBubbleBlowerTitle.Size = UDim2.new(0.529142916, 0, 0.0897916555, 0)
+AutoBubbleBlowerTitle.ZIndex = 2
+AutoBubbleBlowerTitle.Font = Enum.Font.ArialBold
+AutoBubbleBlowerTitle.Text = "Auto Bubble Blower"
+AutoBubbleBlowerTitle.TextColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerTitle.TextScaled = true
+AutoBubbleBlowerTitle.TextSize = 14
+AutoBubbleBlowerTitle.TextStrokeTransparency = 0.75
+AutoBubbleBlowerTitle.TextWrapped = true
+AutoBubbleBlowerTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+AutoEggDesc.Name = "AutoEggDesc"
+AutoEggDesc.Parent = Main
+AutoEggDesc.AnchorPoint = Vector2.new(1, 0.5)
+AutoEggDesc.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoEggDesc.BackgroundTransparency = 1
+AutoEggDesc.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoEggDesc.Position = UDim2.new(0.967238188, 0, 0.600000024, 2)
+AutoEggDesc.Size = UDim2.new(0.92200017, 0, 0.137250707, 0)
+AutoEggDesc.ZIndex = 2
+AutoEggDesc.Font = Enum.Font.Arial
+AutoEggDesc.Text = "Press \"Common Egg\" to select the crate or egg you want to open. This automatically purchases eggs / crates and deletes the ones you don't want!"
+AutoEggDesc.TextColor3 = Color3.new(1, 1, 1)
+AutoEggDesc.TextScaled = true
+AutoEggDesc.TextSize = 14
+AutoEggDesc.TextStrokeTransparency = 0.75
+AutoEggDesc.TextWrapped = true
+
+AutoPetTitle.Name = "AutoPetTitle"
+AutoPetTitle.Parent = Main
+AutoPetTitle.AnchorPoint = Vector2.new(1, 0.5)
+AutoPetTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoPetTitle.BackgroundTransparency = 1
+AutoPetTitle.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoPetTitle.Position = UDim2.new(0.913214386, 0, 0.5, -4)
+AutoPetTitle.Size = UDim2.new(0.800345302, 0, 0.0897916555, 0)
+AutoPetTitle.ZIndex = 2
+AutoPetTitle.Font = Enum.Font.ArialBold
+AutoPetTitle.Text = "Auto Pet / Hat Purchase/Deletion"
+AutoPetTitle.TextColor3 = Color3.new(1, 1, 1)
+AutoPetTitle.TextScaled = true
+AutoPetTitle.TextSize = 14
+AutoPetTitle.TextStrokeTransparency = 0.75
+AutoPetTitle.TextWrapped = true
+
+AutoBlowBubble.Name = "AutoBlowBubble"
+AutoBlowBubble.Parent = Main
+AutoBlowBubble.AnchorPoint = Vector2.new(0, 1)
+AutoBlowBubble.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+AutoBlowBubble.BackgroundTransparency = 1
+AutoBlowBubble.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBlowBubble.Position = UDim2.new(0.349999994, 0, 0.419999987, 0)
+AutoBlowBubble.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+AutoBlowBubble.ZIndex = 2
+AutoBlowBubble.Image = "rbxassetid://1511196841"
+AutoBlowBubble.ImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+AutoBlowBubble.ScaleType = Enum.ScaleType.Slice
+AutoBlowBubble.SliceCenter = Rect.new(9, 11, 91, 89)
+
+AutoBubbleBlowerText_2.Name = "AutoBubbleBlowerText"
+AutoBubbleBlowerText_2.Parent = AutoBlowBubble
+AutoBubbleBlowerText_2.AnchorPoint = Vector2.new(0.5, 0.5)
+AutoBubbleBlowerText_2.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText_2.BackgroundTransparency = 1
+AutoBubbleBlowerText_2.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBubbleBlowerText_2.Position = UDim2.new(0.5, 0, 0.5, -2)
+AutoBubbleBlowerText_2.Size = UDim2.new(0.899999976, 0, 0.850000024, 0)
+AutoBubbleBlowerText_2.ZIndex = 2
+AutoBubbleBlowerText_2.Font = Enum.Font.Cartoon
+AutoBubbleBlowerText_2.Text = "DISABLED"
+AutoBubbleBlowerText_2.TextColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText_2.TextScaled = true
+AutoBubbleBlowerText_2.TextSize = 14
+AutoBubbleBlowerText_2.TextStrokeTransparency = 0.75
+AutoBubbleBlowerText_2.TextWrapped = true
+
+UIAspectRatioConstraint_3.Parent = AutoBlowBubble
+UIAspectRatioConstraint_3.AspectRatio = 3
+
+EggScroller.Name = "EggScroller"
+EggScroller.Parent = Main
+EggScroller.BackgroundColor3 = Color3.new(0.2, 0.505882, 1)
+EggScroller.BorderSizePixel = 0
+EggScroller.Position = UDim2.new(0.0500000119, 0, 0.119999997, 1)
+EggScroller.Size = UDim2.new(0.899999976, 0, 0.550000012, 0)
+EggScroller.Visible = false
+EggScroller.ZIndex = 5
+EggScroller.ScrollBarThickness = 8
+EggScroller.CanvasSize = UDim2.new(0, 0, 2.2, 0)
+
+UIListLayout.Parent = nil
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 0)
+
+Settings.Name = "Settings"
+Settings.Parent = BubbleGUI
+Settings.BackgroundTransparency = 1
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0.635, 0, 0.25, 0)
+Settings.Size = UDim2.new(0.25, 0, 0.550000012, 0)
+Settings.ZIndex = 2
+Settings.Image = "rbxassetid://1285673399"
+Settings.ImageColor3 = Color3.new(0.2, 0.505882, 1)
+Settings.ScaleType = Enum.ScaleType.Slice
+Settings.SliceCenter = Rect.new(8, 8, 247, 247)
+Settings.Visible = false
+
+UIAspectRatioConstraint_4.Parent = Settings
+UIAspectRatioConstraint_4.DominantAxis = Enum.DominantAxis.Height
+
+Outline_2.Name = "Outline"
+Outline_2.Parent = Settings
+Outline_2.BackgroundTransparency = 1
+Outline_2.BorderSizePixel = 0
+Outline_2.Position = UDim2.new(0, 0, 0.0199999996, 0)
+Outline_2.Size = UDim2.new(1, 0, 1, 0)
+Outline_2.Image = "rbxassetid://1285673399"
+Outline_2.ImageColor3 = Color3.new(0.137255, 0.356863, 0.701961)
+Outline_2.ScaleType = Enum.ScaleType.Slice
+Outline_2.SliceCenter = Rect.new(8, 8, 247, 247)
+
+TextLabel_2.Parent = Settings
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Position = UDim2.new(0.0749999881, 0, -0.0700000003, 0)
+TextLabel_2.Size = UDim2.new(0.850000024, 0, 0.150000006, 0)
+TextLabel_2.ZIndex = 2
+TextLabel_2.Font = Enum.Font.Cartoon
+TextLabel_2.Text = "SETTINGS"
+TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14
+TextLabel_2.TextStrokeTransparency = 0.80000001192093
+TextLabel_2.TextWrapped = true
+
+Outline2_2.Name = "Outline2"
+Outline2_2.Parent = Settings
+Outline2_2.BackgroundTransparency = 1
+Outline2_2.BorderSizePixel = 0
+Outline2_2.Position = UDim2.new(0.0749999881, 0, -0.0599999987, 0)
+Outline2_2.Size = UDim2.new(0.850000024, 0, 1, 0)
+Outline2_2.Image = "rbxassetid://1285673399"
+Outline2_2.ImageColor3 = Color3.new(0.2, 0.505882, 1)
+Outline2_2.ScaleType = Enum.ScaleType.Slice
+Outline2_2.SliceCenter = Rect.new(8, 8, 247, 247)
+
+TripleEgg.Name = "TripleEgg"
+TripleEgg.Parent = Settings
+TripleEgg.BackgroundColor3 = Color3.new(1, 1, 1)
+TripleEgg.BackgroundTransparency = 1
+TripleEgg.Position = UDim2.new(0.0500000007, 0, 0.150000006, 0)
+TripleEgg.Size = UDim2.new(0.550000012, 0, 0.100000001, 0)
+TripleEgg.ZIndex = 3
+TripleEgg.Font = Enum.Font.Cartoon
+TripleEgg.Text = "Triple Egg:"
+TripleEgg.TextColor3 = Color3.new(1, 1, 1)
+TripleEgg.TextScaled = true
+TripleEgg.TextSize = 14
+TripleEgg.TextStrokeTransparency = 0.80000001192093
+TripleEgg.TextWrapped = true
+TripleEgg.TextXAlignment = Enum.TextXAlignment.Left
+
+TripleEggStatus.Name = "TripleEggStatus"
+TripleEggStatus.Parent = Settings
+TripleEggStatus.BackgroundColor3 = Color3.new(1, 1, 1)
+TripleEggStatus.BackgroundTransparency = 1
+TripleEggStatus.Position = UDim2.new(0.5, 0, 0.150000006, 0)
+TripleEggStatus.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+TripleEggStatus.ZIndex = 3
+TripleEggStatus.Font = Enum.Font.Cartoon
+TripleEggStatus.Text = "FALSE"
+TripleEggStatus.TextColor3 = Color3.new(1, 0, 0)
+TripleEggStatus.TextScaled = true
+TripleEggStatus.TextSize = 14
+TripleEggStatus.TextStrokeTransparency = 0.89999997615814
+TripleEggStatus.TextWrapped = true
+TripleEggStatus.TextXAlignment = Enum.TextXAlignment.Left
+
+KeepEpic.Name = "KeepEpic"
+KeepEpic.Parent = Settings
+KeepEpic.BackgroundColor3 = Color3.new(1, 1, 1)
+KeepEpic.BackgroundTransparency = 1
+KeepEpic.Position = UDim2.new(0.0500000007, 0, 0.300000012, 0)
+KeepEpic.Size = UDim2.new(0.550000012, 0, 0.100000001, 0)
+KeepEpic.ZIndex = 3
+KeepEpic.Font = Enum.Font.Cartoon
+KeepEpic.Text = "Keep Epic:"
+KeepEpic.TextColor3 = Color3.new(1, 1, 1)
+KeepEpic.TextScaled = true
+KeepEpic.TextSize = 14
+KeepEpic.TextStrokeTransparency = 0.80000001192093
+KeepEpic.TextWrapped = true
+KeepEpic.TextXAlignment = Enum.TextXAlignment.Left
+
+KeepLegendary.Name = "KeepLegendary"
+KeepLegendary.Parent = Settings
+KeepLegendary.BackgroundColor3 = Color3.new(1, 1, 1)
+KeepLegendary.BackgroundTransparency = 1
+KeepLegendary.Position = UDim2.new(0.0500000007, 0, 0.449999988, 0)
+KeepLegendary.Size = UDim2.new(0.550000012, 0, 0.100000001, 0)
+KeepLegendary.ZIndex = 3
+KeepLegendary.Font = Enum.Font.Cartoon
+KeepLegendary.Text = "Keep Legend:"
+KeepLegendary.TextColor3 = Color3.new(1, 1, 1)
+KeepLegendary.TextScaled = true
+KeepLegendary.TextSize = 14
+KeepLegendary.TextStrokeTransparency = 0.80000001192093
+KeepLegendary.TextWrapped = true
+KeepLegendary.TextXAlignment = Enum.TextXAlignment.Left
+
+FastOpenLabel.Name = "KeepLegendary"
+FastOpenLabel.Parent = Settings
+FastOpenLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+FastOpenLabel.BackgroundTransparency = 1
+FastOpenLabel.Position = UDim2.new(0.0500000007, 0, 0.6, 0)
+FastOpenLabel.Size = UDim2.new(0.550000012, 0, 0.100000001, 0)
+FastOpenLabel.ZIndex = 3
+FastOpenLabel.Font = Enum.Font.Cartoon
+FastOpenLabel.Text = "Faster Open:"
+FastOpenLabel.TextColor3 = Color3.new(1, 1, 1)
+FastOpenLabel.TextScaled = true
+FastOpenLabel.TextSize = 14
+FastOpenLabel.TextStrokeTransparency = 0.80000001192093
+FastOpenLabel.TextWrapped = true
+FastOpenLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+AutoBlowBubble_2.Name = "AutoBlowBubble" -- Keep Epic
+AutoBlowBubble_2.Parent = Settings
+AutoBlowBubble_2.AnchorPoint = Vector2.new(0, 1)
+AutoBlowBubble_2.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+AutoBlowBubble_2.BackgroundTransparency = 1
+AutoBlowBubble_2.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBlowBubble_2.Position = UDim2.new(0.5, 0, 0.400000006, 0)
+AutoBlowBubble_2.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+AutoBlowBubble_2.ZIndex = 2
+AutoBlowBubble_2.Image = "rbxassetid://1511196841"
+AutoBlowBubble_2.ImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+AutoBlowBubble_2.ScaleType = Enum.ScaleType.Slice
+AutoBlowBubble_2.SliceCenter = Rect.new(9, 11, 91, 89)
+
+AutoBubbleBlowerText_3.Name = "AutoBubbleBlowerText"
+AutoBubbleBlowerText_3.Parent = AutoBlowBubble_2
+AutoBubbleBlowerText_3.AnchorPoint = Vector2.new(0.5, 0.5)
+AutoBubbleBlowerText_3.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText_3.BackgroundTransparency = 1
+AutoBubbleBlowerText_3.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBubbleBlowerText_3.Position = UDim2.new(0.5, 0, 0.5, -2)
+AutoBubbleBlowerText_3.Size = UDim2.new(0.899999976, 0, 0.850000024, 0)
+AutoBubbleBlowerText_3.ZIndex = 2
+AutoBubbleBlowerText_3.Font = Enum.Font.Cartoon
+AutoBubbleBlowerText_3.Text = "DISABLED"
+AutoBubbleBlowerText_3.TextColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText_3.TextScaled = true
+AutoBubbleBlowerText_3.TextSize = 14
+AutoBubbleBlowerText_3.TextStrokeTransparency = 0.75
+AutoBubbleBlowerText_3.TextWrapped = true
+
+UIAspectRatioConstraint_5.Parent = AutoBlowBubble_2
+UIAspectRatioConstraint_5.AspectRatio = 3
+
+AutoBlowBubble_3.Name = "AutoBlowBubble" -- Keep Legendary
+AutoBlowBubble_3.Parent = Settings
+AutoBlowBubble_3.AnchorPoint = Vector2.new(0, 1)
+AutoBlowBubble_3.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+AutoBlowBubble_3.BackgroundTransparency = 1
+AutoBlowBubble_3.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBlowBubble_3.Position = UDim2.new(0.600000024, 0, 0.550000012, 0)
+AutoBlowBubble_3.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+AutoBlowBubble_3.ZIndex = 2
+AutoBlowBubble_3.Image = "rbxassetid://1511196841"
+AutoBlowBubble_3.ImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+AutoBlowBubble_3.ScaleType = Enum.ScaleType.Slice
+AutoBlowBubble_3.SliceCenter = Rect.new(9, 11, 91, 89)
+
+AutoBubbleBlowerText_4.Name = "AutoBubbleBlowerText"
+AutoBubbleBlowerText_4.Parent = AutoBlowBubble_3
+AutoBubbleBlowerText_4.AnchorPoint = Vector2.new(0.5, 0.5)
+AutoBubbleBlowerText_4.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText_4.BackgroundTransparency = 1
+AutoBubbleBlowerText_4.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBubbleBlowerText_4.Position = UDim2.new(0.5, 0, 0.5, -2)
+AutoBubbleBlowerText_4.Size = UDim2.new(0.899999976, 0, 0.850000024, 0)
+AutoBubbleBlowerText_4.ZIndex = 2
+AutoBubbleBlowerText_4.Font = Enum.Font.Cartoon
+AutoBubbleBlowerText_4.Text = "DISABLED"
+AutoBubbleBlowerText_4.TextColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText_4.TextScaled = true
+AutoBubbleBlowerText_4.TextSize = 14
+AutoBubbleBlowerText_4.TextStrokeTransparency = 0.75
+AutoBubbleBlowerText_4.TextWrapped = true
+
+UIAspectRatioConstraint_6.Parent = AutoBlowBubble_3
+UIAspectRatioConstraint_6.AspectRatio = 3
+
+-- Faster Open
+FastOpenButton.Name = "AutoBlowBubble" -- Keep Legendary
+FastOpenButton.Parent = Settings
+FastOpenButton.AnchorPoint = Vector2.new(0, 1)
+FastOpenButton.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+FastOpenButton.BackgroundTransparency = 1
+FastOpenButton.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+FastOpenButton.Position = UDim2.new(0.6, 0, 0.7, 0)
+FastOpenButton.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+FastOpenButton.ZIndex = 2
+FastOpenButton.Image = "rbxassetid://1511196841"
+FastOpenButton.ImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+FastOpenButton.ScaleType = Enum.ScaleType.Slice
+FastOpenButton.SliceCenter = Rect.new(9, 11, 91, 89)
+
+FastOpenButtonText.Name = "AutoBubbleBlowerText"
+FastOpenButtonText.Parent = FastOpenButton
+FastOpenButtonText.AnchorPoint = Vector2.new(0.5, 0.5)
+FastOpenButtonText.BackgroundColor3 = Color3.new(1, 1, 1)
+FastOpenButtonText.BackgroundTransparency = 1
+FastOpenButtonText.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+FastOpenButtonText.Position = UDim2.new(0.5, 0, 0.5, -2)
+FastOpenButtonText.Size = UDim2.new(0.899999976, 0, 0.850000024, 0)
+FastOpenButtonText.ZIndex = 2
+FastOpenButtonText.Font = Enum.Font.Cartoon
+FastOpenButtonText.Text = "DISABLED"
+FastOpenButtonText.TextColor3 = Color3.new(1, 1, 1)
+FastOpenButtonText.TextScaled = true
+FastOpenButtonText.TextSize = 14
+FastOpenButtonText.TextStrokeTransparency = 0.75
+FastOpenButtonText.TextWrapped = true
+
+FastOpenUIAspectRatioConstraint.Parent = FastOpenButton
+FastOpenUIAspectRatioConstraint.AspectRatio = 3
+
+
+
+AutoEggDesc_2.Name = "AutoEggDesc"
+AutoEggDesc_2.Parent = Settings
+AutoEggDesc_2.AnchorPoint = Vector2.new(1, 0.5)
+AutoEggDesc_2.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoEggDesc_2.BackgroundTransparency = 1
+AutoEggDesc_2.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoEggDesc_2.Position = UDim2.new(0.95, 0, 0.88, 0)
+AutoEggDesc_2.Size = UDim2.new(0.9, 0, 0.25, 0)
+AutoEggDesc_2.ZIndex = 2
+AutoEggDesc_2.Font = Enum.Font.ArialBold
+AutoEggDesc_2.Text = "NOTE: If \"Keep Epic\" or \"Keep Legendary\" is set to disabled, then they will delete automatically when recieved."
+AutoEggDesc_2.TextColor3 = Color3.new(1, 1, 1)
+AutoEggDesc_2.TextScaled = true
+AutoEggDesc_2.TextSize = 14
+AutoEggDesc_2.TextStrokeTransparency = 0.75
+AutoEggDesc_2.TextWrapped = true
+
+Log.Name = "Log"
+Log.Parent = BubbleGUI
+Log.AnchorPoint = Vector2.new(0.5, 0)
+Log.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+Log.BackgroundTransparency = 1
+Log.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Log.Position = UDim2.new(0.499593467, 0, 0.0274019241, 0)
+Log.Size = UDim2.new(0.300000012, 0, 0.06332881, 0)
+Log.ZIndex = 55
+Log.Image = "rbxassetid://1511196841"
+Log.ImageColor3 = Color3.new(0.243137, 0.380392, 1)
+Log.ScaleType = Enum.ScaleType.Slice
+Log.SliceCenter = Rect.new(9, 11, 91, 89)
+
+LogText.Name = "LogText"
+LogText.Parent = Log
+LogText.AnchorPoint = Vector2.new(0.5, 0.5)
+LogText.BackgroundColor3 = Color3.new(1, 1, 1)
+LogText.BackgroundTransparency = 1
+LogText.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+LogText.Position = UDim2.new(0.5, 0, 0.5, -2)
+LogText.Size = UDim2.new(0.899999976, 0, 0.899999976, 0)
+LogText.ZIndex = 56
+LogText.Font = Enum.Font.Cartoon
+LogText.Text = "YOUR EXPLOIT NEED DEBUG LIBRARY"
+LogText.TextColor3 = Color3.new(1, 1, 1)
+LogText.TextScaled = true
+LogText.TextSize = 12
+LogText.TextStrokeTransparency = 0.75
+LogText.TextWrapped = true
+
+-- Scripts:
+local Player = game.Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:wait()
+local Eggs = {}
+local Functions = {}
+local Settings = {
+	TripleEgg = game:GetService("MarketplaceService"):UserOwnsGamePassAsync(Player.UserId, 5502695),
+	KeepEpic = true,
+	KeepLegendary = true,
+	RemoveUI = false,
+	blowWait = 1
+}
+local SavedInstancesFolder = Instance.new("Folder")
+SavedInstancesFolder.Name = "SavedInstancesFolder"
+SavedInstancesFolder.Parent = game.CoreGui
+-- Will figure out how to properly restore these elements below in future update
+local SavedInstances = {
+	"StatsFrame",
+	"MainButtons",
+	"Settings",
+	"HeightMeter",
+	"Hotkey",
+	"PetHatch"
+}
+local ChosenEgg = "Common Egg"
+local DisabledColor = Color3.fromRGB(125, 125, 125)
+local EnabledColor = Color3.fromRGB(64, 255, 64)
+local PetModule
+local HatModule
+local AutoProfit = false
+local AutoOpen = false
+
+-- Grab Modules
+for _, ModuleScript in pairs(game.ReplicatedStorage:GetDescendants()) do
+	if ModuleScript:IsA("ModuleScript") and ModuleScript.Name == "PetModule" then
+		PetModule = require(ModuleScript)
+	elseif ModuleScript:IsA("ModuleScript") and ModuleScript.Name == "HatModule" then
+		HatModule = require(ModuleScript)
+	end
+end
+
+-- Grab Eggs
+for _, egg in next, workspace.Eggs:GetChildren() do
+	Eggs[#Eggs + 1] = egg
+end
+
+-- Log Text Functions
+local LogText = function(Text)
+	pcall(function()
+		LogText.Text = tostring(Text)
+	end)
+end
+
+-- Grab Functions
+local FireNetwork = function(...)
+	Functions[1]:FireServer(...)
+end
+
+for A,B in next, debug.getregistry() do
+	if type(B) == "function" then
+		pcall(function()
+			for X,Z in next, debug.getupvalues(B) do
+				if X == "Network" then
+					Functions[#Functions + 1] = Z
+				end
+			end
+		end)
+	end
+end
+
+for _,Remote in pairs (game:GetDescendants()) do
+	if Remote:IsA("RemoteEvent") then
+		Remote.OnClientEvent:Connect(function(ArgOne, ...)
+			if AutoOpen then
+				if ArgOne == "DataChanged" then
+					if typeof (...) == "table" then
+						for A,B in ipairs (...) do
+							if typeof(B) == "table" then
+								if string.len(tostring(B[1])) == 36 then
+									wait()
+									--print(B[2])
+									if string.sub(ChosenEgg, -5) == "Crate" then
+										-- Delete hat code
+										pcall(function()
+											if HatModule[tostring(B[2])]["Rarity"] == "Epic" then
+												if Settings.KeepEpic ~= true then
+													if B[6] ~= true then
+														LogText("Deleted Hat: " .. tostring(B[2]))
+														FireNetwork("DeleteHat", tostring(B[1]))
+													end
+												end
+											elseif HatModule[tostring(B[2])]["Rarity"] == "Legendary" then
+												if Settings.KeepLegendary ~= true then
+													if B[6] ~= true then
+														LogText("Deleted Hat: " .. tostring(B[2]))
+														FireNetwork("DeleteHat", tostring(B[1]))
+													end
+												end
+											else
+												if B[6] ~= true then
+													LogText("Deleted Hat: " .. tostring(B[2]))
+													FireNetwork("DeleteHat", tostring(B[1]))
+												end	
+											end
+										end)
+									elseif string.sub(ChosenEgg, -3) == "Egg" then
+										pcall(function()
+											if PetModule[tostring(B[2])]["Rarity"] == "Epic" then
+												if Settings.KeepEpic ~= true then
+													if B[6] ~= true then
+														LogText("Deleted Pet: " .. tostring(B[2]))
+														FireNetwork("DeletePet", tostring(B[1]))
+													end
+												end
+											elseif PetModule[tostring(B[2])]["Rarity"] == "Legendary" then
+												if Settings.KeepLegendary ~= true then
+													if B[6] ~= true then
+														LogText("Deleted Pet: " .. tostring(B[2]))
+														FireNetwork("DeletePet", tostring(B[1]))
+													end
+												end
+											else
+												if B[6] ~= true then
+													LogText("Deleted Pet: " .. tostring(B[2]))
+													FireNetwork("DeletePet", tostring(B[1]))
+												end
+											end
+										end)
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end)
+	end
+end
+-----------
+if Settings.TripleEgg then
+	TripleEggStatus.Text = "TRUE"
+	TripleEggStatus.TextColor3 = Color3.fromRGB(64, 255, 64)
+elseif Settings.TripleEgg == false then
+	TripleEggStatus.Text = "FALSE"
+	TripleEggStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+end
+
+AutoBlowBubble_2.ImageColor3 = EnabledColor
+AutoBubbleBlowerText_3.Text = "ENABLED"
+
+AutoBlowBubble_3.ImageColor3 = EnabledColor
+AutoBubbleBlowerText_4.Text = "ENABLED"
+
+LogText("Developer: Titanium Developer#9736")
+wait(3)
+LogText("Discord: https://discord.gg/6qcVZcU")
+wait(3)
+LogText("New UI & Crate Opening - Stevee#7213")
+wait(3)
+LogText("Click To Open")
+
+AutoBlowBubble.MouseButton1Down:Connect(function()
+	if AutoProfit then
+		LogText("Disabled Bubble Blower")
+		AutoBubbleBlowerText_2.Text = "DISABLED"
+		AutoBlowBubble.ImageColor3 = DisabledColor
+		AutoProfit = false
+	else
+		AutoProfit = true
+		AutoBubbleBlowerText_2.Text = "ENABLED"
+		AutoBlowBubble.ImageColor3 = EnabledColor
+		LogText("Enabled Bubble Blower")
+		repeat
+			wait(Settings.blowWait)
+			FireNetwork("BlowBubble")
+			FireNetwork("ClaimAchievement", 1)
+			FireNetwork("ClaimAchievement", 2)
+			FireNetwork("ClaimAchievement", 3)
+			FireNetwork("ClaimAchievement", 4)
+		until AutoProfit == false
+	end
+end)
+
+AutoOpenerButton.MouseButton1Down:Connect(function()
+	if AutoOpen then
+		LogText("Disabled Auto Open")
+		AutoOpen = false
+		AutoOpenerButton.ImageColor3 = DisabledColor
+		AutoBubbleBlowerText.Text = "DISABLED"
+	else
+		AutoOpen = true
+		AutoOpenerButton.ImageColor3 = EnabledColor
+		AutoBubbleBlowerText.Text = "ENABLED"
+		LogText("Enabled Auto Open")
+		repeat
+			if Settings.TripleEgg then
+				FireNetwork("PurchaseEgg", Object.Text, "Multi")
+			elseif Settings.TripleEgg == false then
+				FireNetwork("PurchaseEgg", Object.Text)
+			end
+			if Settings.RemoveUI then
+				wait(2)
+			elseif Settings.RemoveUI  == false then
+				wait(4)			
+			end
+		until AutoOpen == false
+	end	
+end)
+
+
+ChooseEgg.MouseButton1Down:Connect(function()
+	--	(2/4/2019) ~ No longer recreate buttons & removed while loop for button click connection
+	if EggScroller.Visible then
+		EggScroller.Visible = false
+	else
+		local count = 0
+		for i,v in pairs(Eggs) do
+			if not EggScroller:FindFirstChild(v.Name) then
+				local btn = TemplateButton:Clone()
+				btn.Name, btn.Text = v.Name, v.Name
+				btn.Visible = true
+				btn.Position = UDim2.new(0.1, 0, (count / 10) / 3, 0)
+				btn.Parent = EggScroller
+				count = count + 1
+
+				-- Clicked
+				btn.MouseButton1Down:Connect(function()
+					ChosenEgg = v.Name
+					Object.Text = v.Name
+					LogText("Selected " .. v.Name)
+					EggScroller.Visible = not EggScroller.Visible
+				end)
+			end
+		end
+		EggScroller.Visible = true
+	end
+end)
+
+AutoBlowBubble_2.MouseButton1Down:Connect(function()
+	if Settings.KeepEpic then
+		Settings.KeepEpic = false
+		LogText("Disabled keeping Epic Items")
+		AutoBubbleBlowerText_3.Text = "DISABLED"
+		AutoBlowBubble_2.ImageColor3 = DisabledColor
+	else
+		Settings.KeepEpic = true
+		LogText("Enabled keeping Epic Items")
+		AutoBubbleBlowerText_3.Text = "ENABLED"
+		AutoBlowBubble_2.ImageColor3 = EnabledColor
+	end	
+end)
+
+AutoBlowBubble_3.MouseButton1Down:Connect(function()
+	if Settings.KeepLegendary then
+		Settings.KeepLegendary = false
+		LogText("Disabled keeping Legendary Items")
+		AutoBubbleBlowerText_4.Text = "DISABLED"
+		AutoBlowBubble_3.ImageColor3 = DisabledColor
+	else
+		Settings.KeepLegendary = true
+		LogText("Enabled keeping Legendary Items")
+		AutoBubbleBlowerText_4.Text = "ENABLED"
+		AutoBlowBubble_3.ImageColor3 = EnabledColor
+	end	
+end)
+
+Log.MouseButton1Down:Connect(function()
+	if Main.Visible then
+		LogText("Click to Open")
+		for i,v in pairs(BubbleGUI:GetChildren()) do
+			if v.Name ~= "Log" then
+				v.Visible = false
+			end
+		end
+	else
+		LogText("Click to Close")
+		for i,v in pairs(BubbleGUI:GetChildren()) do
+			if v.Name ~= "Log" then
+				v.Visible = true
+			end
+		end
+	end
+end)
+
+FastOpenButton.MouseButton1Down:Connect(function()
+	if Settings.RemoveUI then
+		LogText("Disabled Faster Open")
+		Settings.RemoveUI = false
+		FastOpenButtonText.Text = "DISABLED"
+		FastOpenButton.ImageColor3 = DisabledColor
+	else
+		LogText("Enabled Faster Open")
+		Settings.RemoveUI = true
+		FastOpenButtonText.Text = "ENABLED"
+		FastOpenButton.ImageColor3 = EnabledColor
+	end
+end)
+
+-- Anti AFK
+local VirtualUser = game:GetService("VirtualUser")
+Player.Idled:Connect(function()
+	VirtualUser:CaptureController()	
+	VirtualUser:ClickButton2(Vector2.new())
+end)
+
+
+game.Players.LocalPlayer.PlayerGui.ScreenGui.ChildAdded:Connect(function(Child)		
+	if Settings.RemoveUI then
+		if Child.Name == "MultiPetHatch" or Child.Name == "PetHatch" then		
+			Child:Destroy()		
+		end	
+	end	
+end)
+
+
+
+--	(2/4/2019) ~ Removed While loop and RunService loop { *POSSIBLE CRASH REASONS* }
+Settings.TripleEgg = game:GetService("MarketplaceService"):UserOwnsGamePassAsync(Player.UserId, 5502695)
+if Settings.TripleEgg then
+	TripleEggStatus.Text = "TRUE"
+	TripleEggStatus.TextColor3 = Color3.fromRGB(64, 255, 64)
+elseif Settings.TripleEgg == false then
+	TripleEggStatus.Text = "FALSE"
+	TripleEggStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+end
+
+if game:GetService("MarketplaceService"):UserOwnsGamePassAsync(Player.UserId, 5418177) then
+	Settings.blowWait = 0.5
+else
+	Settings.blowWait = 1
+end
+end)
+
+TOY.Name = "TOY"
+TOY.Parent = TSCP
+TOY.BackgroundColor3 = Color3.new(0, 0, 0)
+TOY.Position = UDim2.new(-0.0509999879, 0, -0.0844811797, 0)
+TOY.Size = UDim2.new(0, 201, 0, 22)
+TOY.Font = Enum.Font.ArialBold
+TOY.Text = "TOY LAND SCRIPTS"
+TOY.TextColor3 = Color3.new(1, 1, 1)
+TOY.TextSize = 14
+
+TOY2.Name = "TOY2"
+TOY2.Parent = TSCP
+TOY2.BackgroundColor3 = Color3.new(0, 0, 0)
+TOY2.Position = UDim2.new(-0.0509999879, 0, 0.966023862, 0)
+TOY2.Size = UDim2.new(0, 201, 0, 22)
+TOY2.Font = Enum.Font.ArialBold
+TOY2.Text = "TOY LAND SCRIPTS"
+TOY2.TextColor3 = Color3.new(1, 1, 1)
+TOY2.TextSize = 14
+
+XT.Name = "XT"
+XT.Parent = TSCP
+XT.BackgroundColor3 = Color3.new(0, 0, 0)
+XT.Position = UDim2.new(0.898800254, 0, -0.0823158771, 0)
+XT.Size = UDim2.new(0, 20, 0, 21)
+XT.Font = Enum.Font.ArialBold
+XT.Text = "X"
+XT.TextColor3 = Color3.new(1, 1, 1)
+XT.TextSize = 14
+XT.MouseButton1Click:connect(function()
+	TSCP.Visible = false
+end)
+
+CandyLand.Name = "CandyLand"
+CandyLand.Parent = ScreenGui
+CandyLand.BackgroundColor3 = Color3.new(1, 1, 1)
+CandyLand.Position = UDim2.new(0, 0, 0.498771489, 0)
+CandyLand.Size = UDim2.new(0, 77, 0, 65)
+CandyLand.Style = Enum.FrameStyle.DropShadow
+
+CANDYMAIN.Name = "CANDYMAIN"
+CANDYMAIN.Parent = CandyLand
+CANDYMAIN.BackgroundColor3 = Color3.new(1, 1, 1)
+CANDYMAIN.Position = UDim2.new(-0.0541406646, 0, 0.17796348, 0)
+CANDYMAIN.Size = UDim2.new(0, 66, 0, 31)
+CANDYMAIN.SizeConstraint = Enum.SizeConstraint.RelativeYY
+CANDYMAIN.Style = Enum.ButtonStyle.RobloxRoundButton
+CANDYMAIN.Font = Enum.Font.ArialBold
+CANDYMAIN.Text = "CANDY LAND"
+CANDYMAIN.TextColor3 = Color3.new(0, 0, 0)
+CANDYMAIN.MouseButton1Click:connect(function()
+	CSCP.Visible = true
+end)
+
+CSCP.Name = "CSCP"
+CSCP.Parent = CandyLand
+CSCP.BackgroundColor3 = Color3.new(0.12549, 0.686275, 0.498039)
+CSCP.Position = UDim2.new(2.39973021, 0, -1.57065105, 0)
+CSCP.Size = UDim2.new(0, 200, 0, 297)
+CSCP.Visible = false
+CSCP.Style = Enum.FrameStyle.DropShadow
+
+CANDYUNLOCK.Name = "CANDYUNLOCK"
+CANDYUNLOCK.Parent = CSCP
+CANDYUNLOCK.BackgroundColor3 = Color3.new(1, 1, 1)
+CANDYUNLOCK.Position = UDim2.new(-0.0449999981, 0, 0.75757575, 0)
+CANDYUNLOCK.Size = UDim2.new(0, 200, 0, 50)
+CANDYUNLOCK.Style = Enum.ButtonStyle.RobloxRoundButton
+CANDYUNLOCK.Font = Enum.Font.ArialBold
+CANDYUNLOCK.Text = "CANDY UNLOCK"
+CANDYUNLOCK.TextColor3 = Color3.new(0, 0, 0)
+CANDYUNLOCK.TextSize = 14
+CANDYUNLOCK.MouseButton1Click:connect(function()
+	for i,v in pairs(game.Workspace.FloatingIslands["Candy Land"]:GetChildren()) do 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Collision.CFrame 
+    wait(1)
+end
+end)
+
+CANDYFARM.Name = "CANDYFARM"
+CANDYFARM.Parent = CSCP
+CANDYFARM.BackgroundColor3 = Color3.new(1, 1, 1)
+CANDYFARM.Position = UDim2.new(-0.0449999981, 0, 0.0606060624, 0)
+CANDYFARM.Size = UDim2.new(0, 200, 0, 50)
+CANDYFARM.Style = Enum.ButtonStyle.RobloxRoundButton
+CANDYFARM.Font = Enum.Font.ArialBold
+CANDYFARM.Text = "CANDY AUTO FARM"
+CANDYFARM.TextColor3 = Color3.new(0, 0, 0)
+CANDYFARM.TextSize = 14
+CANDYFARM.MouseButton1Click:connect(function()
+	-- This is made for the last candy land area
+for i , v in pairs(game.Workspace.FloatingIslands["Candy Land"]["Sweet Island"]:GetChildren()) do 
+    if v.ClassName == "Model" then 
+        for i , b in pairs(v:GetChildren()) do 
+            if b.ClassName ~= "Model" then 
+                if b.ClassName ~= "BillboardGui" then
+                    b.CanCollide = false
+                end
+            end
+            if b.ClassName == "Model" then 
+                for i , c in pairs(b:GetChildren()) do
+                    if c.ClassName ~= "Model" then 
+                        c.CanCollide = false
+                    end 
+                    if c.ClassName == "Model" then 
+                        for i , d in pairs(c:GetChildren()) do 
+                            if d.ClassName ~= "Model" then
+                                d.CanCollide = false
+                            end
+                    end
+                end    
+            end
+        end
+    end
+end
+end
+for i , v in pairs(game.Workspace.FloatingIslands["Candy Land"]["Sweet Island"].Decore.Shrine.Decore.Mountains:GetChildren()) do 
+    if v.ClassName ~= "Model" then
+        v.CanCollide = false
+    else
+        for i,b in pairs(v:GetChildren()) do 
+            b.CanCollide = false
+    end
+    end
+
+end
+for i , v in pairs(game.Workspace.Eggs:GetChildren()) do 
+    for i , b in pairs(v:GetChildren()) do 
+        if b.ClassName == "Model" then 
+            for i , c in pairs(b:GetChildren()) do 
+                if c.ClassName == "Model" then 
+                    for i , as in pairs(c:GetChildren()) do 
+                        if as.ClassName ~= "Script" then
+                            as.CanCollide = false
+                        end
+                    end
+                else
+                    if c.ClassName ~= "StringValue" then
+                        c.CanCollide = false
+                    end
+                end
+            end
+        else
+            b.CanCollide = false
+        end
+    end
+end
+
+    
+while wait() do 
+local hum = game:GetService("Players").LocalPlayer.Character.Humanoid
+for i , v in pairs(game.Workspace.Pickups:GetChildren()) do 
+if v.ClassName ~= "Model" then
+if game.Players.LocalPlayer:DistanceFromCharacter(v.Position) < 100 then 
+hum:MoveTo(v.Position)
+hum.MoveToFinished:wait()
+end
+end
+end
+end
+end)
+
+EGGSC.Name = "EGGSC"
+EGGSC.Parent = CSCP
+EGGSC.BackgroundColor3 = Color3.new(1, 1, 1)
+EGGSC.Position = UDim2.new(-0.0449999981, 0, 0.404040396, 0)
+EGGSC.Size = UDim2.new(0, 200, 0, 50)
+EGGSC.Style = Enum.ButtonStyle.RobloxRoundButton
+EGGSC.Font = Enum.Font.ArialBold
+EGGSC.Text = "AUTO OPEN & DELETE EGGS"
+EGGSC.TextColor3 = Color3.new(0, 0, 0)
+EGGSC.TextSize = 14
+EGGSC.MouseButton1Click:connect(function()
+	--[[ #Credits
+	#Developer: Titanium Developer#9736
+	#Discord Server: https://discord.gg/6qcVZcU
+	#Update 2 [2/5/2019]:
+		* Auto Bubble blower is faster if you own the gamepass "Fast Chewer"
+		* Fixed performance issues and crashing issue
+		* I ran the script constantly opening eggs for 11 hours without any issue
+	#Update [1/15/2019]:
+		#Credit: Stevee#7213
+		#1) Remade UI and added settings to UI
+		#2) Automatically determine if the player owns Triple Egg Pass ("Multi Hatch") and updates if bought in game
+		#3) Supports the new crate update and deletes the hats that aren't wanted according to users settings.
+		#4) Supports anti-lag by using "faster open"
+]]
+
+--[[
+	!! NOTE: CLICK "COMMON EGG" TO SELECT THE EGG OR CRATE YOU WANT TO OPEN
+	SEND ANY BUGS TO Stevee#7213
+	UPDATES WILL BE POSTED ON THIS EXACT PASTEBIN THREAD
+]]
+
+-- Instances:
+local BubbleGUI = Instance.new("ScreenGui")
+local Main = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Outline = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local Outline2 = Instance.new("ImageLabel")
+local ChooseEgg = Instance.new("ImageButton")
+local Object = Instance.new("TextLabel")
+local AutoOpenerButton = Instance.new("ImageButton")
+local AutoBubbleBlowerText = Instance.new("TextLabel")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local TemplateButton = Instance.new("TextButton")
+local AutoBlowerDesc = Instance.new("TextLabel")
+local AutoBubbleBlowerTitle = Instance.new("TextLabel")
+local AutoEggDesc = Instance.new("TextLabel")
+local AutoPetTitle = Instance.new("TextLabel")
+local AutoBlowBubble = Instance.new("ImageButton")
+local AutoBubbleBlowerText_2 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local EggScroller = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local Settings = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local Outline_2 = Instance.new("ImageLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local Outline2_2 = Instance.new("ImageLabel")
+local TripleEgg = Instance.new("TextLabel")
+local TripleEggStatus = Instance.new("TextLabel")
+local KeepEpic = Instance.new("TextLabel")
+local KeepLegendary = Instance.new("TextLabel")
+local AutoBlowBubble_2 = Instance.new("ImageButton")
+local AutoBubbleBlowerText_3 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local AutoBlowBubble_3 = Instance.new("ImageButton")
+local AutoBubbleBlowerText_4 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local AutoEggDesc_2 = Instance.new("TextLabel")
+local FastOpenLabel = Instance.new("TextLabel")
+local FastOpenButton = Instance.new("ImageButton")
+local FastOpenButtonText = Instance.new("TextLabel")
+local FastOpenUIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Log = Instance.new("ImageButton")
+local LogText = Instance.new("TextLabel")
+local _VERSION = 2
+--Properties:
+BubbleGUI.Name = "BubbleGUI"
+BubbleGUI.Parent = game.CoreGui
+Main.Name = "Main"
+Main.Parent = BubbleGUI
+Main.BackgroundTransparency = 1
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.324999988, 0, 0.224999994, 0)
+Main.Size = UDim2.new(0.35, 0, 0.55, 0)
+Main.ZIndex = 2
+Main.Image = "rbxassetid://1285673399"
+Main.ImageColor3 = Color3.new(0.2, 0.505882, 1)
+Main.ScaleType = Enum.ScaleType.Slice
+Main.SliceCenter = Rect.new(8, 8, 247, 247)
+Main.Visible = false
+
+UIAspectRatioConstraint.Parent = Main
+UIAspectRatioConstraint.DominantAxis = Enum.DominantAxis.Height
+
+Outline.Name = "Outline"
+Outline.Parent = Main
+Outline.BackgroundTransparency = 1
+Outline.BorderSizePixel = 0
+Outline.Position = UDim2.new(0, 0, 0.0199999996, 0)
+Outline.Size = UDim2.new(1, 0, 1, 0)
+Outline.Image = "rbxassetid://1285673399"
+Outline.ImageColor3 = Color3.new(0.137255, 0.356863, 0.701961)
+Outline.ScaleType = Enum.ScaleType.Slice
+Outline.SliceCenter = Rect.new(8, 8, 247, 247)
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.0749999881, 0, -0.0700000003, 0)
+TextLabel.Size = UDim2.new(0.85, 0, 0.15, 0)
+TextLabel.ZIndex = 2
+TextLabel.Font = Enum.Font.Cartoon
+TextLabel.Text = string.format(" AUTO [V.0.%d]", _VERSION) --"AUTO [V.0.1]"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextStrokeTransparency = 0.80000001192093
+TextLabel.TextWrapped = true
+
+Outline2.Name = "Outline2"
+Outline2.Parent = Main
+Outline2.BackgroundTransparency = 1
+Outline2.BorderSizePixel = 0
+Outline2.Position = UDim2.new(0.0749999881, 0, -0.0599999987, 0)
+Outline2.Size = UDim2.new(0.850000024, 0, 1, 0)
+Outline2.Image = "rbxassetid://1285673399"
+Outline2.ImageColor3 = Color3.new(0.2, 0.505882, 1)
+Outline2.ScaleType = Enum.ScaleType.Slice
+Outline2.SliceCenter = Rect.new(8, 8, 247, 247)
+
+ChooseEgg.Name = "ChooseEgg"
+ChooseEgg.Parent = Main
+ChooseEgg.BackgroundColor3 = Color3.new(1, 1, 1)
+ChooseEgg.BackgroundTransparency = 1
+ChooseEgg.Position = UDim2.new(0.099999994, 0, 0.699999988, 0)
+ChooseEgg.Size = UDim2.new(0.800000012, 0, 0.119999997, 0)
+ChooseEgg.ZIndex = 3
+ChooseEgg.Image = "rbxassetid://1285673399"
+ChooseEgg.ImageColor3 = Color3.new(0.137255, 0.356863, 0.701961)
+ChooseEgg.ScaleType = Enum.ScaleType.Slice
+ChooseEgg.SliceCenter = Rect.new(8, 8, 247, 247)
+
+Object.Name = "Object"
+Object.Parent = ChooseEgg
+Object.BackgroundColor3 = Color3.new(1, 1, 1)
+Object.BackgroundTransparency = 1
+Object.Position = UDim2.new(0.025000006, 0, 0.0500000119, 0)
+Object.Size = UDim2.new(0.949999988, 0, 0.899999976, 0)
+Object.ZIndex = 3
+Object.Font = Enum.Font.Cartoon
+Object.Text = "Common Egg"
+Object.TextColor3 = Color3.new(1, 1, 1)
+Object.TextScaled = true
+Object.TextSize = 14
+Object.TextStrokeTransparency = 0.80000001192093
+Object.TextWrapped = true
+
+AutoOpenerButton.Name = "AutoOpenerButton"
+AutoOpenerButton.Parent = Main
+AutoOpenerButton.AnchorPoint = Vector2.new(0, 1)
+AutoOpenerButton.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+AutoOpenerButton.BackgroundTransparency = 1
+AutoOpenerButton.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoOpenerButton.Position = UDim2.new(0.349999994, 0, 0.949999988, 0)
+AutoOpenerButton.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+AutoOpenerButton.ZIndex = 2
+AutoOpenerButton.Image = "rbxassetid://1511196841"
+AutoOpenerButton.ImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+AutoOpenerButton.ScaleType = Enum.ScaleType.Slice
+AutoOpenerButton.SliceCenter = Rect.new(9, 11, 91, 89)
+
+AutoBubbleBlowerText.Name = "AutoBubbleBlowerText"
+AutoBubbleBlowerText.Parent = AutoOpenerButton
+AutoBubbleBlowerText.AnchorPoint = Vector2.new(0.5, 0.5)
+AutoBubbleBlowerText.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText.BackgroundTransparency = 1
+AutoBubbleBlowerText.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBubbleBlowerText.Position = UDim2.new(0.5, 0, 0.5, -2)
+AutoBubbleBlowerText.Size = UDim2.new(0.899999976, 0, 0.850000024, 0)
+AutoBubbleBlowerText.ZIndex = 2
+AutoBubbleBlowerText.Font = Enum.Font.Cartoon
+AutoBubbleBlowerText.Text = "DISABLED"
+AutoBubbleBlowerText.TextColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText.TextScaled = true
+AutoBubbleBlowerText.TextSize = 14
+AutoBubbleBlowerText.TextStrokeTransparency = 0.75
+AutoBubbleBlowerText.TextWrapped = true
+
+UIAspectRatioConstraint_2.Parent = AutoOpenerButton
+UIAspectRatioConstraint_2.AspectRatio = 3
+
+TemplateButton.Name = "TemplateButton"
+TemplateButton.Parent = Main
+TemplateButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TemplateButton.BackgroundTransparency = 1
+TemplateButton.Position = UDim2.new(8, 0, 0.100000001, 0)
+TemplateButton.Size = UDim2.new(0.800000012, 0, 0.045, 0)
+TemplateButton.Visible = false
+TemplateButton.ZIndex = 5
+TemplateButton.Font = Enum.Font.Cartoon
+TemplateButton.TextColor3 = Color3.new(1, 1, 1)
+TemplateButton.TextScaled = true
+TemplateButton.TextSize = 14
+TemplateButton.TextStrokeTransparency = 0.80000001192093
+TemplateButton.TextWrapped = true
+
+AutoBlowerDesc.Name = "AutoBlowerDesc"
+AutoBlowerDesc.Parent = Main
+AutoBlowerDesc.AnchorPoint = Vector2.new(1, 0.5)
+AutoBlowerDesc.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoBlowerDesc.BackgroundTransparency = 1
+AutoBlowerDesc.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBlowerDesc.Position = UDim2.new(0.967238188, 0, 0.25, 0)
+AutoBlowerDesc.Size = UDim2.new(0.92200011, 0, 0.115160845, 0)
+AutoBlowerDesc.ZIndex = 2
+AutoBlowerDesc.Font = Enum.Font.Arial
+AutoBlowerDesc.Text = "Automatically blows and sells bubbles for you."
+AutoBlowerDesc.TextColor3 = Color3.new(1, 1, 1)
+AutoBlowerDesc.TextScaled = true
+AutoBlowerDesc.TextSize = 14
+AutoBlowerDesc.TextStrokeTransparency = 0.75
+AutoBlowerDesc.TextWrapped = true
+
+AutoBubbleBlowerTitle.Name = "AutoBubbleBlowerTitle"
+AutoBubbleBlowerTitle.Parent = Main
+AutoBubbleBlowerTitle.AnchorPoint = Vector2.new(1, 0.5)
+AutoBubbleBlowerTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerTitle.BackgroundTransparency = 1
+AutoBubbleBlowerTitle.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBubbleBlowerTitle.Position = UDim2.new(0.781523764, 0, 0.150000006, 0)
+AutoBubbleBlowerTitle.Size = UDim2.new(0.529142916, 0, 0.0897916555, 0)
+AutoBubbleBlowerTitle.ZIndex = 2
+AutoBubbleBlowerTitle.Font = Enum.Font.ArialBold
+AutoBubbleBlowerTitle.Text = "Auto Bubble Blower"
+AutoBubbleBlowerTitle.TextColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerTitle.TextScaled = true
+AutoBubbleBlowerTitle.TextSize = 14
+AutoBubbleBlowerTitle.TextStrokeTransparency = 0.75
+AutoBubbleBlowerTitle.TextWrapped = true
+AutoBubbleBlowerTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+AutoEggDesc.Name = "AutoEggDesc"
+AutoEggDesc.Parent = Main
+AutoEggDesc.AnchorPoint = Vector2.new(1, 0.5)
+AutoEggDesc.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoEggDesc.BackgroundTransparency = 1
+AutoEggDesc.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoEggDesc.Position = UDim2.new(0.967238188, 0, 0.600000024, 2)
+AutoEggDesc.Size = UDim2.new(0.92200017, 0, 0.137250707, 0)
+AutoEggDesc.ZIndex = 2
+AutoEggDesc.Font = Enum.Font.Arial
+AutoEggDesc.Text = "Press \"Common Egg\" to select the crate or egg you want to open. This automatically purchases eggs / crates and deletes the ones you don't want!"
+AutoEggDesc.TextColor3 = Color3.new(1, 1, 1)
+AutoEggDesc.TextScaled = true
+AutoEggDesc.TextSize = 14
+AutoEggDesc.TextStrokeTransparency = 0.75
+AutoEggDesc.TextWrapped = true
+
+AutoPetTitle.Name = "AutoPetTitle"
+AutoPetTitle.Parent = Main
+AutoPetTitle.AnchorPoint = Vector2.new(1, 0.5)
+AutoPetTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoPetTitle.BackgroundTransparency = 1
+AutoPetTitle.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoPetTitle.Position = UDim2.new(0.913214386, 0, 0.5, -4)
+AutoPetTitle.Size = UDim2.new(0.800345302, 0, 0.0897916555, 0)
+AutoPetTitle.ZIndex = 2
+AutoPetTitle.Font = Enum.Font.ArialBold
+AutoPetTitle.Text = "Auto Pet / Hat Purchase/Deletion"
+AutoPetTitle.TextColor3 = Color3.new(1, 1, 1)
+AutoPetTitle.TextScaled = true
+AutoPetTitle.TextSize = 14
+AutoPetTitle.TextStrokeTransparency = 0.75
+AutoPetTitle.TextWrapped = true
+
+AutoBlowBubble.Name = "AutoBlowBubble"
+AutoBlowBubble.Parent = Main
+AutoBlowBubble.AnchorPoint = Vector2.new(0, 1)
+AutoBlowBubble.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+AutoBlowBubble.BackgroundTransparency = 1
+AutoBlowBubble.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBlowBubble.Position = UDim2.new(0.349999994, 0, 0.419999987, 0)
+AutoBlowBubble.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+AutoBlowBubble.ZIndex = 2
+AutoBlowBubble.Image = "rbxassetid://1511196841"
+AutoBlowBubble.ImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+AutoBlowBubble.ScaleType = Enum.ScaleType.Slice
+AutoBlowBubble.SliceCenter = Rect.new(9, 11, 91, 89)
+
+AutoBubbleBlowerText_2.Name = "AutoBubbleBlowerText"
+AutoBubbleBlowerText_2.Parent = AutoBlowBubble
+AutoBubbleBlowerText_2.AnchorPoint = Vector2.new(0.5, 0.5)
+AutoBubbleBlowerText_2.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText_2.BackgroundTransparency = 1
+AutoBubbleBlowerText_2.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBubbleBlowerText_2.Position = UDim2.new(0.5, 0, 0.5, -2)
+AutoBubbleBlowerText_2.Size = UDim2.new(0.899999976, 0, 0.850000024, 0)
+AutoBubbleBlowerText_2.ZIndex = 2
+AutoBubbleBlowerText_2.Font = Enum.Font.Cartoon
+AutoBubbleBlowerText_2.Text = "DISABLED"
+AutoBubbleBlowerText_2.TextColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText_2.TextScaled = true
+AutoBubbleBlowerText_2.TextSize = 14
+AutoBubbleBlowerText_2.TextStrokeTransparency = 0.75
+AutoBubbleBlowerText_2.TextWrapped = true
+
+UIAspectRatioConstraint_3.Parent = AutoBlowBubble
+UIAspectRatioConstraint_3.AspectRatio = 3
+
+EggScroller.Name = "EggScroller"
+EggScroller.Parent = Main
+EggScroller.BackgroundColor3 = Color3.new(0.2, 0.505882, 1)
+EggScroller.BorderSizePixel = 0
+EggScroller.Position = UDim2.new(0.0500000119, 0, 0.119999997, 1)
+EggScroller.Size = UDim2.new(0.899999976, 0, 0.550000012, 0)
+EggScroller.Visible = false
+EggScroller.ZIndex = 5
+EggScroller.ScrollBarThickness = 8
+EggScroller.CanvasSize = UDim2.new(0, 0, 2.2, 0)
+
+UIListLayout.Parent = nil
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 0)
+
+Settings.Name = "Settings"
+Settings.Parent = BubbleGUI
+Settings.BackgroundTransparency = 1
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0.635, 0, 0.25, 0)
+Settings.Size = UDim2.new(0.25, 0, 0.550000012, 0)
+Settings.ZIndex = 2
+Settings.Image = "rbxassetid://1285673399"
+Settings.ImageColor3 = Color3.new(0.2, 0.505882, 1)
+Settings.ScaleType = Enum.ScaleType.Slice
+Settings.SliceCenter = Rect.new(8, 8, 247, 247)
+Settings.Visible = false
+
+UIAspectRatioConstraint_4.Parent = Settings
+UIAspectRatioConstraint_4.DominantAxis = Enum.DominantAxis.Height
+
+Outline_2.Name = "Outline"
+Outline_2.Parent = Settings
+Outline_2.BackgroundTransparency = 1
+Outline_2.BorderSizePixel = 0
+Outline_2.Position = UDim2.new(0, 0, 0.0199999996, 0)
+Outline_2.Size = UDim2.new(1, 0, 1, 0)
+Outline_2.Image = "rbxassetid://1285673399"
+Outline_2.ImageColor3 = Color3.new(0.137255, 0.356863, 0.701961)
+Outline_2.ScaleType = Enum.ScaleType.Slice
+Outline_2.SliceCenter = Rect.new(8, 8, 247, 247)
+
+TextLabel_2.Parent = Settings
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Position = UDim2.new(0.0749999881, 0, -0.0700000003, 0)
+TextLabel_2.Size = UDim2.new(0.850000024, 0, 0.150000006, 0)
+TextLabel_2.ZIndex = 2
+TextLabel_2.Font = Enum.Font.Cartoon
+TextLabel_2.Text = "SETTINGS"
+TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14
+TextLabel_2.TextStrokeTransparency = 0.80000001192093
+TextLabel_2.TextWrapped = true
+
+Outline2_2.Name = "Outline2"
+Outline2_2.Parent = Settings
+Outline2_2.BackgroundTransparency = 1
+Outline2_2.BorderSizePixel = 0
+Outline2_2.Position = UDim2.new(0.0749999881, 0, -0.0599999987, 0)
+Outline2_2.Size = UDim2.new(0.850000024, 0, 1, 0)
+Outline2_2.Image = "rbxassetid://1285673399"
+Outline2_2.ImageColor3 = Color3.new(0.2, 0.505882, 1)
+Outline2_2.ScaleType = Enum.ScaleType.Slice
+Outline2_2.SliceCenter = Rect.new(8, 8, 247, 247)
+
+TripleEgg.Name = "TripleEgg"
+TripleEgg.Parent = Settings
+TripleEgg.BackgroundColor3 = Color3.new(1, 1, 1)
+TripleEgg.BackgroundTransparency = 1
+TripleEgg.Position = UDim2.new(0.0500000007, 0, 0.150000006, 0)
+TripleEgg.Size = UDim2.new(0.550000012, 0, 0.100000001, 0)
+TripleEgg.ZIndex = 3
+TripleEgg.Font = Enum.Font.Cartoon
+TripleEgg.Text = "Triple Egg:"
+TripleEgg.TextColor3 = Color3.new(1, 1, 1)
+TripleEgg.TextScaled = true
+TripleEgg.TextSize = 14
+TripleEgg.TextStrokeTransparency = 0.80000001192093
+TripleEgg.TextWrapped = true
+TripleEgg.TextXAlignment = Enum.TextXAlignment.Left
+
+TripleEggStatus.Name = "TripleEggStatus"
+TripleEggStatus.Parent = Settings
+TripleEggStatus.BackgroundColor3 = Color3.new(1, 1, 1)
+TripleEggStatus.BackgroundTransparency = 1
+TripleEggStatus.Position = UDim2.new(0.5, 0, 0.150000006, 0)
+TripleEggStatus.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+TripleEggStatus.ZIndex = 3
+TripleEggStatus.Font = Enum.Font.Cartoon
+TripleEggStatus.Text = "FALSE"
+TripleEggStatus.TextColor3 = Color3.new(1, 0, 0)
+TripleEggStatus.TextScaled = true
+TripleEggStatus.TextSize = 14
+TripleEggStatus.TextStrokeTransparency = 0.89999997615814
+TripleEggStatus.TextWrapped = true
+TripleEggStatus.TextXAlignment = Enum.TextXAlignment.Left
+
+KeepEpic.Name = "KeepEpic"
+KeepEpic.Parent = Settings
+KeepEpic.BackgroundColor3 = Color3.new(1, 1, 1)
+KeepEpic.BackgroundTransparency = 1
+KeepEpic.Position = UDim2.new(0.0500000007, 0, 0.300000012, 0)
+KeepEpic.Size = UDim2.new(0.550000012, 0, 0.100000001, 0)
+KeepEpic.ZIndex = 3
+KeepEpic.Font = Enum.Font.Cartoon
+KeepEpic.Text = "Keep Epic:"
+KeepEpic.TextColor3 = Color3.new(1, 1, 1)
+KeepEpic.TextScaled = true
+KeepEpic.TextSize = 14
+KeepEpic.TextStrokeTransparency = 0.80000001192093
+KeepEpic.TextWrapped = true
+KeepEpic.TextXAlignment = Enum.TextXAlignment.Left
+
+KeepLegendary.Name = "KeepLegendary"
+KeepLegendary.Parent = Settings
+KeepLegendary.BackgroundColor3 = Color3.new(1, 1, 1)
+KeepLegendary.BackgroundTransparency = 1
+KeepLegendary.Position = UDim2.new(0.0500000007, 0, 0.449999988, 0)
+KeepLegendary.Size = UDim2.new(0.550000012, 0, 0.100000001, 0)
+KeepLegendary.ZIndex = 3
+KeepLegendary.Font = Enum.Font.Cartoon
+KeepLegendary.Text = "Keep Legend:"
+KeepLegendary.TextColor3 = Color3.new(1, 1, 1)
+KeepLegendary.TextScaled = true
+KeepLegendary.TextSize = 14
+KeepLegendary.TextStrokeTransparency = 0.80000001192093
+KeepLegendary.TextWrapped = true
+KeepLegendary.TextXAlignment = Enum.TextXAlignment.Left
+
+FastOpenLabel.Name = "KeepLegendary"
+FastOpenLabel.Parent = Settings
+FastOpenLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+FastOpenLabel.BackgroundTransparency = 1
+FastOpenLabel.Position = UDim2.new(0.0500000007, 0, 0.6, 0)
+FastOpenLabel.Size = UDim2.new(0.550000012, 0, 0.100000001, 0)
+FastOpenLabel.ZIndex = 3
+FastOpenLabel.Font = Enum.Font.Cartoon
+FastOpenLabel.Text = "Faster Open:"
+FastOpenLabel.TextColor3 = Color3.new(1, 1, 1)
+FastOpenLabel.TextScaled = true
+FastOpenLabel.TextSize = 14
+FastOpenLabel.TextStrokeTransparency = 0.80000001192093
+FastOpenLabel.TextWrapped = true
+FastOpenLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+AutoBlowBubble_2.Name = "AutoBlowBubble" -- Keep Epic
+AutoBlowBubble_2.Parent = Settings
+AutoBlowBubble_2.AnchorPoint = Vector2.new(0, 1)
+AutoBlowBubble_2.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+AutoBlowBubble_2.BackgroundTransparency = 1
+AutoBlowBubble_2.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBlowBubble_2.Position = UDim2.new(0.5, 0, 0.400000006, 0)
+AutoBlowBubble_2.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+AutoBlowBubble_2.ZIndex = 2
+AutoBlowBubble_2.Image = "rbxassetid://1511196841"
+AutoBlowBubble_2.ImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+AutoBlowBubble_2.ScaleType = Enum.ScaleType.Slice
+AutoBlowBubble_2.SliceCenter = Rect.new(9, 11, 91, 89)
+
+AutoBubbleBlowerText_3.Name = "AutoBubbleBlowerText"
+AutoBubbleBlowerText_3.Parent = AutoBlowBubble_2
+AutoBubbleBlowerText_3.AnchorPoint = Vector2.new(0.5, 0.5)
+AutoBubbleBlowerText_3.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText_3.BackgroundTransparency = 1
+AutoBubbleBlowerText_3.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBubbleBlowerText_3.Position = UDim2.new(0.5, 0, 0.5, -2)
+AutoBubbleBlowerText_3.Size = UDim2.new(0.899999976, 0, 0.850000024, 0)
+AutoBubbleBlowerText_3.ZIndex = 2
+AutoBubbleBlowerText_3.Font = Enum.Font.Cartoon
+AutoBubbleBlowerText_3.Text = "DISABLED"
+AutoBubbleBlowerText_3.TextColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText_3.TextScaled = true
+AutoBubbleBlowerText_3.TextSize = 14
+AutoBubbleBlowerText_3.TextStrokeTransparency = 0.75
+AutoBubbleBlowerText_3.TextWrapped = true
+
+UIAspectRatioConstraint_5.Parent = AutoBlowBubble_2
+UIAspectRatioConstraint_5.AspectRatio = 3
+
+AutoBlowBubble_3.Name = "AutoBlowBubble" -- Keep Legendary
+AutoBlowBubble_3.Parent = Settings
+AutoBlowBubble_3.AnchorPoint = Vector2.new(0, 1)
+AutoBlowBubble_3.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+AutoBlowBubble_3.BackgroundTransparency = 1
+AutoBlowBubble_3.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBlowBubble_3.Position = UDim2.new(0.600000024, 0, 0.550000012, 0)
+AutoBlowBubble_3.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+AutoBlowBubble_3.ZIndex = 2
+AutoBlowBubble_3.Image = "rbxassetid://1511196841"
+AutoBlowBubble_3.ImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+AutoBlowBubble_3.ScaleType = Enum.ScaleType.Slice
+AutoBlowBubble_3.SliceCenter = Rect.new(9, 11, 91, 89)
+
+AutoBubbleBlowerText_4.Name = "AutoBubbleBlowerText"
+AutoBubbleBlowerText_4.Parent = AutoBlowBubble_3
+AutoBubbleBlowerText_4.AnchorPoint = Vector2.new(0.5, 0.5)
+AutoBubbleBlowerText_4.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText_4.BackgroundTransparency = 1
+AutoBubbleBlowerText_4.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoBubbleBlowerText_4.Position = UDim2.new(0.5, 0, 0.5, -2)
+AutoBubbleBlowerText_4.Size = UDim2.new(0.899999976, 0, 0.850000024, 0)
+AutoBubbleBlowerText_4.ZIndex = 2
+AutoBubbleBlowerText_4.Font = Enum.Font.Cartoon
+AutoBubbleBlowerText_4.Text = "DISABLED"
+AutoBubbleBlowerText_4.TextColor3 = Color3.new(1, 1, 1)
+AutoBubbleBlowerText_4.TextScaled = true
+AutoBubbleBlowerText_4.TextSize = 14
+AutoBubbleBlowerText_4.TextStrokeTransparency = 0.75
+AutoBubbleBlowerText_4.TextWrapped = true
+
+UIAspectRatioConstraint_6.Parent = AutoBlowBubble_3
+UIAspectRatioConstraint_6.AspectRatio = 3
+
+-- Faster Open
+FastOpenButton.Name = "AutoBlowBubble" -- Keep Legendary
+FastOpenButton.Parent = Settings
+FastOpenButton.AnchorPoint = Vector2.new(0, 1)
+FastOpenButton.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+FastOpenButton.BackgroundTransparency = 1
+FastOpenButton.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+FastOpenButton.Position = UDim2.new(0.6, 0, 0.7, 0)
+FastOpenButton.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+FastOpenButton.ZIndex = 2
+FastOpenButton.Image = "rbxassetid://1511196841"
+FastOpenButton.ImageColor3 = Color3.new(0.490196, 0.490196, 0.490196)
+FastOpenButton.ScaleType = Enum.ScaleType.Slice
+FastOpenButton.SliceCenter = Rect.new(9, 11, 91, 89)
+
+FastOpenButtonText.Name = "AutoBubbleBlowerText"
+FastOpenButtonText.Parent = FastOpenButton
+FastOpenButtonText.AnchorPoint = Vector2.new(0.5, 0.5)
+FastOpenButtonText.BackgroundColor3 = Color3.new(1, 1, 1)
+FastOpenButtonText.BackgroundTransparency = 1
+FastOpenButtonText.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+FastOpenButtonText.Position = UDim2.new(0.5, 0, 0.5, -2)
+FastOpenButtonText.Size = UDim2.new(0.899999976, 0, 0.850000024, 0)
+FastOpenButtonText.ZIndex = 2
+FastOpenButtonText.Font = Enum.Font.Cartoon
+FastOpenButtonText.Text = "DISABLED"
+FastOpenButtonText.TextColor3 = Color3.new(1, 1, 1)
+FastOpenButtonText.TextScaled = true
+FastOpenButtonText.TextSize = 14
+FastOpenButtonText.TextStrokeTransparency = 0.75
+FastOpenButtonText.TextWrapped = true
+
+FastOpenUIAspectRatioConstraint.Parent = FastOpenButton
+FastOpenUIAspectRatioConstraint.AspectRatio = 3
+
+
+
+AutoEggDesc_2.Name = "AutoEggDesc"
+AutoEggDesc_2.Parent = Settings
+AutoEggDesc_2.AnchorPoint = Vector2.new(1, 0.5)
+AutoEggDesc_2.BackgroundColor3 = Color3.new(1, 1, 1)
+AutoEggDesc_2.BackgroundTransparency = 1
+AutoEggDesc_2.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+AutoEggDesc_2.Position = UDim2.new(0.95, 0, 0.88, 0)
+AutoEggDesc_2.Size = UDim2.new(0.9, 0, 0.25, 0)
+AutoEggDesc_2.ZIndex = 2
+AutoEggDesc_2.Font = Enum.Font.ArialBold
+AutoEggDesc_2.Text = "NOTE: If \"Keep Epic\" or \"Keep Legendary\" is set to disabled, then they will delete automatically when recieved."
+AutoEggDesc_2.TextColor3 = Color3.new(1, 1, 1)
+AutoEggDesc_2.TextScaled = true
+AutoEggDesc_2.TextSize = 14
+AutoEggDesc_2.TextStrokeTransparency = 0.75
+AutoEggDesc_2.TextWrapped = true
+
+Log.Name = "Log"
+Log.Parent = BubbleGUI
+Log.AnchorPoint = Vector2.new(0.5, 0)
+Log.BackgroundColor3 = Color3.new(0.972549, 0.972549, 0.972549)
+Log.BackgroundTransparency = 1
+Log.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Log.Position = UDim2.new(0.499593467, 0, 0.0274019241, 0)
+Log.Size = UDim2.new(0.300000012, 0, 0.06332881, 0)
+Log.ZIndex = 55
+Log.Image = "rbxassetid://1511196841"
+Log.ImageColor3 = Color3.new(0.243137, 0.380392, 1)
+Log.ScaleType = Enum.ScaleType.Slice
+Log.SliceCenter = Rect.new(9, 11, 91, 89)
+
+LogText.Name = "LogText"
+LogText.Parent = Log
+LogText.AnchorPoint = Vector2.new(0.5, 0.5)
+LogText.BackgroundColor3 = Color3.new(1, 1, 1)
+LogText.BackgroundTransparency = 1
+LogText.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+LogText.Position = UDim2.new(0.5, 0, 0.5, -2)
+LogText.Size = UDim2.new(0.899999976, 0, 0.899999976, 0)
+LogText.ZIndex = 56
+LogText.Font = Enum.Font.Cartoon
+LogText.Text = "YOUR EXPLOIT NEED DEBUG LIBRARY"
+LogText.TextColor3 = Color3.new(1, 1, 1)
+LogText.TextScaled = true
+LogText.TextSize = 12
+LogText.TextStrokeTransparency = 0.75
+LogText.TextWrapped = true
+
+-- Scripts:
+local Player = game.Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:wait()
+local Eggs = {}
+local Functions = {}
+local Settings = {
+	TripleEgg = game:GetService("MarketplaceService"):UserOwnsGamePassAsync(Player.UserId, 5502695),
+	KeepEpic = true,
+	KeepLegendary = true,
+	RemoveUI = false,
+	blowWait = 1
+}
+local SavedInstancesFolder = Instance.new("Folder")
+SavedInstancesFolder.Name = "SavedInstancesFolder"
+SavedInstancesFolder.Parent = game.CoreGui
+-- Will figure out how to properly restore these elements below in future update
+local SavedInstances = {
+	"StatsFrame",
+	"MainButtons",
+	"Settings",
+	"HeightMeter",
+	"Hotkey",
+	"PetHatch"
+}
+local ChosenEgg = "Common Egg"
+local DisabledColor = Color3.fromRGB(125, 125, 125)
+local EnabledColor = Color3.fromRGB(64, 255, 64)
+local PetModule
+local HatModule
+local AutoProfit = false
+local AutoOpen = false
+
+-- Grab Modules
+for _, ModuleScript in pairs(game.ReplicatedStorage:GetDescendants()) do
+	if ModuleScript:IsA("ModuleScript") and ModuleScript.Name == "PetModule" then
+		PetModule = require(ModuleScript)
+	elseif ModuleScript:IsA("ModuleScript") and ModuleScript.Name == "HatModule" then
+		HatModule = require(ModuleScript)
+	end
+end
+
+-- Grab Eggs
+for _, egg in next, workspace.Eggs:GetChildren() do
+	Eggs[#Eggs + 1] = egg
+end
+
+-- Log Text Functions
+local LogText = function(Text)
+	pcall(function()
+		LogText.Text = tostring(Text)
+	end)
+end
+
+-- Grab Functions
+local FireNetwork = function(...)
+	Functions[1]:FireServer(...)
+end
+
+for A,B in next, debug.getregistry() do
+	if type(B) == "function" then
+		pcall(function()
+			for X,Z in next, debug.getupvalues(B) do
+				if X == "Network" then
+					Functions[#Functions + 1] = Z
+				end
+			end
+		end)
+	end
+end
+
+for _,Remote in pairs (game:GetDescendants()) do
+	if Remote:IsA("RemoteEvent") then
+		Remote.OnClientEvent:Connect(function(ArgOne, ...)
+			if AutoOpen then
+				if ArgOne == "DataChanged" then
+					if typeof (...) == "table" then
+						for A,B in ipairs (...) do
+							if typeof(B) == "table" then
+								if string.len(tostring(B[1])) == 36 then
+									wait()
+									--print(B[2])
+									if string.sub(ChosenEgg, -5) == "Crate" then
+										-- Delete hat code
+										pcall(function()
+											if HatModule[tostring(B[2])]["Rarity"] == "Epic" then
+												if Settings.KeepEpic ~= true then
+													if B[6] ~= true then
+														LogText("Deleted Hat: " .. tostring(B[2]))
+														FireNetwork("DeleteHat", tostring(B[1]))
+													end
+												end
+											elseif HatModule[tostring(B[2])]["Rarity"] == "Legendary" then
+												if Settings.KeepLegendary ~= true then
+													if B[6] ~= true then
+														LogText("Deleted Hat: " .. tostring(B[2]))
+														FireNetwork("DeleteHat", tostring(B[1]))
+													end
+												end
+											else
+												if B[6] ~= true then
+													LogText("Deleted Hat: " .. tostring(B[2]))
+													FireNetwork("DeleteHat", tostring(B[1]))
+												end	
+											end
+										end)
+									elseif string.sub(ChosenEgg, -3) == "Egg" then
+										pcall(function()
+											if PetModule[tostring(B[2])]["Rarity"] == "Epic" then
+												if Settings.KeepEpic ~= true then
+													if B[6] ~= true then
+														LogText("Deleted Pet: " .. tostring(B[2]))
+														FireNetwork("DeletePet", tostring(B[1]))
+													end
+												end
+											elseif PetModule[tostring(B[2])]["Rarity"] == "Legendary" then
+												if Settings.KeepLegendary ~= true then
+													if B[6] ~= true then
+														LogText("Deleted Pet: " .. tostring(B[2]))
+														FireNetwork("DeletePet", tostring(B[1]))
+													end
+												end
+											else
+												if B[6] ~= true then
+													LogText("Deleted Pet: " .. tostring(B[2]))
+													FireNetwork("DeletePet", tostring(B[1]))
+												end
+											end
+										end)
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end)
+	end
+end
+-----------
+if Settings.TripleEgg then
+	TripleEggStatus.Text = "TRUE"
+	TripleEggStatus.TextColor3 = Color3.fromRGB(64, 255, 64)
+elseif Settings.TripleEgg == false then
+	TripleEggStatus.Text = "FALSE"
+	TripleEggStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+end
+
+AutoBlowBubble_2.ImageColor3 = EnabledColor
+AutoBubbleBlowerText_3.Text = "ENABLED"
+
+AutoBlowBubble_3.ImageColor3 = EnabledColor
+AutoBubbleBlowerText_4.Text = "ENABLED"
+
+LogText("Developer: Titanium Developer#9736")
+wait(3)
+LogText("Discord: https://discord.gg/6qcVZcU")
+wait(3)
+LogText("New UI & Crate Opening - Stevee#7213")
+wait(3)
+LogText("Click To Open")
+
+AutoBlowBubble.MouseButton1Down:Connect(function()
+	if AutoProfit then
+		LogText("Disabled Bubble Blower")
+		AutoBubbleBlowerText_2.Text = "DISABLED"
+		AutoBlowBubble.ImageColor3 = DisabledColor
+		AutoProfit = false
+	else
+		AutoProfit = true
+		AutoBubbleBlowerText_2.Text = "ENABLED"
+		AutoBlowBubble.ImageColor3 = EnabledColor
+		LogText("Enabled Bubble Blower")
+		repeat
+			wait(Settings.blowWait)
+			FireNetwork("BlowBubble")
+			FireNetwork("ClaimAchievement", 1)
+			FireNetwork("ClaimAchievement", 2)
+			FireNetwork("ClaimAchievement", 3)
+			FireNetwork("ClaimAchievement", 4)
+		until AutoProfit == false
+	end
+end)
+
+AutoOpenerButton.MouseButton1Down:Connect(function()
+	if AutoOpen then
+		LogText("Disabled Auto Open")
+		AutoOpen = false
+		AutoOpenerButton.ImageColor3 = DisabledColor
+		AutoBubbleBlowerText.Text = "DISABLED"
+	else
+		AutoOpen = true
+		AutoOpenerButton.ImageColor3 = EnabledColor
+		AutoBubbleBlowerText.Text = "ENABLED"
+		LogText("Enabled Auto Open")
+		repeat
+			if Settings.TripleEgg then
+				FireNetwork("PurchaseEgg", Object.Text, "Multi")
+			elseif Settings.TripleEgg == false then
+				FireNetwork("PurchaseEgg", Object.Text)
+			end
+			if Settings.RemoveUI then
+				wait(2)
+			elseif Settings.RemoveUI  == false then
+				wait(4)			
+			end
+		until AutoOpen == false
+	end	
+end)
+
+
+ChooseEgg.MouseButton1Down:Connect(function()
+	--	(2/4/2019) ~ No longer recreate buttons & removed while loop for button click connection
+	if EggScroller.Visible then
+		EggScroller.Visible = false
+	else
+		local count = 0
+		for i,v in pairs(Eggs) do
+			if not EggScroller:FindFirstChild(v.Name) then
+				local btn = TemplateButton:Clone()
+				btn.Name, btn.Text = v.Name, v.Name
+				btn.Visible = true
+				btn.Position = UDim2.new(0.1, 0, (count / 10) / 3, 0)
+				btn.Parent = EggScroller
+				count = count + 1
+
+				-- Clicked
+				btn.MouseButton1Down:Connect(function()
+					ChosenEgg = v.Name
+					Object.Text = v.Name
+					LogText("Selected " .. v.Name)
+					EggScroller.Visible = not EggScroller.Visible
+				end)
+			end
+		end
+		EggScroller.Visible = true
+	end
+end)
+
+AutoBlowBubble_2.MouseButton1Down:Connect(function()
+	if Settings.KeepEpic then
+		Settings.KeepEpic = false
+		LogText("Disabled keeping Epic Items")
+		AutoBubbleBlowerText_3.Text = "DISABLED"
+		AutoBlowBubble_2.ImageColor3 = DisabledColor
+	else
+		Settings.KeepEpic = true
+		LogText("Enabled keeping Epic Items")
+		AutoBubbleBlowerText_3.Text = "ENABLED"
+		AutoBlowBubble_2.ImageColor3 = EnabledColor
+	end	
+end)
+
+AutoBlowBubble_3.MouseButton1Down:Connect(function()
+	if Settings.KeepLegendary then
+		Settings.KeepLegendary = false
+		LogText("Disabled keeping Legendary Items")
+		AutoBubbleBlowerText_4.Text = "DISABLED"
+		AutoBlowBubble_3.ImageColor3 = DisabledColor
+	else
+		Settings.KeepLegendary = true
+		LogText("Enabled keeping Legendary Items")
+		AutoBubbleBlowerText_4.Text = "ENABLED"
+		AutoBlowBubble_3.ImageColor3 = EnabledColor
+	end	
+end)
+
+Log.MouseButton1Down:Connect(function()
+	if Main.Visible then
+		LogText("Click to Open")
+		for i,v in pairs(BubbleGUI:GetChildren()) do
+			if v.Name ~= "Log" then
+				v.Visible = false
+			end
+		end
+	else
+		LogText("Click to Close")
+		for i,v in pairs(BubbleGUI:GetChildren()) do
+			if v.Name ~= "Log" then
+				v.Visible = true
+			end
+		end
+	end
+end)
+
+FastOpenButton.MouseButton1Down:Connect(function()
+	if Settings.RemoveUI then
+		LogText("Disabled Faster Open")
+		Settings.RemoveUI = false
+		FastOpenButtonText.Text = "DISABLED"
+		FastOpenButton.ImageColor3 = DisabledColor
+	else
+		LogText("Enabled Faster Open")
+		Settings.RemoveUI = true
+		FastOpenButtonText.Text = "ENABLED"
+		FastOpenButton.ImageColor3 = EnabledColor
+	end
+end)
+
+-- Anti AFK
+local VirtualUser = game:GetService("VirtualUser")
+Player.Idled:Connect(function()
+	VirtualUser:CaptureController()	
+	VirtualUser:ClickButton2(Vector2.new())
+end)
+
+
+game.Players.LocalPlayer.PlayerGui.ScreenGui.ChildAdded:Connect(function(Child)		
+	if Settings.RemoveUI then
+		if Child.Name == "MultiPetHatch" or Child.Name == "PetHatch" then		
+			Child:Destroy()		
+		end	
+	end	
+end)
+
+
+
+--	(2/4/2019) ~ Removed While loop and RunService loop { *POSSIBLE CRASH REASONS* }
+Settings.TripleEgg = game:GetService("MarketplaceService"):UserOwnsGamePassAsync(Player.UserId, 5502695)
+if Settings.TripleEgg then
+	TripleEggStatus.Text = "TRUE"
+	TripleEggStatus.TextColor3 = Color3.fromRGB(64, 255, 64)
+elseif Settings.TripleEgg == false then
+	TripleEggStatus.Text = "FALSE"
+	TripleEggStatus.TextColor3 = Color3.fromRGB(255, 0, 0)
+end
+
+if game:GetService("MarketplaceService"):UserOwnsGamePassAsync(Player.UserId, 5418177) then
+	Settings.blowWait = 0.5
+else
+	Settings.blowWait = 1
+end
+end)
+
+CANDY.Name = "CANDY"
+CANDY.Parent = CSCP
+CANDY.BackgroundColor3 = Color3.new(0, 0, 0)
+CANDY.Position = UDim2.new(-0.0509999879, 0, -0.0844811797, 0)
+CANDY.Size = UDim2.new(0, 201, 0, 22)
+CANDY.Font = Enum.Font.ArialBold
+CANDY.Text = "CANDY LAND SCRIPTS"
+CANDY.TextColor3 = Color3.new(1, 1, 1)
+CANDY.TextSize = 14
+
+CANDY2.Name = "CANDY2"
+CANDY2.Parent = CSCP
+CANDY2.BackgroundColor3 = Color3.new(0, 0, 0)
+CANDY2.Position = UDim2.new(-0.0509999879, 0, 0.966023862, 0)
+CANDY2.Size = UDim2.new(0, 201, 0, 22)
+CANDY2.Font = Enum.Font.ArialBold
+CANDY2.Text = "CANDY LAND SCRIPTS"
+CANDY2.TextColor3 = Color3.new(1, 1, 1)
+CANDY2.TextSize = 14
+
+XCL.Name = "XCL"
+XCL.Parent = CSCP
+XCL.BackgroundColor3 = Color3.new(0, 0, 0)
+XCL.Position = UDim2.new(0.898800254, 0, -0.0823158771, 0)
+XCL.Size = UDim2.new(0, 20, 0, 21)
+XCL.Font = Enum.Font.ArialBold
+XCL.Text = "X"
+XCL.TextColor3 = Color3.new(1, 1, 1)
+XCL.TextSize = 14
+XCL.MouseButton1Click:connect(function()
+	CSCP.Visible = false
+end)
+
+Credits.Name = "Credits"
+Credits.Parent = ScreenGui
+Credits.BackgroundColor3 = Color3.new(1, 1, 1)
+Credits.Position = UDim2.new(0, 0, 0.671990156, 0)
+Credits.Size = UDim2.new(0, 77, 0, 65)
+Credits.Style = Enum.FrameStyle.DropShadow
+
+CREDITSMAIN.Name = "CREDITSMAIN"
+CREDITSMAIN.Parent = Credits
+CREDITSMAIN.BackgroundColor3 = Color3.new(1, 1, 1)
+CREDITSMAIN.Position = UDim2.new(-0.0541406646, 0, 0.17796348, 0)
+CREDITSMAIN.Size = UDim2.new(0, 66, 0, 31)
+CREDITSMAIN.SizeConstraint = Enum.SizeConstraint.RelativeYY
+CREDITSMAIN.Style = Enum.ButtonStyle.RobloxRoundButton
+CREDITSMAIN.Font = Enum.Font.ArialBold
+CREDITSMAIN.Text = "CREDITS"
+CREDITSMAIN.TextColor3 = Color3.new(0, 0, 0)
+CREDITSMAIN.TextSize = 14
+CREDITSMAIN.MouseButton1Click:connect(function()
+	CREDITSINFO.Visible = true
+end)
+
+CREDITSINFO.Name = "CREDITSINFO"
+CREDITSINFO.Parent = Credits
+CREDITSINFO.BackgroundColor3 = Color3.new(0.12549, 0.686275, 0.498039)
+CREDITSINFO.Position = UDim2.new(2.89323664, 0, -4.12449694, 0)
+CREDITSINFO.Size = UDim2.new(0, 200, 0, 297)
+CREDITSINFO.Visible = false
+CREDITSINFO.Style = Enum.FrameStyle.DropShadow
+
+CREDITS2.Name = "CREDITS2"
+CREDITS2.Parent = CREDITSINFO
+CREDITS2.BackgroundColor3 = Color3.new(0, 0, 0)
+CREDITS2.Position = UDim2.new(-0.0509999879, 0, -0.0844811797, 0)
+CREDITS2.Size = UDim2.new(0, 201, 0, 22)
+CREDITS2.Font = Enum.Font.ArialBold
+CREDITS2.Text = "CREDITS"
+CREDITS2.TextColor3 = Color3.new(1, 1, 1)
+CREDITS2.TextSize = 14
+
+CREDITS.Name = "CREDITS"
+CREDITS.Parent = CREDITSINFO
+CREDITS.BackgroundColor3 = Color3.new(0, 0, 0)
+CREDITS.Position = UDim2.new(-0.0509999879, 0, 0.966023862, 0)
+CREDITS.Size = UDim2.new(0, 201, 0, 22)
+CREDITS.Font = Enum.Font.ArialBold
+CREDITS.Text = "CREDITS"
+CREDITS.TextColor3 = Color3.new(1, 1, 1)
+CREDITS.TextSize = 14
+
+XC.Name = "XC"
+XC.Parent = CREDITSINFO
+XC.BackgroundColor3 = Color3.new(0, 0, 0)
+XC.Position = UDim2.new(0.898800254, 0, -0.0823158771, 0)
+XC.Size = UDim2.new(0, 20, 0, 21)
+XC.Font = Enum.Font.ArialBold
+XC.Text = "X"
+XC.TextColor3 = Color3.new(1, 1, 1)
+XC.TextSize = 14
+XC.MouseButton1Click:connect(function()
+	CREDITSINFO.Visible = false
+end)
+
+CREDITSTO.Name = "CREDITS TO"
+CREDITSTO.Parent = CREDITSINFO
+CREDITSTO.BackgroundColor3 = Color3.new(0.576471, 0.576471, 0.576471)
+CREDITSTO.Position = UDim2.new(-0.0246559121, 0, 0.153840333, 0)
+CREDITSTO.Size = UDim2.new(0, 190, 0, 50)
+CREDITSTO.Font = Enum.Font.Arcade
+CREDITSTO.Text = "CREDITS TO:"
+CREDITSTO.TextColor3 = Color3.new(0, 0, 0)
+CREDITSTO.TextSize = 14
+
+CRED.Name = "CRED"
+CRED.Parent = CREDITSINFO
+CRED.BackgroundColor3 = Color3.new(0.545098, 0.545098, 0.545098)
+CRED.Position = UDim2.new(-0.0281649772, 0, 0.432275116, 0)
+CRED.Size = UDim2.new(0, 191, 0, 56)
+CRED.Font = Enum.Font.ArialBold
+CRED.Text = "NAME4YOU,ANTRAXO,TITANIUMDEVELOPER"
+CRED.TextColor3 = Color3.new(0, 0, 0)
+
+CREDI.Name = "CREDI"
+CREDI.Parent = CREDITSINFO
+CREDI.BackgroundColor3 = Color3.new(0.533333, 0.533333, 0.533333)
+CREDI.Position = UDim2.new(-0.0369155891, 0, 0.714001596, 0)
+CREDI.Size = UDim2.new(0, 195, 0, 50)
+CREDI.Font = Enum.Font.ArialBold
+CREDI.Text = "STEEVE,SHIZU, NOT A TRAP, REALLESECURE"
+CREDI.TextColor3 = Color3.new(0, 0, 0)
+-- Scripts:
