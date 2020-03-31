@@ -1,0 +1,19 @@
+game.StarterGui:SetCore("SendNotification", {
+       Title = "txmsZen TP Sistemi";
+       Text = "3";
+})
+wait(1)
+game.StarterGui:SetCore("SendNotification", {
+       Title = "txmsZen TP Sistemi";
+       Text = "2";
+})
+wait(1)
+game.StarterGui:SetCore("SendNotification", {
+       Title = "txmsZen TP Sistemi";
+       Text = "1";
+})
+wait(1)
+local oh1 = CFrame.new(1133.33264, 292.04248, 1440.64148)
+local oh2 = game:GetService("Players")
+local oh3 = oh2.LocalPlayer.Character.HumanoidRootPart
+oh3.CFrame = oh1
