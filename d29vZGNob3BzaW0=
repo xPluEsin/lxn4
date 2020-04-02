@@ -1,0 +1,540 @@
+--[[
+      Woodchopping Simulator GUI v2
+
+			designed by ISaiD
+
+	Help: https://docs.apiupload.gq under Woodchopping Simulator GUI v2
+
+
+]]--
+-- Instances:
+local GUIV2 = Instance.new("ScreenGui")
+local Open = Instance.new("Frame")
+local OpenButton = Instance.new("TextButton")
+local Main = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Subtitle = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local ToolsLabel = Instance.new("TextLabel")
+local AllTools = Instance.new("TextButton")
+local STool = Instance.new("TextBox")
+local GetTool = Instance.new("TextButton")
+local BackLabel = Instance.new("TextLabel")
+local AllBacks = Instance.new("TextButton")
+local SBack = Instance.new("TextBox")
+local GetBack = Instance.new("TextButton")
+local VehLabel = Instance.new("TextLabel")
+local AllVeh = Instance.new("TextButton")
+local SVeh = Instance.new("TextBox")
+local GetVeh = Instance.new("TextButton")
+local PetsLabel = Instance.new("TextLabel")
+local AllPets = Instance.new("TextButton")
+local SPet = Instance.new("TextBox")
+local GetPet = Instance.new("TextButton")
+local OPTools = Instance.new("TextButton")
+local Help = Instance.new("TextLabel")
+local Chng = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+--Properties:
+GUIV2.Name = "GUIV2"
+GUIV2.Parent = game.CoreGui
+
+Main.Active = true
+Main.Draggable = true
+
+Open.Name = "Open"
+Open.Parent = GUIV2
+Open.BackgroundColor3 = Color3.new(1, 1, 1)
+Open.Position = UDim2.new(0, 0, 0.948402941, 0)
+Open.Size = UDim2.new(0, 128, 0, 22)
+
+OpenButton.Name = "OpenButton"
+OpenButton.Parent = Open
+OpenButton.BackgroundColor3 = Color3.new(1, 0.290196, 0.0117647)
+OpenButton.Size = UDim2.new(0, 128, 0, 22)
+OpenButton.Font = Enum.Font.SourceSans
+OpenButton.Text = "Open"
+OpenButton.TextColor3 = Color3.new(0, 0, 0)
+OpenButton.TextSize = 14
+
+Main.Name = "Main"
+Main.Parent = GUIV2
+Main.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+Main.BackgroundTransparency = 0.60000002384186
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.0294820722, 0, 0.0491400473, 0)
+Main.Size = UDim2.new(0, 638, 0, 359)
+Main.Visible = false
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+Title.Position = UDim2.new(-0.0109717865, 0, -0.0198300276, 0)
+Title.Size = UDim2.new(0, 651, 0, 15)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Woodchopping Simulator GUI v2"
+Title.TextColor3 = Color3.new(0, 0, 0)
+Title.TextSize = 14
+
+Subtitle.Name = "Subtitle"
+Subtitle.Parent = Main
+Subtitle.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+Subtitle.Position = UDim2.new(-0.0109717865, 0, 0.983002841, 0)
+Subtitle.Size = UDim2.new(0, 651, 0, 15)
+Subtitle.Font = Enum.Font.SourceSans
+Subtitle.Text = "GUI by ISaiD"
+Subtitle.TextColor3 = Color3.new(0, 0, 0)
+Subtitle.TextSize = 14
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+Close.Position = UDim2.new(0.982758641, 0, -0.0198300276, 0)
+Close.Size = UDim2.new(0, 17, 0, 15)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.new(0, 0, 0)
+Close.TextSize = 14
+
+ToolsLabel.Name = "ToolsLabel"
+ToolsLabel.Parent = Main
+ToolsLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ToolsLabel.BackgroundTransparency = 1
+ToolsLabel.Position = UDim2.new(-0.000937937177, 0, 0.0266790092, 0)
+ToolsLabel.Size = UDim2.new(0, 42, 0, 23)
+ToolsLabel.Font = Enum.Font.SourceSans
+ToolsLabel.Text = "Tools:"
+ToolsLabel.TextColor3 = Color3.new(0, 0, 0)
+ToolsLabel.TextSize = 14
+
+AllTools.Name = "AllTools"
+AllTools.Parent = Main
+AllTools.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+AllTools.Position = UDim2.new(0.0642633215, 0, 0.0339943357, 0)
+AllTools.Size = UDim2.new(0, 200, 0, 20)
+AllTools.Font = Enum.Font.SourceSans
+AllTools.Text = "All Tools"
+AllTools.TextColor3 = Color3.new(0, 0, 0)
+AllTools.TextSize = 14
+
+STool.Name = "STool"
+STool.Parent = Main
+STool.BackgroundColor3 = Color3.new(1, 1, 1)
+STool.Position = UDim2.new(0.388714731, 0, 0.0339943357, 0)
+STool.Size = UDim2.new(0, 278, 0, 20)
+STool.Font = Enum.Font.SourceSans
+STool.Text = "Tool ID here"
+STool.TextColor3 = Color3.new(0, 0, 0)
+STool.TextSize = 14
+
+GetTool.Name = "GetTool"
+GetTool.Parent = Main
+GetTool.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+GetTool.Position = UDim2.new(0.838558018, 0, 0.0339943357, 0)
+GetTool.Size = UDim2.new(0, 92, 0, 20)
+GetTool.Font = Enum.Font.SourceSans
+GetTool.Text = "Get"
+GetTool.TextColor3 = Color3.new(0, 0, 0)
+GetTool.TextSize = 14
+
+BackLabel.Name = "BackLabel"
+BackLabel.Parent = Main
+BackLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+BackLabel.BackgroundTransparency = 1
+BackLabel.Position = UDim2.new(0, 0, 0.11048159, 0)
+BackLabel.Size = UDim2.new(0, 56, 0, 23)
+BackLabel.Font = Enum.Font.SourceSans
+BackLabel.Text = "Backpack:"
+BackLabel.TextColor3 = Color3.new(0, 0, 0)
+BackLabel.TextSize = 14
+
+AllBacks.Name = "AllBacks"
+AllBacks.Parent = Main
+AllBacks.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+AllBacks.Position = UDim2.new(0.100313477, 0, 0.110481583, 0)
+AllBacks.Size = UDim2.new(0, 177, 0, 20)
+AllBacks.Font = Enum.Font.SourceSans
+AllBacks.Text = "All Backpacks"
+AllBacks.TextColor3 = Color3.new(0, 0, 0)
+AllBacks.TextSize = 14
+
+SBack.Name = "SBack"
+SBack.Parent = Main
+SBack.BackgroundColor3 = Color3.new(1, 1, 1)
+SBack.Position = UDim2.new(0.388714731, 0, 0.11048159, 0)
+SBack.Size = UDim2.new(0, 278, 0, 20)
+SBack.Font = Enum.Font.SourceSans
+SBack.Text = "Backpack ID here"
+SBack.TextColor3 = Color3.new(0, 0, 0)
+SBack.TextSize = 14
+
+GetBack.Name = "GetBack"
+GetBack.Parent = Main
+GetBack.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+GetBack.Position = UDim2.new(0.838558018, 0, 0.11048159, 0)
+GetBack.Size = UDim2.new(0, 92, 0, 20)
+GetBack.Font = Enum.Font.SourceSans
+GetBack.Text = "Get"
+GetBack.TextColor3 = Color3.new(0, 0, 0)
+GetBack.TextSize = 14
+
+VehLabel.Name = "VehLabel"
+VehLabel.Parent = Main
+VehLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+VehLabel.BackgroundTransparency = 1
+VehLabel.Position = UDim2.new(0, 0, 0.195467427, 0)
+VehLabel.Size = UDim2.new(0, 56, 0, 23)
+VehLabel.Font = Enum.Font.SourceSans
+VehLabel.Text = "Vehicles:"
+VehLabel.TextColor3 = Color3.new(0, 0, 0)
+VehLabel.TextSize = 14
+
+AllVeh.Name = "AllVeh"
+AllVeh.Parent = Main
+AllVeh.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+AllVeh.Position = UDim2.new(0.100313477, 0, 0.195467412, 0)
+AllVeh.Size = UDim2.new(0, 177, 0, 20)
+AllVeh.Font = Enum.Font.SourceSans
+AllVeh.Text = "All Vehicles"
+AllVeh.TextColor3 = Color3.new(0, 0, 0)
+AllVeh.TextSize = 14
+
+SVeh.Name = "SVeh"
+SVeh.Parent = Main
+SVeh.BackgroundColor3 = Color3.new(1, 1, 1)
+SVeh.Position = UDim2.new(0.388714731, 0, 0.195467427, 0)
+SVeh.Size = UDim2.new(0, 278, 0, 20)
+SVeh.Font = Enum.Font.SourceSans
+SVeh.Text = "Vehicle ID here"
+SVeh.TextColor3 = Color3.new(0, 0, 0)
+SVeh.TextSize = 14
+
+GetVeh.Name = "GetVeh"
+GetVeh.Parent = Main
+GetVeh.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+GetVeh.Position = UDim2.new(0.838558018, 0, 0.195467427, 0)
+GetVeh.Size = UDim2.new(0, 92, 0, 20)
+GetVeh.Font = Enum.Font.SourceSans
+GetVeh.Text = "Get"
+GetVeh.TextColor3 = Color3.new(0, 0, 0)
+GetVeh.TextSize = 14
+
+PetsLabel.Name = "PetsLabel"
+PetsLabel.Parent = Main
+PetsLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+PetsLabel.BackgroundTransparency = 1
+PetsLabel.Position = UDim2.new(0, 0, 0.271954656, 0)
+PetsLabel.Size = UDim2.new(0, 56, 0, 23)
+PetsLabel.Font = Enum.Font.SourceSans
+PetsLabel.Text = "Pets:"
+PetsLabel.TextColor3 = Color3.new(0, 0, 0)
+PetsLabel.TextSize = 14
+
+AllPets.Name = "AllPets"
+AllPets.Parent = Main
+AllPets.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+AllPets.Position = UDim2.new(0.100313477, 0, 0.277620405, 0)
+AllPets.Size = UDim2.new(0, 177, 0, 20)
+AllPets.Font = Enum.Font.SourceSans
+AllPets.Text = "All Pets"
+AllPets.TextColor3 = Color3.new(0, 0, 0)
+AllPets.TextSize = 14
+
+SPet.Name = "SPet"
+SPet.Parent = Main
+SPet.BackgroundColor3 = Color3.new(1, 1, 1)
+SPet.Position = UDim2.new(0.388714731, 0, 0.277620405, 0)
+SPet.Size = UDim2.new(0, 278, 0, 20)
+SPet.Font = Enum.Font.SourceSans
+SPet.Text = "Pet ID here"
+SPet.TextColor3 = Color3.new(0, 0, 0)
+SPet.TextSize = 14
+
+GetPet.Name = "GetPet"
+GetPet.Parent = Main
+GetPet.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+GetPet.Position = UDim2.new(0.838558018, 0, 0.277620405, 0)
+GetPet.Size = UDim2.new(0, 92, 0, 20)
+GetPet.Font = Enum.Font.SourceSans
+GetPet.Text = "Get"
+GetPet.TextColor3 = Color3.new(0, 0, 0)
+GetPet.TextSize = 14
+
+OPTools.Name = "OPTools"
+OPTools.Parent = Main
+OPTools.BackgroundColor3 = Color3.new(1, 0.333333, 0)
+OPTools.Position = UDim2.new(0.0125391847, 0, 0.359773368, 0)
+OPTools.Size = UDim2.new(0, 619, 0, 50)
+OPTools.Font = Enum.Font.Arial
+OPTools.Text = "Give OP Tools"
+OPTools.TextColor3 = Color3.new(0, 0, 0)
+OPTools.TextSize = 20
+
+Help.Name = "Help"
+Help.Parent = Main
+Help.BackgroundColor3 = Color3.new(1, 1, 1)
+Help.BackgroundTransparency = 1
+Help.Position = UDim2.new(0.0125391847, 0, 0.524079323, 0)
+Help.Size = UDim2.new(0, 619, 0, 15)
+Help.Font = Enum.Font.SourceSans
+Help.Text = "Help: https://docs.apiupload.gq under Woodchopping Simulator GUI v2"
+Help.TextColor3 = Color3.new(0, 0, 0)
+Help.TextSize = 14
+
+Chng.Name = "Chng"
+Chng.Parent = Main
+Chng.BackgroundColor3 = Color3.new(1, 1, 1)
+Chng.BackgroundTransparency = 1
+Chng.Position = UDim2.new(0.0125391847, 0, 0.584958196, 0)
+Chng.Size = UDim2.new(0, 200, 0, 16)
+Chng.Font = Enum.Font.SourceSans
+Chng.Text = "Changelog:"
+Chng.TextColor3 = Color3.new(0, 0, 0)
+Chng.TextSize = 14
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.0125391847, 0, 0.629526436, 0)
+TextLabel.Size = UDim2.new(0, 619, 0, 114)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Changed design; fixed pets, removed cahs, ability to unlock specified items"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 14
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel.TextYAlignment = Enum.TextYAlignment.Top
+-- Scripts:
+OpenButton.MouseButton1Click:connect(function()
+	Open.Visible = false
+	Main.Visible = true
+end)
+AllTools.MouseButton1Click:connect(function()
+	local A_1 = "Scrap Axe"
+    local A_2 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_1, A_2)
+    local A_3 = "Industrial Hatchet"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_3, A_4)
+    local A_5 = "Wood Saw"
+    local A_6 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_5, A_6)
+    local A_7 = "Rune Axe"
+    local A_8 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_7, A_8)
+    local A_9 = "Skull Splitter"
+    local A_10 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_9, A_10)
+    local A_11 = "Dragon Claw"
+    local A_12 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_11, A_12)
+    local A_13 = "Rusty Saw"
+    local A_14 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_13, A_14)
+    local A_15 = "Chainsaw"
+    local A_16 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_15, A_16)
+    local A_17 = "Laser Disk"
+    local A_18 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_17, A_18)
+    local A_19 = "Laser Cutter"
+    local A_20 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_19, A_20)
+    local A_21 = "Auto Axe"
+    local A_22 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_21, A_22)
+    local A_23 = "The Heater"
+    local A_24 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_23, A_24)
+    local A_25 = "Beam Emitter"
+    local A_26 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_25, A_26)
+    local A_27 = "Katana"
+    local A_28 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_27, A_28)
+    local A_29 = "Tree Wedger"
+    local A_30 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_29, A_30)
+end)
+AllBacks.MouseButton1Click:connect(function()
+	local A_3 = "Backpack2"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack3"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack4"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack5"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack7"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack8"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack9"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack10"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack611"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack12"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack13"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack14"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack15"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_3 = "Backpack16"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+end)
+AllVeh.MouseButton1Click:connect(function()
+	local A_1 = "Car"
+    local A_2 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.VehicleBuy
+    Event:FireServer(A_1, A_2)
+    local A_3 = "Truck"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.VehicleBuy
+    Event:FireServer(A_3, A_4)
+    local A_5 = "Motorbike"
+    local A_6 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.VehicleBuy
+    Event:FireServer(A_5, A_6)
+    local A_7 = "Tractor"
+    local A_8 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.VehicleBuy
+    Event:FireServer(A_7, A_8)
+    local A_9 = "Dump Truck"
+    local A_10 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.VehicleBuy
+    Event:FireServer(A_9, A_10)
+end)
+AllPets.MouseButton1Click:connect(function()
+	local A_1 = "Pet1"
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.PetBuy
+	Event:FireServer(A_1, A_2)
+	local A_1 = "Pet2"
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.PetBuy
+	Event:FireServer(A_1, A_2)
+	local A_1 = "Pet3"
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.PetBuy
+	Event:FireServer(A_1, A_2)
+	local A_1 = "Pet4"
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.PetBuy
+	Event:FireServer(A_1, A_2)
+	local A_1 = "Pet5"
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.PetBuy
+	Event:FireServer(A_1, A_2)
+	local A_1 = "Pet6"
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.PetBuy
+	Event:FireServer(A_1, A_2)
+	local A_1 = "Pet7"
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.PetBuy
+	Event:FireServer(A_1, A_2)
+	local A_1 = "Pet8"
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.PetBuy
+	Event:FireServer(A_1, A_2)
+	local A_1 = "Pet9"
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.PetBuy
+	Event:FireServer(A_1, A_2)
+	local A_1 = "Pet10"
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.PetBuy
+	Event:FireServer(A_1, A_2)
+	local A_1 = "Pet11"
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.PetBuy
+	Event:FireServer(A_1, A_2)
+end)
+GetTool.MouseButton1Click:connect(function()
+	local A_1 = STool.Text
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+	Event:FireServer(A_1, A_2)
+end)
+GetBack.MouseButton1Click:connect(function()
+	local A_1 = SBack.Text
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+	Event:FireServer(A_1, A_2)
+end)
+GetVeh.MouseButton1Click:connect(function()
+	local A_1 = SVeh.Text
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.VehicleBuy
+	Event:FireServer(A_1, A_2)
+end)
+GetPet.MouseButton1Click:connect(function()
+    local A_1 = SPet.Text
+	local A_2 = 0
+	local Event = game:GetService("ReplicatedStorage").GlobalEvents.PetBuy
+	Event:FireServer(A_1, A_2)
+end)
+OPTools.MouseButton1Click:connect(function()
+	local A_1 = "Beam Emitter"
+    local A_2 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.ToolBuy
+    Event:FireServer(A_1, A_2)
+    local A_3 = "Backpack6"
+    local A_4 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.BackpackBuy
+    Event:FireServer(A_3, A_4)
+    local A_5 = "Tractor"
+    local A_6 = 0
+    local Event = game:GetService("ReplicatedStorage").GlobalEvents.VehicleBuy
+    Event:FireServer(A_5, A_6)
+end)
+Close.MouseButton1Click:connect(function()
+    Open.Visible = true
+    Main.Visible = false
+end)
