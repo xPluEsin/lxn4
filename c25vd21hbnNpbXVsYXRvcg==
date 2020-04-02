@@ -1,0 +1,118 @@
+-- Gui to Lua
+-- Version: 3
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local TextButton_5 = Instance.new("TextButton")
+local TextButton_6 = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local TextButton_7 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame.Position = UDim2.new(0.0788844526, 0, 0.54004848, 0)
+Frame.Size = UDim2.new(0, 297, 0, 274)
+Frame.Visible = false
+Frame.Active = true
+Frame.Draggable = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.Size = UDim2.new(0, 297, 0, 23)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "SnowMan Simulator GUI"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 20
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.Position = UDim2.new(0.0370370448, 0, 0.145985395, 0)
+TextButton.Size = UDim2.new(0, 124, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "AutoFarm"
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextSize = 14
+TextButton.MouseButton1Down:connect(function()
+--AutoFarm-AutoSell
+_G.LULU = true--change to true or false
+
+function AntiAFK()
+   if _G.LULU == false then return end
+   game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+   wait(1)
+   spawn(AntiAFK)
+end
+
+spawn(AntiAFK)
+
+while _G.LULU do
+wait(0.3)--dont change time if you change you kicked and move your character to not be kick
+game:GetService("ReplicatedStorage").ThisGame.Calls.collectSnow:FireServer()
+local A_1 = "stopRoll"
+game:GetService("ReplicatedStorage").ThisGame.Calls.snowballControllerFunc:InvokeServer(A_1)
+local A_1 = "addToSnowman"
+game:GetService("ReplicatedStorage").ThisGame.Calls.snowballController:FireServer(A_1)--Change the script to false for gain money
+end
+end)
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_2.Position = UDim2.new(0.508417487, 0, 0.145985395, 0)
+TextButton_2.Size = UDim2.new(0, 124, 0, 50)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "Collect Candy"
+TextButton_2.TextColor3 = Color3.new(0, 0, 0)
+TextButton_2.TextSize = 14
+TextButton_2.MouseButton1Down:connect(function()
+while wait(0.3)do
+for i,v in pairs (game.Workspace.gameCandyCanes:GetChildren()) do
+if v.cane then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.cane.Position)
+end
+end
+end
+end)
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_3.Position = UDim2.new(0.0370370448, 0, 0.434306532, 0)
+TextButton_3.Size = UDim2.new(0, 200, 0, 50)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "Collect Gold Candy (ONLY WHEN IT SPAWNS)"
+TextButton_3.TextColor3 = Color3.new(0, 0, 0)
+TextButton_3.TextSize = 12
+TextButton_3.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Workspace.singleCaneSpawners.goldCaneSpawnObbyEnd.Position)
+end)
+
+Frame_2.Parent = ScreenGui
+Frame_2.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame_2.Position = UDim2.new(0.00717131514, 0, 0.444174707, 0)
+Frame_2.Size = UDim2.new(0, 91, 0, 28)
+Frame.Active = true
+Frame.Draggable = true
+
+
+TextButton_7.Parent = Frame_2
+TextButton_7.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_7.Position = UDim2.new(0, 0, 0.0357142873, 0)
+TextButton_7.Size = UDim2.new(0, 190, 0, 260)
+TextButton_7.Font = Enum.Font.SourceSans
+TextButton_7.Text = "Open"
+TextButton_7.TextColor3 = Color3.new(0, 0, 0)
+TextButton_7.TextSize = 14
+TextButton_7.MouseButton1Down:connect(function()
+Frame_2.Visible = false
+Frame.Visible = true		
+end)
