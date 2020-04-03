@@ -1,0 +1,98 @@
+local smm = nil
+local getni = getnilinstances or get_nil_instances
+for i,v in next, getni() do
+	pcall(function()
+		if v:IsA("ModuleScript") then
+			local b = require(v)
+			if type(b) == 'table' then
+				if b.new then
+					local test = b:new()
+					if test.register_hit then
+						smm = b
+					end
+				end
+			end
+		end
+	end)
+end
+
+function givepoints()
+	if _G.CurrentAj then
+		_G.CurrentAj:set_score(_G.CurrentAj:get_score() + 10000000)
+	end
+end
+local enableautoplay = nil
+local disableautoplay = nil
+
+local library = loadstring(game:HttpGet("https://pastebinp.com/raw/7Z6TzFnv", true))()
+local main = library:CreateWindow({
+  text = "Main"
+})
+
+main:AddButton("Autoplayer", function()
+	spawn(function()
+		repeat
+			wait()
+		until enableautoplay ~= nil
+		enableautoplay()
+	end)
+end)
+
+main:AddButton("Unlimited Score", function()
+	givepoints()
+end)
+
+main:AddLabel("\nWhomever#9960")
+
+if smm then
+	local smmold = smm.new
+	function smm:new(...)
+		local myAj = nil
+		self = smmold({},...)
+		enableautoplay = function()
+			local oldreg = self.register_hit
+			function self.register_hit(self,f_game,noter,slot_index, track_index, params)
+				noter = 3
+				return oldreg(self,f_game,noter,slot_index, track_index, params)
+			end
+			function self:is_powerbar_active()
+				local locals = debug.getupvalues(self.initialize_localplayer)
+				myAj = locals.Aj
+				return true
+			end
+			spawn(function()
+				repeat
+					wait()
+				until myAj ~= nil
+				_G.CurrentAj = myAj
+				local oldreg2 = _G.CurrentAj.register_hit
+				function _G.CurrentAj.register_hit(self,zf,uf)
+					zf = 3
+					return oldreg2(self,zf,uf)
+				end
+			end)
+		end
+		disableautoplay = function()
+			local oldreg = self.register_hit
+			function self.register_hit(self,f_game,noter,slot_index, track_index, params)
+				return oldreg(self,f_game,prevnote,slot_index, track_index, params)
+			end
+			function self:is_powerbar_active()
+				local locals = debug.getupvalues(self.initialize_localplayer)
+				myAj = locals.Aj
+				return myAj:is_powerbar_active()
+			end
+			spawn(function()
+				repeat
+					wait()
+				until myAj ~= nil
+				_G.CurrentAj = myAj
+				local oldreg2 = _G.CurrentAj.register_hit
+				function _G.CurrentAj.register_hit(self,zf,uf)
+					return oldreg2(self,zf,uf)
+				end
+			end)
+		end
+		return self
+	end
+end
