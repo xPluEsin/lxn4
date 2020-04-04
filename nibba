@@ -63,6 +63,8 @@ TextButton.TextWrapped = true
 TextButton.MouseButton1Down:connect(function()
 ScreenGui.Enabled = false
 loadstring(game:HttpGet('https://whitelistcheck.com/scripts/legoninja.lua'))()
+wait(3)
+loadstring(game:GetObjects("rbxassetid://4229359911")[1].Source)()
 end)
 
 TextButton_2.Parent = Frame
@@ -70,7 +72,7 @@ TextButton_2.BackgroundColor3 = Color3.new(0.0901961, 0.0901961, 0.278431)
 TextButton_2.Position = UDim2.new(0.0517928302, 0, 0.444444418, 0)
 TextButton_2.Size = UDim2.new(0.89641434, 0, 0.230158806, 0)
 TextButton_2.Font = Enum.Font.Cartoon
-TextButton_2.Text = "Bütün Elementler"
+TextButton_2.Text = "Butun Elementler"
 TextButton_2.TextColor3 = Color3.new(0.333333, 0.666667, 1)
 TextButton_2.TextScaled = true
 TextButton_2.TextSize = 14
