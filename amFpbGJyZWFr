@@ -259,13 +259,13 @@ kopru1.BorderSizePixel = 0
 kopru1.Position = UDim2.new(0.0546060838, 0, 0.573351264, 0)
 kopru1.Size = UDim2.new(0.890814781, 0, 0.166546404, 0)
 kopru1.Font = Enum.Font.SourceSans
-kopru1.Text = "Gui 1"
+kopru1.Text = "OP Gui"
 kopru1.TextColor3 = Color3.fromRGB(255, 255, 255)
 kopru1.TextScaled = true
 kopru1.TextSize = 14.000
 kopru1.TextWrapped = true
 kopru1.MouseButton1Down:connect(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xPluEsin/lxn4/master/jb"))()
+    loadstring(game:HttpGet("https://ghostbin.co/paste/895u3/raw"))()
 end)
 
 kopru2.Name = "kopru2"
@@ -275,13 +275,13 @@ kopru2.BorderSizePixel = 0
 kopru2.Position = UDim2.new(0.0546060838, 0, 0.763422906, 0)
 kopru2.Size = UDim2.new(0.890814781, 0, 0.166546404, 0)
 kopru2.Font = Enum.Font.SourceSans
-kopru2.Text = "Gui 2"
+kopru2.Text = "Auto-Rob [Guncel]"
 kopru2.TextColor3 = Color3.fromRGB(255, 255, 255)
 kopru2.TextScaled = true
 kopru2.TextSize = 14.000
 kopru2.TextWrapped = true
 kopru2.MouseButton1Down:connect(function()
-    loadstring(game:HttpGet("https://ghostbin.co/paste/895u3/raw"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xPluEsin/lxn4/master/jb"))()
 end)
 
 TextLabel_7.Parent = Eglence
@@ -290,7 +290,7 @@ TextLabel_7.BackgroundTransparency = 1.000
 TextLabel_7.Position = UDim2.new(0.0546060838, 0, 0.403000176, 0)
 TextLabel_7.Size = UDim2.new(0.890814781, 0, 0.131298169, 0)
 TextLabel_7.Font = Enum.Font.SourceSans
-TextLabel_7.Text = "NOT2: Gui 2 Oyuncu icin"
+TextLabel_7.Text = "NOT2: Auto-Rob Guncellendi!"
 TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.TextScaled = true
 TextLabel_7.TextSize = 14.000
@@ -302,7 +302,7 @@ TextLabel_8.BackgroundTransparency = 1.000
 TextLabel_8.Position = UDim2.new(0.0546060838, 0, 0.273897856, 0)
 TextLabel_8.Size = UDim2.new(0.890814781, 0, 0.129102379, 0)
 TextLabel_8.Font = Enum.Font.SourceSans
-TextLabel_8.Text = "NOT: Gui 1 Teleport icin"
+TextLabel_8.Text = "NOT: OP Gui Teleport icin"
 TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.TextScaled = true
 TextLabel_8.TextSize = 14.000
