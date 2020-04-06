@@ -265,7 +265,7 @@ kopru1.TextScaled = true
 kopru1.TextSize = 14.000
 kopru1.TextWrapped = true
 kopru1.MouseButton1Down:connect(function()
-    loadstring(game:HttpGet("https://ghostbin.co/paste/895u3/raw"))()
+loadstring(game:HttpGet("https://pastebinp.com/raw/VFeL159y", true))();
 end)
 
 kopru2.Name = "kopru2"
