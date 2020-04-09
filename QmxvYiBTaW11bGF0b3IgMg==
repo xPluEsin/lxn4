@@ -1,0 +1,454 @@
+-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local PRB = Instance.new("ScreenGui")
+local PRB_2 = Instance.new("Frame")
+local TPAREA = Instance.new("TextButton")
+local PB1 = Instance.new("TextLabel")
+local PB2 = Instance.new("TextLabel")
+local AUTOEQUIP = Instance.new("TextButton")
+local CREDITS = Instance.new("TextButton")
+local AUTOFARM = Instance.new("TextButton")
+local AF = Instance.new("TextLabel")
+local AREANUMBER = Instance.new("TextBox")
+local EGGNUMBER = Instance.new("TextBox")
+local ABE = Instance.new("TextButton")
+local MAHEALTH = Instance.new("TextBox")
+local MHEALTH = Instance.new("TextBox")
+local OC = Instance.new("Frame")
+local OPEN = Instance.new("TextButton")
+local CLOSE = Instance.new("TextButton")
+local CREDITSF = Instance.new("Frame")
+local PB3 = Instance.new("TextLabel")
+local PB4 = Instance.new("TextLabel")
+local X = Instance.new("TextButton")
+local PB3_2 = Instance.new("TextLabel")
+local CRED = Instance.new("TextLabel")
+local CRED_2 = Instance.new("TextLabel")
+local CRED_3 = Instance.new("TextLabel")
+--Properties:
+PRB.Name = "PRB"
+PRB.Parent = game.CoreGui
+
+PRB_2.Name = "PRB"
+PRB_2.Parent = PRB
+PRB_2.BackgroundColor3 = Color3.new(1, 1, 1)
+PRB_2.BorderSizePixel = 3
+PRB_2.Position = UDim2.new(0.707509875, 0, 0.120393127, 0)
+PRB_2.Size = UDim2.new(0, 320, 0, 389)
+PRB_2.Visible = false
+
+TPAREA.Name = "TPAREA"
+TPAREA.Parent = PRB_2
+TPAREA.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+TPAREA.Position = UDim2.new(0.0527420044, 0, 0.222446308, 0)
+TPAREA.Size = UDim2.new(0, 284, 0, 50)
+TPAREA.Font = Enum.Font.Highway
+TPAREA.Text = "TP AREA"
+TPAREA.TextColor3 = Color3.new(0, 0, 0)
+TPAREA.TextSize = 14
+TPAREA.MouseButton1Click:Connect(function()
+    -- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local ScreenGui = Instance.new("ScreenGui")
+local Back = Instance.new("Frame")
+local Areas = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local Template = Instance.new("TextButton")
+--Properties:
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Back.Name = "Back"
+Back.Parent = ScreenGui
+Back.BackgroundColor3 = Color3.new(0.670588, 0.501961, 0.988235)
+Back.BorderSizePixel = 0
+Back.Position = UDim2.new(0.409007907, 0, 0.555722892, 0)
+Back.Size = UDim2.new(0.181984171, 0, 0.341867477, 0)
+
+Areas.Name = "Areas"
+Areas.Parent = Back
+Areas.BackgroundColor3 = Color3.new(0.670588, 0.501961, 0.988235)
+Areas.BorderSizePixel = 0
+Areas.Size = UDim2.new(1, 0, 1, 0)
+Areas.ScrollBarThickness = 5
+Areas.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+
+UIGridLayout.Parent = Areas
+UIGridLayout.CellPadding = UDim2.new(0, 0, 0, 0)
+UIGridLayout.CellSize = UDim2.new(0, 294, 0, 50)
+
+Template.Name = "Template"
+Template.Parent = UIGridLayout
+Template.BackgroundColor3 = Color3.new(1, 1, 1)
+Template.BackgroundTransparency = 1
+Template.BorderSizePixel = 0
+Template.Size = UDim2.new(0.983277619, 0, 0.105485231, 0)
+Template.Font = Enum.Font.Highway
+Template.Text = "Area Name"
+Template.TextColor3 = Color3.new(0, 0, 0)
+Template.TextScaled = true
+Template.TextSize = 14
+Template.TextWrapped = true
+-- Scripts:
+for _,v in pairs(game.Workspace.GameComponents.Teleports:GetChildren()) do
+    if Areas:FindFirstChild(v.Name) == nil then
+        local copy = Template:Clone()
+        copy.Parent = Areas
+        copy.Name = v.Name
+        copy.Text = v.Name
+        copy.MouseButton1Click:Connect(function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.GameComponents.Teleports[copy.Name].CFrame
+        end)
+    end
+end
+--  102
+game:GetService("UserInputService").InputBegan:Connect(function(key)
+    if key.KeyCode == Enum.KeyCode.F then
+        if Back.Visible == false then
+            Back.Visible = true
+        elseif Back.Visible == true then
+            Back.Visible = false
+        end
+    end
+    
+end)
+Back.Active = true
+Back.Draggable = true
+end)
+
+PB1.Name = "PB1"
+PB1.Parent = PRB_2
+PB1.BackgroundColor3 = Color3.new(1, 1, 1)
+PB1.BorderSizePixel = 3
+PB1.ClipsDescendants = true
+PB1.Position = UDim2.new(0, 0, -0.0912762284, 0)
+PB1.Size = UDim2.new(0, 320, 0, 50)
+PB1.Font = Enum.Font.Highway
+PB1.Text = "PROJECT BLOB"
+PB1.TextColor3 = Color3.new(0, 0, 0)
+PB1.TextSize = 14
+
+PB2.Name = "PB2"
+PB2.Parent = PRB_2
+PB2.BackgroundColor3 = Color3.new(1, 1, 1)
+PB2.BorderSizePixel = 3
+PB2.ClipsDescendants = true
+PB2.Position = UDim2.new(0, 0, 0.998406529, 0)
+PB2.Size = UDim2.new(0, 320, 0, 50)
+PB2.Font = Enum.Font.Highway
+PB2.Text = "PROJECT BLOB"
+PB2.TextColor3 = Color3.new(0, 0, 0)
+PB2.TextSize = 14
+
+AUTOEQUIP.Name = "AUTOEQUIP"
+AUTOEQUIP.Parent = PRB_2
+AUTOEQUIP.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+AUTOEQUIP.Position = UDim2.new(0.0527421236, 0, 0.0660902411, 0)
+AUTOEQUIP.Size = UDim2.new(0, 285, 0, 50)
+AUTOEQUIP.Font = Enum.Font.Highway
+AUTOEQUIP.Text = "AUTO EQUIP THE BEST PET IN GAME"
+AUTOEQUIP.TextColor3 = Color3.new(0, 0, 0)
+AUTOEQUIP.TextSize = 14
+AUTOEQUIP.MouseButton1Click:Connect(function()
+local blob = "Radioactive Blobimus Infernus" 
+
+game.ReplicatedStorage.Events.EquipBlob:FireServer(game.ReplicatedStorage.Blobs[blob])
+end)
+
+CREDITS.Name = "CREDITS"
+CREDITS.Parent = PRB_2
+CREDITS.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+CREDITS.Position = UDim2.new(0.052742146, 0, 0.533110559, 0)
+CREDITS.Size = UDim2.new(0, 285, 0, 34)
+CREDITS.Font = Enum.Font.Highway
+CREDITS.Text = "CREDITS"
+CREDITS.TextColor3 = Color3.new(0, 0, 0)
+CREDITS.TextSize = 14
+CREDITS.MouseButton1Click:Connect(function()
+    CREDITSF.Visible = true
+end)
+
+AUTOFARM.Name = "AUTOFARM"
+AUTOFARM.Parent = PRB_2
+AUTOFARM.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+AUTOFARM.Position = UDim2.new(0.0500000007, 0, 0.875844121, 0)
+AUTOFARM.Size = UDim2.new(0, 286, 0, 35)
+AUTOFARM.Font = Enum.Font.Highway
+AUTOFARM.Text = "AUTO FARM"
+AUTOFARM.TextColor3 = Color3.new(0, 0, 0)
+AUTOFARM.TextSize = 14
+
+AF.Name = "AF"
+AF.Parent = PRB_2
+AF.BackgroundColor3 = Color3.new(1, 1, 1)
+AF.BorderSizePixel = 3
+AF.ClipsDescendants = true
+AF.Position = UDim2.new(-4.77302819e-08, 0, 0.644119561, 0)
+AF.Size = UDim2.new(0, 320, 0, 34)
+AF.Font = Enum.Font.Highway
+AF.Text = "AUTO FARM"
+AF.TextColor3 = Color3.new(0, 0, 0)
+AF.TextSize = 14
+
+EGGNUMBER.Name = "EGGNUMBER"
+EGGNUMBER.Parent = PRB_2
+EGGNUMBER.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+EGGNUMBER.Position = UDim2.new(0.0500000007, 0, 0.379208058, 0)
+EGGNUMBER.Size = UDim2.new(0, 134, 0, 50)
+EGGNUMBER.Font = Enum.Font.Highway
+EGGNUMBER.Text = "EGG NUMBER"
+EGGNUMBER.TextColor3 = Color3.new(0, 0, 0)
+EGGNUMBER.TextSize = 14
+
+ABE.Name = "ABE"
+ABE.Parent = PRB_2
+ABE.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+ABE.Position = UDim2.new(0.496492088, 0, 0.377438039, 0)
+ABE.Size = UDim2.new(0, 142, 0, 50)
+ABE.Font = Enum.Font.Highway
+ABE.Text = "AUTO BUY EGG"
+ABE.TextColor3 = Color3.new(0, 0, 0)
+ABE.TextSize = 14
+ABE.MouseButton1Click:Connect(function()
+    local on = false
+ABE.MouseButton1Click:Connect(function()
+    if on == false then
+        on = true
+        ABE.Text = "STOP"
+    elseif on == true then
+        on = false
+        ABE.Text = "AUTO BUY EGG"
+    end
+    repeat 
+        wait()
+         
+        local A_1 = game:GetService("Workspace").GameComponents.EggShop["Tier "..EGGNUMBER.Text]
+        local Event = game:GetService("ReplicatedStorage").Events.BuyEgg
+        Event:FireServer(A_1)
+
+    until on == false
+end)
+end)
+
+MAHEALTH.Name = "MAHEALTH"
+MAHEALTH.Parent = PRB_2
+MAHEALTH.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+MAHEALTH.Position = UDim2.new(0.521875024, 0, 0.756268263, 0)
+MAHEALTH.Size = UDim2.new(0, 134, 0, 39)
+MAHEALTH.Font = Enum.Font.Highway
+MAHEALTH.Text = "MAX HEALTH"
+MAHEALTH.TextColor3 = Color3.new(0, 0, 0)
+MAHEALTH.TextSize = 14
+
+MHEALTH.Name = "MHEALTH"
+MHEALTH.Parent = PRB_2
+MHEALTH.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+MHEALTH.Position = UDim2.new(0.052742146, 0, 0.756268263, 0)
+MHEALTH.Size = UDim2.new(0, 141, 0, 39)
+MHEALTH.Font = Enum.Font.Highway
+MHEALTH.Text = "MIN HEALTH"
+MHEALTH.TextColor3 = Color3.new(0, 0, 0)
+MHEALTH.TextSize = 14
+
+OC.Name = "OC"
+OC.Parent = PRB
+OC.BackgroundColor3 = Color3.new(1, 1, 1)
+OC.Position = UDim2.new(0.0173912924, 0, 0.427518398, 0)
+OC.Size = UDim2.new(0, 22, 0, 25)
+
+OPEN.Name = "OPEN"
+OPEN.Parent = OC
+OPEN.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+OPEN.BorderSizePixel = 3
+OPEN.Position = UDim2.new(-0.630039513, 0, -0.298624128, 0)
+OPEN.Size = UDim2.new(0, 65, 0, 39)
+OPEN.Font = Enum.Font.Highway
+OPEN.Text = "OPEN"
+OPEN.TextColor3 = Color3.new(0, 0, 0)
+OPEN.TextSize = 20
+OPEN.MouseButton1Click:Connect(function()
+    OPEN.Visible = false
+    CLOSE.Visible = true
+    PRB_2.Visible = true
+end)
+
+CLOSE.Name = "CLOSE"
+CLOSE.Parent = OC
+CLOSE.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+CLOSE.BorderSizePixel = 3
+CLOSE.Position = UDim2.new(-0.630039513, 0, -0.298624128, 0)
+CLOSE.Size = UDim2.new(0, 65, 0, 39)
+CLOSE.Visible = false
+CLOSE.Font = Enum.Font.Highway
+CLOSE.Text = "CLOSE"
+CLOSE.TextColor3 = Color3.new(0, 0, 0)
+CLOSE.TextSize = 20
+CLOSE.MouseButton1Click:Connect(function()
+    OPEN.Visible = true
+    CLOSE.Visible = false
+    PRB_2.Visible = false
+end)
+
+CREDITSF.Name = "CREDITSF"
+CREDITSF.Parent = PRB
+CREDITSF.BackgroundColor3 = Color3.new(1, 1, 1)
+CREDITSF.BorderSizePixel = 3
+CREDITSF.Position = UDim2.new(0.474308312, 0, 0.165847659, 0)
+CREDITSF.Size = UDim2.new(0, 234, 0, 288)
+CREDITSF.Visible = false
+
+PB3.Name = "PB3"
+PB3.Parent = CREDITSF
+PB3.BackgroundColor3 = Color3.new(1, 1, 1)
+PB3.BorderSizePixel = 3
+PB3.ClipsDescendants = true
+PB3.Position = UDim2.new(0, 0, 0.998406589, 0)
+PB3.Size = UDim2.new(0, 234, 0, 50)
+PB3.Font = Enum.Font.SourceSans
+PB3.Text = "PROJECT BLOB"
+PB3.TextColor3 = Color3.new(0, 0, 0)
+PB3.TextSize = 14
+
+PB4.Name = "PB4"
+PB4.Parent = CREDITSF
+PB4.BackgroundColor3 = Color3.new(1, 1, 1)
+PB4.BorderSizePixel = 3
+PB4.ClipsDescendants = true
+PB4.Position = UDim2.new(0, 0, -0.14404358, 0)
+PB4.Size = UDim2.new(0, 234, 0, 50)
+PB4.Font = Enum.Font.Highway
+PB4.Text = "PROJECT BLOB - CREDITS"
+PB4.TextColor3 = Color3.new(0, 0, 0)
+PB4.TextSize = 14
+
+X.Name = "X"
+X.Parent = CREDITSF
+X.BackgroundColor3 = Color3.new(1, 1, 1)
+X.BorderSizePixel = 0
+X.Position = UDim2.new(0.880342007, 0, -0.121527821, 0)
+X.Size = UDim2.new(0, 22, 0, 23)
+X.Font = Enum.Font.SourceSans
+X.Text = "X"
+X.TextColor3 = Color3.new(0, 0, 0)
+X.TextSize = 14
+X.MouseButton1Click:Connect(function()
+    CREDITSF.Visible = false
+end)
+
+PB3_2.Name = "PB3"
+PB3_2.Parent = CREDITSF
+PB3_2.BackgroundColor3 = Color3.new(1, 1, 1)
+PB3_2.BorderSizePixel = 3
+PB3_2.ClipsDescendants = true
+PB3_2.Position = UDim2.new(0, 0, 0.998406589, 0)
+PB3_2.Size = UDim2.new(0, 234, 0, 50)
+PB3_2.Font = Enum.Font.Highway
+PB3_2.Text = "PROJECT BLOB - CREDITS"
+PB3_2.TextColor3 = Color3.new(0, 0, 0)
+PB3_2.TextSize = 14
+
+CRED.Name = "CRED"
+CRED.Parent = CREDITSF
+CRED.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+CRED.BorderSizePixel = 3
+CRED.ClipsDescendants = true
+CRED.Position = UDim2.new(0, 0, 0.0852121711, 0)
+CRED.Size = UDim2.new(0, 234, 0, 50)
+CRED.Font = Enum.Font.Highway
+CRED.Text = "NOT A TRAP#9698"
+CRED.TextColor3 = Color3.new(0, 0, 0)
+CRED.TextSize = 14
+
+CRED_2.Name = "CRED"
+CRED_2.Parent = CREDITSF
+CRED_2.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+CRED_2.BorderSizePixel = 3
+CRED_2.ClipsDescendants = true
+CRED_2.Position = UDim2.new(0, 0, 0.765767753, 0)
+CRED_2.Size = UDim2.new(0, 234, 0, 50)
+CRED_2.Font = Enum.Font.Highway
+CRED_2.Text = "ReallySecure#4953"
+CRED_2.TextColor3 = Color3.new(0, 0, 0)
+CRED_2.TextSize = 14
+
+CRED_3.Name = "CRED"
+CRED_3.Parent = CREDITSF
+CRED_3.BackgroundColor3 = Color3.new(0.160784, 0.411765, 0.811765)
+CRED_3.BorderSizePixel = 3
+CRED_3.ClipsDescendants = true
+CRED_3.Position = UDim2.new(0, 0, 0.415073276, 0)
+CRED_3.Size = UDim2.new(0, 234, 0, 50)
+CRED_3.Font = Enum.Font.Highway
+CRED_3.Text = "NAME4YOU#1192"
+CRED_3.TextColor3 = Color3.new(0, 0, 0)
+CRED_3.TextSize = 14
+-- Scripts:
+local on = false
+AUTOFARM.MouseButton1Click:Connect(function()
+    if on == false then
+        on = true
+        AUTOFARM.Text = "STOP"
+        
+    elseif on == true then
+        on = false
+        AUTOFARM.Text = "AUTO_FARM"
+    end
+
+    repeat
+        wait()
+        local min = tonumber(MHEALTH.Text)
+        local max = tonumber(MAHEALTH.Text)
+            for _,v in pairs(game.Workspace:GetChildren()) do
+            for _,c in pairs(v:GetChildren()) do
+                if c.Name ~= "CoinRegion" then
+                    for _,b in pairs(c:GetChildren()) do 
+                        if b:FindFirstChild("Stats") ~= nil then
+                            if b.Stats.Health.Value > min -1  and b.Stats.Health.Value < max +1 then
+                                if AUTOFARM.Text == "STOP" then 
+                                wait(1)
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = b.CFrame    
+                                local A_1 = b
+                                local A_2 = "click"
+                                local Event = game:GetService("ReplicatedStorage").BlobModule.BlobClick
+                                Event:FireServer(A_1, A_2)
+                                wait(1)
+                                if b:FindFirstChild("Damagers") ~= nil then
+                                    if b.Damagers:FindFirstChild(game.Players.LocalPlayer.Name) ~= nil then
+                                        if b:WaitForChild("Damagers"):WaitForChild(game.Players.LocalPlayer.Name).Value >= b.Stats.Health.Value then 
+                                            warn("done")
+                                            
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+            end
+            end
+    until on == false
+end)
+PRB_2.Active = true
+PRB_2.Draggable = true
+CREDITSF.Active = true
+CREDITSF.Draggable = true
+
+function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+local counter1 = 1
+while wait(0.1) do
+    PRB_2.BackgroundColor3 = Color3.fromHSV(zigzag(counter1),1,1)
+    PB1.BackgroundColor3 = Color3.fromHSV(zigzag(counter1),1,1) 
+    PB2.BackgroundColor3 = Color3.fromHSV(zigzag(counter1),1,1) 
+    AF.BackgroundColor3 = Color3.fromHSV(zigzag(counter1),1,1) 
+    CREDITSF.BackgroundColor3 = Color3.fromHSV(zigzag(counter1),1,1) 
+    PB3.BackgroundColor3 = Color3.fromHSV(zigzag(counter1),1,1) 
+    PB3_2.BackgroundColor3 = Color3.fromHSV(zigzag(counter1),1,1) 
+    PB4.BackgroundColor3 = Color3.fromHSV(zigzag(counter1),1,1) 
+    X.BackgroundColor3 = Color3.fromHSV(zigzag(counter1),1,1) 
+    counter1 = counter1 + 0.01
+
+
+end
