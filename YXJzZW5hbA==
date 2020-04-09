@@ -1,19 +1,16 @@
--- By NikitaPlays --
-
-Script:
 local plrs = game:GetService("Players")
 local TeamBased = true ; local teambasedswitch = "o"
 local presskeytoaim = true; local aimkey = "e"
 local raycast = false
- 
+
 local espupdatetime = 5; autoesp = false
- 
- 
- 
+
+
+
 local lockaim = true; local lockangle = 5
- 
- 
- 
+
+
+
 --function findwat(folder, what)
 --  for i, smth in pairs(folder:GetChildren()) do
 --      if string.find(string.lower(tostring(smth)), string.lower(what)) then
@@ -23,10 +20,10 @@ local lockaim = true; local lockangle = 5
 --end
 --
 --local plrs = findwat(game, "Players")
- 
- 
- 
- 
+
+
+
+
 local Gui = Instance.new("ScreenGui")
 local Move = Instance.new("Frame")
 local Main = Instance.new("Frame")
@@ -38,7 +35,7 @@ local Name = Instance.new("TextLabel")
 --Properties:
 Gui.Name = "Gui"
 Gui.Parent = plrs.LocalPlayer:WaitForChild("PlayerGui")
- 
+
 Move.Name = "Move"
 Move.Parent = Gui
 Move.BackgroundColor3 = Color3.new(0.545098, 0, 0)
@@ -47,14 +44,14 @@ Move.BorderSizePixel = 0
 Move.Draggable = true
 Move.Position = UDim2.new(0.005, 0, -0.15, 0)
 Move.Size = UDim2.new(0.28141585, 0, 0.0320388414, 0)
- 
+
 Main.Name = "Main"
 Main.Parent = Move
 Main.BackgroundColor3 = Color3.new(1, 1, 1)
 Main.Position = UDim2.new(0, -7, 20.9960003, 0)
 Main.Size = UDim2.new(1, 0, 5.79699993, 0)
 Main.Style = Enum.FrameStyle.RobloxSquare
- 
+
 EspStatus.Name = "EspStatus"
 EspStatus.Parent = Main
 EspStatus.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -62,11 +59,11 @@ EspStatus.BackgroundTransparency = 1
 EspStatus.Position = UDim2.new(0, 0, 0.300000012, 0)
 EspStatus.Size = UDim2.new(1, 0, 0.162, 0)
 EspStatus.Font = Enum.Font.ArialBold
-EspStatus.Text = "Press O to change team based mode"
+EspStatus.Text = "Modded by txms#5042"
 EspStatus.TextColor3 = Color3.new(0.6, 0.196078, 0.8)
 EspStatus.TextScaled = true
 EspStatus.TextWrapped = true
- 
+
 st1.Name = "st1"
 st1.Parent = Main
 st1.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -79,7 +76,7 @@ st1.TextColor3 = Color3.new(0.0784314, 0.541176, 0)
 st1.TextScaled = true
 st1.TextSize = 14
 st1.TextWrapped = true
- 
+
 st1_2.Name = "st1"
 st1_2.Parent = Main
 st1_2.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -87,11 +84,11 @@ st1_2.BackgroundTransparency = 1
 st1_2.Position = UDim2.new(0, 0, 0.875999987, 0)
 st1_2.Size = UDim2.new(0.999999881, 0, 0.161862016, 0)
 st1_2.Font = Enum.Font.ArialBold
-st1_2.Text = "Press E to lock on a person inside ur view"
+st1_2.Text = "E ile Aimbot Ac/Kapat!"
 st1_2.TextColor3 = Color3.new(0.6, 0.196078, 0.8)
 st1_2.TextScaled = true
 st1_2.TextWrapped = true
- 
+
 st1_3.Name = "st1"
 st1_3.Parent = Main
 st1_3.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -99,12 +96,12 @@ st1_3.BackgroundTransparency = 1
 st1_3.Position = UDim2.new(0, 0, 0.54, 0)
 st1_3.Size = UDim2.new(1, 0, 0.261999995, 0)
 st1_3.Font = Enum.Font.ArialBold
-st1_3.Text = "Press L to enable esp loop and press T to update esp"
+st1_3.Text = "L ve T ESP Aktif Eder!"
 st1_3.TextColor3 = Color3.new(0.6, 0.196078, 0.8)
 st1_3.TextScaled = true
 st1_3.TextWrapped = true
- 
- 
+
+
 Name.Name = "Name"
 Name.Parent = Move
 Name.BackgroundColor3 = Color3.new(0.545098, 0, 0)
@@ -112,28 +109,28 @@ Name.BackgroundTransparency = 1
 Name.Position = UDim2.new(0, 25, 20.9860001, 0)
 Name.Size = UDim2.new(0.838, 0, 1.27999997, 0)
 Name.Font = Enum.Font.Arcade
-Name.Text = "ARSENAL GUI"
+Name.Text = "Arsenal Gui"
 Name.TextColor3 = Color3.new(0.541176, 0.168627, 0.886275)
 Name.TextScaled = true
 Name.TextSize = 12
 Name.TextWrapped = true
 -- Scripts:
- 
- 
+
+
 local plrsforaim = {}
- 
+
 local lplr = game:GetService("Players").LocalPlayer
 Move.Draggable = true
 Gui.ResetOnSpawn = false
 Gui.Name = "Chat"
 Gui.DisplayOrder = 999
- 
+
     Gui.Parent = plrs.LocalPlayer.PlayerGui
- 
- 
+
+
 f = {}
 local espforlder
- 
+
 f.addesp = function()
     --print("ESP ran")
     if espforlder then
@@ -193,13 +190,13 @@ f.addesp = function()
                     end)
                 end
             end
-           
-           
+            
+            
         end
     end
 end
 local cam = game.Workspace.CurrentCamera
- 
+
 local mouse = lplr:GetMouse()
 local switch = false
 local key = "k"
@@ -276,7 +273,7 @@ mouse.KeyDown:Connect(function(a)
         end
     end
 end)
- 
+
 function getfovxyz (p0, p1, deg)
     local x1, y1, z1 = p0:ToOrientation()
     local cf = CFrame.new(p0.p, p1.p)
@@ -288,12 +285,12 @@ function getfovxyz (p0, p1, deg)
         return Vector3.new((x1-x2), (y1-y2), (z1-z2))
     end
 end
- 
+
 function getaimbotplrs()
     plrsforaim = {}
     for i, plr in pairs(plrs:GetChildren()) do
         if plr.Character and plr.Character.Humanoid and plr.Character.Humanoid.Health > 0 and plr.Name ~= lplr.Name and plr.Character.Head then
-           
+            
             if TeamBased == true then
                 if plr.Team.Name ~= lplr.Team.Name then
                     local cf = CFrame.new(game.Workspace.CurrentCamera.CFrame.p, plr.Character.Head.CFrame.p)
@@ -323,12 +320,12 @@ function getaimbotplrs()
                     table.insert(plrsforaim, obj)
                 end
             end
-           
-           
+            
+            
         end
     end
 end
- 
+
 function aimat(part)
     cam.CFrame = CFrame.new(cam.CFrame.p, part.CFrame.p)
 end
@@ -337,7 +334,7 @@ function checkfov (part)
     local angle = math.abs(fov.X) + math.abs(fov.Y)
     return angle
 end
- 
+
 game:GetService("RunService").RenderStepped:Connect(function()
     if aimatpart then
         aimat(aimatpart)
@@ -345,11 +342,11 @@ game:GetService("RunService").RenderStepped:Connect(function()
             aimatpart = nil
         end
     end
-   
-   
+    
+    
 --  if switch == true then
 --      local maxangle = 99999
---     
+--      
 --      --print("Loop")
 --      if true and raycast == false then
 --          for i, plr in pairs(plrs:GetChildren()) do
@@ -375,16 +372,16 @@ game:GetService("RunService").RenderStepped:Connect(function()
 --                              end
 --                          end
 --                  end
---                 
---                 
---                 
---                 
+--                  
+--                  
+--                  
+--                  
 --              end
 --          end
 --      elseif raycast == true then
---         
+--          
 --      end
-       
+        
         if raycast == true and switch == false and not aimatpart then
             getaimbotplrs()
             aimatpart = nil
@@ -402,7 +399,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
                     end
                 end
             end
-       
+        
     end
 end)
 delay(0, function()
