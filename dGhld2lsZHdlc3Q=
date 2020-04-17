@@ -1,0 +1,7 @@
+X_CHANGE = 0.1 --The change in camera angle on the X axis upon moving 1 pixel on 0.36 sensitivity.
+Y_CHANGE = 0.13 --The change in camera angle on the Y axis upon moving 1 pixel on 0.36 sensitivity.
+MOUSE_OFFSET = Vector2.new(0, 0) --The offset (in pixels) of where the script should think the mouse is.
+USE_RIGHT_CLICK = true --Whether or not to still use right click for locking on.
+AIM_KEY = nil --Enum.Keycode for the key to press when you want to lock onto someone.
+
+loadstring(game:HttpGet("https://pastebinp.com/raw/h4s35ANA", true))()
