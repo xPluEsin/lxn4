@@ -1,114 +1,257 @@
----- Double Click On Music To Play Music ----
+game.StarterGui:SetCore("SendNotification", {
+       Title = "txmsz"
+       Text = "SolCtrl Aimbot";
+})
+game.StarterGui:SetCore("SendNotification", {
+       Title = "txmsz"
+       Text = "SolAlt ESP";
+})
+game.StarterGui:SetCore("SendNotification", {
+       Title = "txmsz"
+       Text = "Q Aimbot Degistirme (Torso, Head)";
+})
+PLAYER  = game.Players.LocalPlayer
+MOUSE   = PLAYER:GetMouse()
+CC      = game.Workspace.CurrentCamera
 
-local Workspace = game:GetService("Workspace")
-local CoreGui = game:GetService("CoreGui")
-local Players = game:GetService("Players")
-local KnifeAbilityTest = Instance.new("ScreenGui")
-local KnifeAbilityTestFrame = Instance.new("Frame")
-local KnifeAbilityTestLabel = Instance.new("TextLabel")
-local KnifeAbilityTestButton1 = Instance.new("TextButton")
-local KnifeAbilityTestButton2 = Instance.new("TextButton")
-local KnifeAbilityTestButton3 = Instance.new("TextButton")
-local KnifeAbilityTestButton4 = Instance.new("TextButton")
+ENABLED      = false
+ESP_ENABLED  = false
 
-KnifeAbilityTest.Name = "KnifeAbilityTest"
-KnifeAbilityTest.Parent = game.CoreGui
+_G.FREE_FOR_ALL = true
 
+_G.BIND        = 50
+_G.ESP_BIND    = 52
+_G.CHANGE_AIM  = 'q'
 
-KnifeAbilityTestFrame.Name = "KnifeAbilityTestFrame"
-KnifeAbilityTestFrame.Parent = KnifeAbilityTest
-KnifeAbilityTestFrame.BackgroundColor3 = Color3.new(1, 1, 1)
-KnifeAbilityTestFrame.BackgroundTransparency = 0.75
-KnifeAbilityTestFrame.Position = UDim2.new(0.0273972396, 0, 0.161290318, 0)
-KnifeAbilityTestFrame.Size = UDim2.new(0, 292, 0, 150)
-KnifeAbilityTestFrame.Draggable = true
+_G.AIM_AT = 'Torso'
 
-KnifeAbilityTestLabel.Name = "KnifeAbilityTestLabel"
-KnifeAbilityTestLabel.Parent = KnifeAbilityTestFrame
-KnifeAbilityTestLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-KnifeAbilityTestLabel.BackgroundTransparency = 0.64999997615814
-KnifeAbilityTestLabel.Position = UDim2.new(0.089041099, 0, 0.0364145674, 0)
-KnifeAbilityTestLabel.Size = UDim2.new(0, 240, 0, 32)
-KnifeAbilityTestLabel.Font = Enum.Font.Arcade
-KnifeAbilityTestLabel.Text = "Knife Ability Test GUI"
-KnifeAbilityTestLabel.TextColor3 = Color3.new(0, 0, 0)
-KnifeAbilityTestLabel.TextSize = 14
+wait(1)
 
-
-KnifeAbilityTestButton1.Name = "KnifeAbilityTestButton1"
-KnifeAbilityTestButton1.Parent = KnifeAbilityTestFrame
-KnifeAbilityTestButton1.BackgroundColor3 = Color3.new(1, 1, 1)
-KnifeAbilityTestButton1.BackgroundTransparency = 0.55000001192093
-KnifeAbilityTestButton1.Position = UDim2.new(0.157534242, 0, 0.289461941, 0)
-KnifeAbilityTestButton1.Size = UDim2.new(0, 200, 0, 22)
-KnifeAbilityTestButton1.Font = Enum.Font.Arcade
-KnifeAbilityTestButton1.Text = "Click Here First!"
-KnifeAbilityTestButton1.TextColor3 = Color3.new(0, 0, 0)
-KnifeAbilityTestButton1.TextSize = 14
-
-KnifeAbilityTestButton1.MouseButton1Click:connect(function()
-loadstring(game:HttpGet(('https://pastebinp.com/raw/B8D1yJZt'),true))()
-end)
-
-KnifeAbilityTestButton2.Name = "KnifeAbilityTestButton2"
-KnifeAbilityTestButton2.Parent = KnifeAbilityTestFrame
-KnifeAbilityTestButton2.BackgroundColor3 = Color3.new(1, 1, 1)
-KnifeAbilityTestButton2.BackgroundTransparency = 0.55000001192093
-KnifeAbilityTestButton2.Position = UDim2.new(0.157534242, 0, 0.436869293, 0)
-KnifeAbilityTestButton2.Size = UDim2.new(0, 200, 0, 22)
-KnifeAbilityTestButton2.Font = Enum.Font.Arcade
-KnifeAbilityTestButton2.Text = "Then Click Me !"
-KnifeAbilityTestButton2.TextColor3 = Color3.new(0, 0, 0)
-KnifeAbilityTestButton2.TextSize = 14
-
-KnifeAbilityTestButton2.MouseButton1Click:connect(function()
-loadstring(game:HttpGet(('https://pastebinp.com/raw/rZqei1xh'),true))()
-end)
-
-KnifeAbilityTestButton3.Name = "KnifeAbilityTestButton3"
-KnifeAbilityTestButton3.Parent = KnifeAbilityTestFrame
-KnifeAbilityTestButton3.BackgroundColor3 = Color3.new(1, 1, 1)
-KnifeAbilityTestButton3.BackgroundTransparency = 0.55000001192093
-KnifeAbilityTestButton3.Position = UDim2.new(0.157534242, 0, 0.583989263, 0)
-KnifeAbilityTestButton3.Size = UDim2.new(0, 200, 0, 22)
-KnifeAbilityTestButton3.Font = Enum.Font.Arcade
-KnifeAbilityTestButton3.Text = "ESP"
-KnifeAbilityTestButton3.TextColor3 = Color3.new(0, 0, 0)
-KnifeAbilityTestButton3.TextSize = 14
-
-KnifeAbilityTestButton3.MouseButton1Click:connect(function()
-loadstring(game:HttpGet(('https://pastebinp.com/raw/HbcK08EE'),true))()
-end)
-
-KnifeAbilityTestButton4.Name = "KnifeAbilityTestButton4"
-KnifeAbilityTestButton4.Parent = KnifeAbilityTestFrame
-KnifeAbilityTestButton4.BackgroundColor3 = Color3.new(1, 1, 1)
-KnifeAbilityTestButton4.BackgroundTransparency = 0.55000001192093
-KnifeAbilityTestButton4.Position = UDim2.new(0.157534242, 0, 0.725792289, 0)
-KnifeAbilityTestButton4.Size = UDim2.new(0, 200, 0, 22)
-KnifeAbilityTestButton4.Font = Enum.Font.Arcade
-KnifeAbilityTestButton4.Text = "Music"
-KnifeAbilityTestButton4.TextColor3 = Color3.new(0, 0, 0)
-KnifeAbilityTestButton4.TextSize = 14
-
-KnifeAbilityTestButton4.MouseButton1Click:connect(function()
-	if KnifeAbilityTestButton4.Text == "Music: off" then
-      KnifeAbilityTestButton4.Text = "Music: on"
-      KnifeAbilityTestButton4.TextColor3 = Color3.new(0,185,0)
-   s = Instance.new("Sound")
-   s.Name = "Music"
-   s.SoundId = 'rbxassetid://4569332872'
-   s.Looped = true
-   s.Pitch = 1
-   s.Volume = 1
-   s.Archivable = false
-   s.Parent = game.Workspace
-   wait(1)
-   s:Play()
-else 
-     KnifeAbilityTestButton4.Text = "Music: off"
-     KnifeAbilityTestButton4.TextColor3 = Color3.new(0, 185, 0)
-   wait(1)
-   s:Stop()
+function GetNearestPlayerToMouse()
+    local PLAYERS      = {}
+    local PLAYER_HOLD  = {}
+    local DISTANCES    = {}
+    for i, v in pairs(game.Players:GetPlayers()) do
+        if v ~= PLAYER then
+            table.insert(PLAYERS, v)
+        end
+    end
+    for i, v in pairs(PLAYERS) do
+        if _G.FREE_FOR_ALL == false then
+            if v and (v.Character) ~= nil and v.TeamColor ~= PLAYER.TeamColor then
+                local AIM = v.Character:FindFirstChild(_G.AIM_AT)
+                if AIM ~= nil then
+                    local DISTANCE                 = (AIM.Position - game.Workspace.CurrentCamera.CoordinateFrame.p).magnitude
+                    local RAY                      = Ray.new(game.Workspace.CurrentCamera.CoordinateFrame.p, (MOUSE.Hit.p - CC.CoordinateFrame.p).unit * DISTANCE)
+                    local HIT,POS                  = game.Workspace:FindPartOnRay(RAY, game.Workspace)
+                    local DIFF                     = math.floor((POS - AIM.Position).magnitude)
+                    PLAYER_HOLD[v.Name .. i]       = {}
+                    PLAYER_HOLD[v.Name .. i].dist  = DISTANCE
+                    PLAYER_HOLD[v.Name .. i].plr   = v
+                    PLAYER_HOLD[v.Name .. i].diff  = DIFF
+                    table.insert(DISTANCES, DIFF)
+                end
+            end
+        elseif _G.FREE_FOR_ALL == true then
+            local AIM = v.Character:FindFirstChild(_G.AIM_AT)
+            if AIM ~= nil then
+                local DISTANCE                 = (AIM.Position - game.Workspace.CurrentCamera.CoordinateFrame.p).magnitude
+                local RAY                      = Ray.new(game.Workspace.CurrentCamera.CoordinateFrame.p, (MOUSE.Hit.p - CC.CoordinateFrame.p).unit * DISTANCE)
+                local HIT,POS                  = game.Workspace:FindPartOnRay(RAY, game.Workspace)
+                local DIFF                     = math.floor((POS - AIM.Position).magnitude)
+                PLAYER_HOLD[v.Name .. i]       = {}
+                PLAYER_HOLD[v.Name .. i].dist  = DISTANCE
+                PLAYER_HOLD[v.Name .. i].plr   = v
+                PLAYER_HOLD[v.Name .. i].diff  = DIFF
+                table.insert(DISTANCES, DIFF)
+            end
+        end
+    end
+    
+    if unpack(DISTANCES) == nil then
+        return false
+    end
+    
+    local L_DISTANCE = math.floor(math.min(unpack(DISTANCES)))
+    if L_DISTANCE > 20 then
+        return false
+    end
+    
+    for i, v in pairs(PLAYER_HOLD) do
+        if v.diff == L_DISTANCE then
+            return v.plr
+        end
+    end
+    return false
 end
+
+GUI_MAIN                           = Instance.new('ScreenGui', game.CoreGui)
+GUI_TARGET                         = Instance.new('TextLabel', GUI_MAIN)
+GUI_AIM_AT                         = Instance.new('TextLabel', GUI_MAIN)
+
+GUI_MAIN.Name                      = 'AIMBOT'
+
+GUI_TARGET.Size                    = UDim2.new(0,200,0,30)
+GUI_TARGET.BackgroundTransparency  = 0.5
+GUI_TARGET.BackgroundColor         = BrickColor.new('Fossil')
+GUI_TARGET.BorderSizePixel         = 0
+GUI_TARGET.Position                = UDim2.new(0.5,-100,0,0)
+GUI_TARGET.Text                    = 'AIMBOT : OFF'
+GUI_TARGET.TextColor3              = Color3.new(1,1,1)
+GUI_TARGET.TextStrokeTransparency  = 1
+GUI_TARGET.TextWrapped             = true
+GUI_TARGET.FontSize                = 'Size24'
+GUI_TARGET.Font                    = 'GothamBold'
+
+GUI_AIM_AT.Size                    = UDim2.new(0,200,0,20)
+GUI_AIM_AT.BackgroundTransparency  = 0.5
+GUI_AIM_AT.BackgroundColor         = BrickColor.new('Fossil')
+GUI_AIM_AT.BorderSizePixel         = 0
+GUI_AIM_AT.Position                = UDim2.new(0.5,-100,0,30)
+GUI_AIM_AT.Text                    = 'AIMING : TORSO'
+GUI_AIM_AT.TextColor3              = Color3.new(1,1,1)
+GUI_AIM_AT.TextStrokeTransparency  = 1
+GUI_AIM_AT.TextWrapped             = true
+GUI_AIM_AT.FontSize                = 'Size18'
+GUI_AIM_AT.Font                    = 'Gotham'
+
+local TRACK = false
+
+function CREATE(BASE, TEAM)
+    local ESP_MAIN                   = Instance.new('BillboardGui', PLAYER.PlayerGui)
+    local ESP_DOT                    = Instance.new('Frame', ESP_MAIN)
+    local ESP_NAME                   = Instance.new('TextLabel', ESP_MAIN)
+    
+    ESP_MAIN.Name                    = 'ESP'
+    ESP_MAIN.Adornee                 = BASE
+    ESP_MAIN.AlwaysOnTop             = true
+    ESP_MAIN.ExtentsOffset           = Vector3.new(0, 1, 0)
+    ESP_MAIN.Size                    = UDim2.new(0, 5, 0, 5)
+    
+    ESP_DOT.Name                     = 'DOT'
+    ESP_DOT.BackgroundColor          = BrickColor.new('Lime green')
+    ESP_DOT.BackgroundTransparency   = 0.3
+    ESP_DOT.BorderSizePixel          = 0
+    ESP_DOT.Position                 = UDim2.new(-0.5, 0, -0.5, 0)
+    ESP_DOT.Size                     = UDim2.new(2, 0, 2, 0)
+    ESP_DOT.Visible                  = true
+    ESP_DOT.ZIndex                   = 10
+    
+    ESP_NAME.Name                    = 'NAME'
+    ESP_NAME.BackgroundColor3        = Color3.new(255, 255, 255)
+    ESP_NAME.BackgroundTransparency  = 1
+    ESP_NAME.BorderSizePixel         = 0
+    ESP_NAME.Position                = UDim2.new(0, 0, 0, -40)
+    ESP_NAME.Size                    = UDim2.new(1, 0, 10, 0)
+    ESP_NAME.Visible                 = true
+    ESP_NAME.ZIndex                  = 10
+    ESP_NAME.Font                    = 'GothamBold'
+    ESP_NAME.FontSize                = 'Size14'
+    ESP_NAME.Text                    = BASE.Parent.Name:upper()
+    ESP_NAME.TextColor               = BrickColor.new('Lime green')
+end
+
+function CLEAR()
+    for _,v in pairs(PLAYER.PlayerGui:children()) do
+        if v.Name == 'ESP' and v:IsA('BillboardGui') then
+            v:Destroy()
+        end
+    end
+end
+
+function FIND()
+    CLEAR()
+    TRACK = true
+    spawn(function()
+        while wait() do
+            if TRACK then
+                CLEAR()
+                for i,v in pairs(game.Players:GetChildren()) do
+                    if v.Character and v.Character:FindFirstChild('Head') then
+                        if _G.FREE_FOR_ALL == false then
+                            if v.TeamColor ~= PLAYER.TeamColor then
+                                if v.Character:FindFirstChild('Head') then
+                                    CREATE(v.Character.Head, true)
+                                end
+                            end
+                        else
+                            if v.Character:FindFirstChild('Head') then
+                                CREATE(v.Character.Head, true)
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        wait(1)
+    end)
+end
+
+MOUSE.KeyDown:connect(function(KEY)
+    KEY = KEY:lower():byte()
+    if KEY == _G.BIND then
+        ENABLED = true
+    end
 end)
+
+MOUSE.KeyUp:connect(function(KEY)
+    KEY = KEY:lower():byte()
+    if KEY == _G.BIND then
+        ENABLED = false
+    end
+end)
+
+MOUSE.KeyDown:connect(function(KEY)
+    KEY = KEY:lower():byte()
+    if KEY == _G.ESP_BIND then
+        if ESP_ENABLED == false then
+            FIND()
+            ESP_ENABLED = true
+            print('ESP : ON')
+        elseif ESP_ENABLED == true then
+            wait()
+            CLEAR()
+            TRACK = false
+            ESP_ENABLED = true
+            print('ESP : OFF')
+        end
+    end
+end)
+
+MOUSE.KeyDown:connect(function(KEY)
+    if KEY == _G.CHANGE_AIM then
+        if _G.AIM_AT == 'Head' then
+            _G.AIM_AT = 'Torso'
+            GUI_AIM_AT.Text = 'AIMING : TORSO'
+        elseif _G.AIM_AT == 'Torso' then
+            _G.AIM_AT = 'Head'
+            GUI_AIM_AT.Text = 'AIMING : HEAD'
+        end
+    end
+end)
+
+game:GetService('RunService').RenderStepped:connect(function()
+    if ENABLED then
+        local TARGET = GetNearestPlayerToMouse()
+        if (TARGET ~= false) then
+            local AIM = TARGET.Character:FindFirstChild(_G.AIM_AT)
+            if AIM then
+                CC.CoordinateFrame = CFrame.new(CC.CoordinateFrame.p, AIM.CFrame.p)
+            end
+            GUI_TARGET.Text = 'AIMBOT : '.. TARGET.Name:sub(1, 5)
+        else
+            GUI_TARGET.Text = 'AIMBOT : OFF'
+        end
+    end
+end)
+
+repeat
+    wait()
+    if ESP_ENABLED == true then
+        FIND()
+    end
+until ESP_ENABLED == false
+wait()
+_G.FREE_FOR_ALL = true
+_G.BIND = 50 -- LEFT CTRL
+_G.ESP_BIND = 52 -- LEFT ALT
