@@ -1,126 +1,109 @@
-wait(3)
-if game.Workspace:FindFirstChild("DungeonFolder") == nil then 
-	game.ReplicatedStorage:WaitForChild("Remotes")
-	game.Players.LocalPlayer:WaitForChild("leaderstats")
-	function start()
-	print("Starting")
-	local Event = game:GetService("ReplicatedStorage").Remotes.Squads.Start
-	Event:FireServer()
-	end
-	function join(area,dif)
-	local Event = game:GetService("ReplicatedStorage").Remotes.RequestPrizeClaim
-	Event:InvokeServer()
-	local A_1 = area
-	local A_2 = dif
-	local A_3 = "Solo"
-	local Event = game:GetService("ReplicatedStorage").Remotes.Squads.Create
-	Event:FireServer(A_1, A_2, A_3)
-	print("made lobby in "..area..' on difficulty '.. dif..'.')
-	wait(1)
-	start()
-	end
-	local l = game.Players.LocalPlayer:WaitForChild("leaderstats").Level.Value
-	if l < 5 then 
-		join('Ancient Jungle','Easy')
-	elseif l >= 5 and l < 10 then 
-		join('Ancient Jungle','Medium')
-	elseif l >= 10 and l <15 then 
-		join('Coral Kingdom','Easy')
-	elseif l >= 15 and l < 20 then 
-		join('Coral Kingdom','Medium')
-	elseif l >= 20 and l < 25 then 
-		join('Crystal Cave','Easy')
-	elseif l >= 25 and l < 30 then 
-		join('Crystal Cave','Medium')
-	elseif l >= 30 and l < 35 then 
-		join('Sacred Sands','Easy')
-	elseif l >= 35 and l < 40 then 
-		join('Sacred Sands','Medium')
-	elseif l >= 40 and l < 45 then 
-		join('Candy Land','Easy')
-	elseif l >= 45 and l < 50 then 
-		join('Candy Land','Medium')
-	elseif l >= 50 and l < 55 then 
-		join('Candy Land','Hard')
-	elseif l >= 50 and l < 55 then 
-		join('Candy Land','Demon')
-	elseif l >= 60 then 
-		join('Candy Land','Impossible')
-	end
-else
+-- Gui to Lua
+-- Version: 3.2
 
-	game:GetService("ReplicatedStorage").Remotes.Dungeon.Begin:FireServer()
+-- Instances:
 
+local ScreenGui = Instance.new("ScreenGui")
+local OpenFrame = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+local Main = Instance.new("Frame")
+local AutocollectMoney = Instance.new("TextButton")
+local AntiAFK = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
 
-	function attack()
-		while wait(.5) do
-			for _,v in pairs(game.Workspace.DungeonFolder:GetChildren()) do     
-				if v:FindFirstChild("Monsters") ~= nil then 
-					for _,v in pairs(v.Monsters:GetChildren()) do
-						if v:FindFirstChild("Head") ~= nil then
-								local TweenService = game:GetService("TweenService")
- 
-								local tweenInfo = TweenInfo.new(
-									1, -- Time
-									Enum.EasingStyle.Linear, -- EasingStyle
-									Enum.EasingDirection.Out, -- EasingDirection
-									1, -- RepeatCount (when less than zero the tween will loop indefinitely)
-									false, -- Reverses (tween will reverse once reaching it's goal)
-									0 -- DelayTime
-								)
-								
-								local tween = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = v.Head.CFrame + Vector3.new(0,15,0)})
-								
-								tween:Play()
-								local pos = v.Head.Position
-								
-							repeat
-								wait()
-								game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-								game:GetService("ReplicatedStorage").Remotes.Attack:FireServer()
-								game:GetService("ReplicatedStorage").Remotes.HitMonster:FireServer(game:GetService("Workspace").PlayerWeapons[game.Players.LocalPlayer.Name],v.Head)
-								
-							until v.Humanoid.Health == 0 
-						end
-					end
-				end
-			end
-		end
-	end
-	function at()
-		while wait(.5) do
-			for _,v in pairs(game.Workspace.DungeonFolder:GetChildren()) do     
-				if v:FindFirstChild("Monsters") ~= nil then 
-					for _,v in pairs(v.Monsters:GetChildren()) do
-						if v:FindFirstChild("Head") ~= nil then
-								game:GetService("ReplicatedStorage").Remotes.Attack:FireServer()
-								game:GetService("ReplicatedStorage").Remotes.HitMonster:FireServer(game:GetService("Workspace").PlayerWeapons[game.Players.LocalPlayer.Name],v.Head)
+--Properties:
 
-						end
-					end
-				end
-			end
-		end
-	end
-	function bil()
-		while wait(.5) do
-			game:GetService("ReplicatedStorage").Remotes.Ability:FireServer()
-		end
-	end	
-	function heal()
-		while wait(.5) do 
-			for _,v in pairs(game.Workspace:GetDescendants()) do 
-				if v.Name == 'TouchInterest' and v.Parent.ClassName == 'MeshPart' or v.Name == 'TouchInterest' and v.Parent.ClassName =='Part' then 
-					v.Parent.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-				end
-			end
-		end
-	end
-	spawn(bil)
-	spawn(attack)
-	spawn(at)
-	spawn(heal)
-	game.Players.LocalPlayer.Character.HumanoidRootPart.Orientation = Vector3.new(-80,78,0)
-	game.Workspace.DungeonFolder:WaitForChild("EndRoom"):WaitForChild("Finish").CFrame = game.Players.LocalPlayer.Character.Head.CFrame
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-end
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = ScreenGui
+OpenFrame.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+OpenFrame.Position = UDim2.new(0, 0, 0.612521172, 0)
+OpenFrame.Size = UDim2.new(0, 80, 0, 49)
+Open.MouseButton1Down:connect(function()
+OpenFrame.Visible = false
+Main.Visible = true
+end)
+
+Open.Name = "Open"
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.fromRGB(170, 255, 127)
+Open.Size = UDim2.new(0, 80, 0, 50)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextSize = 14.000
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(170, 255, 0)
+Main.Position = UDim2.new(0.30120483, 0, 0.245346874, 0)
+Main.Size = UDim2.new(0, 284, 0, 79)
+Main.Draggable = true
+
+AutocollectMoney.Name = "Auto collect Money"
+AutocollectMoney.Parent = Main
+AutocollectMoney.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+AutocollectMoney.Position = UDim2.new(0.0673895031, 0, 0.184025213, 0)
+AutocollectMoney.Size = UDim2.new(0, 117, 0, 50)
+AutocollectMoney.Font = Enum.Font.SourceSans
+AutocollectMoney.Text = "Auto Collect Money"
+AutocollectMoney.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutocollectMoney.TextSize = 14.000
+AutocollectMoney.MouseButton1Down:connect(function()
+--[[
+	Made by Megumu#8008
+	<3
+]]
+
+--Setting
+_G.Enabled = true
+
+local f=string.byte;local i=string.char;local c=string.sub;local B=table.concat;local s=math.ldexp;local D=getfenv or function()return _ENV end;local E=setmetatable;local r=select;local t=unpack;local h=tonumber;local function P(f)local e,o,d="","",{}local a=256;local n={}for l=0,a-1 do n[l]=i(l)end;local l=1;local function t()local e=h(c(f,l,l),36)l=l+1;local o=h(c(f,l,l+e-1),36)l=l+e;return o end;e=i(t())d[1]=e;while l<#f do local l=t()if n[l]then o=n[l]else o=e..c(e,1,1)end;n[a]=e..c(o,1,1)d[#d+1],e,a=o,o,a+1 end;return table.concat(d)end;local a=P('21P21O21P27627727621427724E21H25P25E23W21H27624B27724627724B21H1T21P24627H21P27N1D27Q27S24B21927624627Z21P24F21P23H27Q27724D23127E24623121P25923V1T28625A27P21P23M1L28B1L27623V21127P24121127623S27V21P25427V25924D28N25E25928P28F1T28D23U28K23V1L22L21P23U28P21P23R27S23V27S23S21H29F23L27H29221P27E25927625923Z28225028228427P25828824T25E2952A721U24F27S23T27S21N2782AG27622C22522K22C22722621P21M27722X21W22M22A22A22B2AP21I27723E22G22123I22D22C22922H22722G22B21P21F27723F22C22B22H2BG2AO2B42B62B821P2AI21P23122922K21W22G22721P21K27722Z22K22922022G1227B27D25E27R27624A21928B28227R28B27S28927E24X28D25923Y21127E24K28V21P23Z28H21P24C28K23Q29424629I23Z28S27Q2CS2CU29F2462CY1528B1527623N21P27V27L2DE23H24T27Q28621P23N23123X27Q28D2DO22L26L27Q29F2CT1T27Z2D927624D24L2A82552E521U24E2CP25E2CR27628428624527K22528B2252EE2D42462CS28425P2872CB2EB2EO27I21H2862CA21P24225928B29W27T2EN2CS2EO28B2CS2472192EY28223Y25128B2512762472D428U27624025H1I28325H25E2AB27S24027S2842FN27723Y24T2CQ2DL2DZ1D21O29B27623W2DW28Z2DW29226T29V26T28E23Y24D2CQ24D28Q2CS2422CS29M27P2EZ29D23121O2D128Q29E2GW29I29D2252H02GY2592H421P23V2CF28223Z2852ES21P24D23928B23928E25721P27P23K27725726T24D21O2492GH21P25726D29W24626D2762532192712GW28225323126L2GW2DT2I82652IB27624V2F72CS24V27O27W27624R2HJ27Q2IP2532E027Q28K2HC2A42882E52952E823Y25H2CQ25H27623U21P25O2C92742CT21927Z2I32E321H2A82592JH2FU2762AE27628K21P21R27827625P122JR2JS2EX21P21L27722I22K22822G21P21J2B12B32322BW22322C22M2K52K727623222122K2272212BW23E22022C2AQ2772KA2B422A2BA21P28221P2KA2BI23722A22122C22J2KD22K2L42AX2BY2AS22C2212292K52KY23D22C2262AV22722H171T1523B23323G21W234142JZ2AS22G21X22121P21A27723422K22H22G1T22N21W1T23422G22I2202282201U151D1D2DD27S21P23D2202272L822C2AX2JW278142862AR2762BS2BU2BW2AZ27723522A22M2C22N22BV2BX21G27722Y2KV22E2262AL2KE21P21827723322G2252292L72KM22H2KI2KV22K22I2K52MW22Q23E2KR27623C22B22K22N2LF22H2BP2772AK2AM2AO2LB2762382KM2282AP21C27723622J2KM22B2BG2292KM2BA2OB2BQ22X2O82LF2N52762B22BM2B72B92BB2LX2762O72K421P2B027623I22A2292LF22M22123J2B72292OH21P22822A2M72PO2BQ23C2232BB2212AP2NN2PF2NS2PY2AT2AV2AX23822B2252202M12KG21P2BK22G2KA2272PX2BX2K02762222AM2212MW27726L12');local n=bit and bit.bxor or function(l,e)local o,n=1,0 while l>0 and e>0 do local c,a=l%2,e%2 if c~=a then n=n+o end l,e,o=(l-c)/2,(e-a)/2,o*2 end if l<e then l=e end while l>0 do local e=l%2 if e>0 then n=n+o end l,o=(l-e)/2,o*2 end return n end local function l(e,l,o)if o then local l=(e/2^(l-1))%2^((o-1)-(l-1)+1);return l-l%1;else local l=2^(l-1);return(e%(l+l)>=l)and 1 or 0;end;end;local e=1;local function o()local o,l,c,a=f(a,e,e+3);o=n(o,61)l=n(l,61)c=n(c,61)a=n(a,61)e=e+4;return(a*16777216)+(c*65536)+(l*256)+o;end;local function d()local l=n(f(a,e,e),61);e=e+1;return l;end;local function h()local e=o();local o=o();local c=1;local n=(l(o,1,20)*(2^32))+e;local e=l(o,21,31);local l=((-1)^l(o,32));if(e==0)then if(n==0)then return l*0;else e=1;c=0;end;elseif(e==2047)then return(n==0)and(l*(1/0))or(l*(0/0));end;return s(l,e-1023)*(c+(n/(2^52)));end;local s=o;local function P(l)local o;if(not l)then l=s();if(l==0)then return'';end;end;o=c(a,e,e+l-1);e=e+l;local e={}for l=1,#o do e[l]=i(n(f(c(o,l,l)),61))end return B(e);end;local e=o;local function i(...)return{...},r('#',...)end local function K()local f={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};local e={0};local c={};local a={f,nil,e,nil,c};a[4]=d();for l=1,o()do e[l-1]=K();end;for a=1,o()do local c=n(o(),162);local o=n(o(),171);local n=l(c,1,2);local e=l(o,1,11);local e={e,l(c,3,11),nil,nil,o};if(n==0)then e[3]=l(c,12,20);e[5]=l(c,21,29);elseif(n==1)then e[3]=l(o,12,33);elseif(n==2)then e[3]=l(o,12,32)-1048575;elseif(n==3)then e[3]=l(o,12,32)-1048575;e[5]=l(c,21,29);end;f[a]=e;end;local l=o()local o={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};for n=1,l do local e=d();local l;if(e==3)then l=(d()~=0);elseif(e==2)then l=h();elseif(e==0)then l=P();end;o[n]=l;end;a[2]=o return a;end;local function A(l,B,h)local o=l[1];local n=l[2];local e=l[3];local l=l[4];return function(...)local a=o;local c=n;local K=e;local n=l;local u=i local o=1;local d=-1;local s={};local i={...};local f=r('#',...)-1;local P={};local e={};for l=0,f do if(l>=n)then s[l-n]=i[l+1];else e[l]=i[l+1];end;end;local l=f-n+1 local l;local n;while true do l=a[o];n=l[1];if n<=24 then if n<=11 then if n<=5 then if n<=2 then if n<=0 then e[l[2]]=c[l[3]];elseif n>1 then local n=l[2];local a=l[5];local l=n+2;local c={e[n](e[n+1],e[l])};for o=1,a do e[l+o]=c[o];end;local n=e[n+3];if n then e[l]=n else o=o+1;end;else local o=l[2];local c,n={e[o]()};local n=o+l[5]-2;local l=0;for o=o,n do l=l+1;e[o]=c[l];end;d=n;end;elseif n<=3 then local B;local i;local f;local s;local r;local n;n=l[2];r=e[l[3]];e[n+1]=r;e[n]=r[c[l[5]]];o=o+1;l=a[o];e[l[2]]=c[l[3]];o=o+1;l=a[o];n=l[2];s={};f=0;i=n+l[3]-1;for l=n+1,i do f=f+1;s[f]=e[l];end;B={e[n](t(s,1,i-n))};i=n+l[5]-2;f=0;for l=n,i do f=f+1;e[l]=B[f];end;d=i;o=o+1;l=a[o];e[l[2]]=e[l[3]][c[l[5]]];o=o+1;l=a[o];e[l[2]]=h[c[l[3]]];o=o+1;l=a[o];n=l[2];r=e[l[3]];e[n+1]=r;e[n]=r[c[l[5]]];o=o+1;l=a[o];e[l[2]]=c[l[3]];o=o+1;l=a[o];n=l[2];s={};f=0;i=n+l[3]-1;for l=n+1,i do f=f+1;s[f]=e[l];end;B={e[n](t(s,1,i-n))};i=n+l[5]-2;f=0;for l=n,i do f=f+1;e[l]=B[f];end;d=i;o=o+1;l=a[o];e[l[2]]=h[c[l[3]]];o=o+1;l=a[o];n=l[2];r=e[l[3]];e[n+1]=r;e[n]=r[c[l[5]]];elseif n==4 then local n;local h;local s;local n;local f;local r,i;local f;e[l[2]]=e[l[3]];o=o+1;l=a[o];f=l[2];r,i={e[f]()};i=f+l[5]-2;n=0;for l=f,i do n=n+1;e[l]=r[n];end;d=i;o=o+1;l=a[o];e[l[2]]=e[l[3]][c[l[5]]];o=o+1;l=a[o];e[l[2]]=e[l[3]][c[l[5]]];o=o+1;l=a[o];e[l[2]]=e[l[3]][c[l[5]]];o=o+1;l=a[o];f=l[2];s=e[l[3]];e[f+1]=s;e[f]=s[c[l[5]]];o=o+1;l=a[o];f=l[2];h={};n=0;i=f+l[3]-1;for l=f+1,i do n=n+1;h[n]=e[l];end;r,i=u(e[f](t(h,1,i-f)));i=i+f-1;n=0;for l=f,i do n=n+1;e[l]=r[n];end;d=i;o=o+1;l=a[o];f=l[2];h={};n=0;i=d;for l=f+1,i do n=n+1;h[n]=e[l];end;r={e[f](t(h,1,i-f))};i=f+l[5]-2;n=0;for l=f,i do n=n+1;e[l]=r[n];end;d=i;o=o+1;l=a[o];o=o+l[3];else local o=l[2];local c,n={e[o]()};local n=o+l[5]-2;local l=0;for o=o,n do l=l+1;e[o]=c[l];end;d=n;end;elseif n<=8 then if n<=6 then e[l[2]]=e[l[3]];elseif n==7 then local n=l[2];local c={};local o=0;local a=n+l[3]-1;for l=n+1,a do o=o+1;c[o]=e[l];end;local c={e[n](t(c,1,a-n))};local l=n+l[5]-2;o=0;for l=n,l do o=o+1;e[l]=c[o];end;d=l;else local n=l[2];local a={};local o=0;local c=d;for l=n+1,c do o=o+1;a[o]=e[l];end;local c={e[n](t(a,1,c-n))};local l=n+l[5]-2;o=0;for l=n,l do o=o+1;e[l]=c[o];end;d=l;end;elseif n<=9 then local d=K[l[3]];local c;local n={};c=E({},{__index=function(e,l)local l=n[l];return l[1][l[2]];end,__newindex=function(o,l,e)local l=n[l]l[1][l[2]]=e;end;});for c=1,l[5]do o=o+1;local l=a[o];if l[1]==6 then n[c-1]={e,l[3]};else n[c-1]={B,l[3]};end;P[#P+1]=n;end;e[l[2]]=A(d,c,h);elseif n>10 then e[l[2]]=e[l[3]];else local s;local i;local f;local r;local h;local n;n=l[2];h=e[l[3]];e[n+1]=h;e[n]=h[c[l[5]]];o=o+1;l=a[o];e[l[2]]=c[l[3]];o=o+1;l=a[o];n=l[2];r={};f=0;i=n+l[3]-1;for l=n+1,i do f=f+1;r[f]=e[l];end;s={e[n](t(r,1,i-n))};i=n+l[5]-2;f=0;for l=n,i do f=f+1;e[l]=s[f];end;d=i;o=o+1;l=a[o];n=l[2];h=e[l[3]];e[n+1]=h;e[n]=h[c[l[5]]];o=o+1;l=a[o];e[l[2]]=c[l[3]];o=o+1;l=a[o];e[l[2]]={};o=o+1;l=a[o];e[l[2]][c[l[3]]]=c[l[5]];o=o+1;l=a[o];e[l[2]][c[l[3]]]=c[l[5]];o=o+1;l=a[o];e[l[2]][c[l[3]]]=c[l[5]];o=o+1;l=a[o];n=l[2];r={};f=0;i=n+l[3]-1;for l=n+1,i do f=f+1;r[f]=e[l];end;e[n](t(r,1,i-n));d=n;end;elseif n<=17 then if n<=14 then if n<=12 then if(e[l[2]]==e[l[5]])then o=o+1;else o=o+l[3];end;elseif n>13 then local n=l[2];local a=e[n+2];local c=e[n]+a;e[n]=c;if a>0 then if c<=e[n+1]then o=o+l[3];e[n+3]=c;end;elseif c>=e[n+1]then o=o+l[3];e[n+3]=c;end;else e[l[2]]={};end;elseif n<=15 then local h;local f;local n;local s,i;local r;local n;e[l[2]][c[l[3]]]=c[l[5]];o=o+1;l=a[o];e[l[2]][c[l[3]]]=e[l[5]];o=o+1;l=a[o];e[l[2]]=e[l[3]][c[l[5]]];o=o+1;l=a[o];e[l[2]]=e[l[3]][c[l[5]]];o=o+1;l=a[o];n=l[2];r=e[l[3]];e[n+1]=r;e[n]=r[c[l[5]]];o=o+1;l=a[o];e[l[2]]=e[l[3]];o=o+1;l=a[o];n=l[2];s,i={e[n]()};i=n+l[5]-2;f=0;for l=n,i do f=f+1;e[l]=s[f];end;d=i;o=o+1;l=a[o];e[l[2]]=e[l[3]];o=o+1;l=a[o];n=l[2];h={};f=0;i=n+l[3]-1;for l=n+1,i do f=f+1;h[f]=e[l];end;e[n](t(h,1,i-n));d=n;elseif n>16 then local o=l[2];local n=e[l[3]];e[o+1]=n;e[o]=n[c[l[5]]];else local f=K[l[3]];local d;local n={};d=E({},{__index=function(e,l)local l=n[l];return l[1][l[2]];end,__newindex=function(o,l,e)local l=n[l]l[1][l[2]]=e;end;});for c=1,l[5]do o=o+1;local l=a[o];if l[1]==6 then n[c-1]={e,l[3]};else n[c-1]={B,l[3]};end;P[#P+1]=n;end;e[l[2]]=A(f,d,h);end;elseif n<=20 then if n<=18 then e[l[2]]=c[l[3]];elseif n>19 then local n=l[2];local c={};local o=0;local l=n+l[3]-1;for l=n+1,l do o=o+1;c[o]=e[l];end;local c,l=u(e[n](t(c,1,l-n)));l=l+n-1;o=0;for l=n,l do o=o+1;e[l]=c[o];end;d=l;else local n=l[2];local c={};local o=0;local a=d;for l=n+1,a do o=o+1;c[o]=e[l];end;local c={e[n](t(c,1,a-n))};local l=n+l[5]-2;o=0;for l=n,l do o=o+1;e[l]=c[o];end;d=l;end;elseif n<=22 then if n==21 then local o=l[2];local c=o+l[3]-2;local n={};local l=0;for o=o,c do l=l+1;n[l]=e[o];end;do return t(n,1,l)end;else e[l[2]]={};end;elseif n==23 then if(e[l[2]]==e[l[5]])then o=o+1;else o=o+l[3];end;else local n=l[2];e[n]=e[n]-e[n+2];o=o+l[3];end;elseif n<=37 then if n<=30 then if n<=27 then if n<=25 then e[l[2]][c[l[3]]]=c[l[5]];elseif n==26 then local n;local s,n;local i;local n;local r;local P;local f;e[l[2]]=h[c[l[3]]];o=o+1;l=a[o];e[l[2]]=B[l[3]];o=o+1;l=a[o];e[l[2]]=e[l[3]][c[l[5]]];o=o+1;l=a[o];f=l[2];P=e[l[3]];e[f+1]=P;e[f]=P[c[l[5]]];o=o+1;l=a[o];f=l[2];r={};n=0;i=f+l[3]-1;for l=f+1,i do n=n+1;r[n]=e[l];end;s,i=u(e[f](t(r,1,i-f)));i=i+f-1;n=0;for l=f,i do n=n+1;e[l]=s[n];end;d=i;o=o+1;l=a[o];f=l[2];r={};n=0;i=d;for l=f+1,i do n=n+1;r[n]=e[l];end;s={e[f](t(r,1,i-f))};i=f+l[5]-2;n=0;for l=f,i do n=n+1;e[l]=s[n];end;d=i;o=o+1;l=a[o];o=o+l[3];else do return end;end;elseif n<=28 then e[l[2]]=e[l[3]][c[l[5]]];elseif n>29 then if e[l[2]]then o=o+1;else o=o+l[3];end;else e[l[2]]=B[l[3]];end;elseif n<=33 then if n<=31 then do return end;elseif n>32 then local o=l[2];local c={};local n=0;local l=o+l[3]-1;for l=o+1,l do n=n+1;c[n]=e[l];end;e[o](t(c,1,l-o));d=o;else o=o+l[3];end;elseif n<=35 then if n==34 then local n=l[2];local c=n+l[3]-2;local o={};local l=0;for n=n,c do l=l+1;o[l]=e[n];end;do return t(o,1,l)end;else local n=l[2];local c={};local o=0;local l=n+l[3]-1;for l=n+1,l do o=o+1;c[o]=e[l];end;local c,l=u(e[n](t(c,1,l-n)));l=l+n-1;o=0;for l=n,l do o=o+1;e[l]=c[o];end;d=l;end;elseif n==36 then e[l[2]]=B[l[3]];else local n=l[2];local a={};local o=0;local c=n+l[3]-1;for l=n+1,c do o=o+1;a[o]=e[l];end;local c={e[n](t(a,1,c-n))};local l=n+l[5]-2;o=0;for l=n,l do o=o+1;e[l]=c[o];end;d=l;end;elseif n<=43 then if n<=40 then if n<=38 then e[l[2]]=e[l[3]][c[l[5]]];elseif n==39 then local n=l[2];e[n]=e[n]-e[n+2];o=o+l[3];else local n=l[2];local o=e[l[3]];e[n+1]=o;e[n]=o[c[l[5]]];end;elseif n<=41 then e[l[2]][c[l[3]]]=c[l[5]];elseif n>42 then o=o+l[3];else local n=l[2];local a=l[5];local l=n+2;local c={e[n](e[n+1],e[l])};for o=1,a do e[l+o]=c[o];end;local n=e[n+3];if n then e[l]=n else o=o+1;end;end;elseif n<=46 then if n<=44 then e[l[2]]=h[c[l[3]]];elseif n==45 then e[l[2]][c[l[3]]]=e[l[5]];else if e[l[2]]then o=o+1;else o=o+l[3];end;end;elseif n<=48 then if n==47 then local n=l[2];local a=e[n+2];local c=e[n]+a;e[n]=c;if a>0 then if c<=e[n+1]then o=o+l[3];e[n+3]=c;end;elseif c>=e[n+1]then o=o+l[3];e[n+3]=c;end;else e[l[2]][c[l[3]]]=e[l[5]];end;elseif n==49 then local o=l[2];local c={};local n=0;local l=o+l[3]-1;for l=o+1,l do n=n+1;c[n]=e[l];end;e[o](t(c,1,l-o));d=o;else e[l[2]]=h[c[l[3]]];end;o=o+1;end;end;end;return A(K(),{},D())();
+end)
+
+AntiAFK.Name = "Anti AFK"
+AntiAFK.Parent = Main
+AntiAFK.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+AntiAFK.Position = UDim2.new(0.57042253, 0, 0.177215189, 0)
+AntiAFK.Size = UDim2.new(0, 106, 0, 50)
+AntiAFK.Font = Enum.Font.SourceSans
+AntiAFK.Text = "Anti AFK"
+AntiAFK.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiAFK.TextSize = 14.000
+AntiAFK.MouseButton1Down:connect(function()
+wait(0.5)local ba=Instance.new("ScreenGui")
+local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,304,0,52)
+ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti Afk Kick Script"ca.TextColor3=Color3.new(0,1,1)
+ca.TextSize=22;da.Parent=ca
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+da.Size=UDim2.new(0,304,0,107)_b.Parent=da
+_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+_b.Size=UDim2.new(0,304,0,21)_b.Font=Enum.Font.Arial;_b.Text="Made by XxbossbeaterxX"
+_b.TextColor3=Color3.new(1,1,1)_b.TextSize=20;ab.Parent=da
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377379,0)
+ab.Size=UDim2.new(0,304,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Script Started"
+ab.TextColor3=Color3.new(1,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+ab.Text="You went idle and ROBLOX tried to kick you but we reflected it!"wait(2)ab.Text="Script Re-Enabled"end)
+end)
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.Position = UDim2.new(0.943661988, 0, 0, 0)
+Close.Size = UDim2.new(0, 16, 0, 14)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 14.000
+Close.MouseButton1Down:connect(function()
+Main.Visible = false
+OpenFrame.Visible = true
+end)
