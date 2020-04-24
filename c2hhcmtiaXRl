@@ -1,526 +1,1030 @@
-local library = loadstring(game:HttpGet("https://pastebinp.com/raw/eWKgbdix", true))()
-LocalPlayer =  game:GetService("Players").LocalPlayer.Name
+local SharkBitmeh = Instance.new("ScreenGui")
+local Weapons = Instance.new("Frame")
+local WT = Instance.new("TextLabel")
+local wdash = Instance.new("ImageButton")
+local ws = Instance.new("Frame")
+local ha = Instance.new("TextLabel")
+local has = Instance.new("TextButton")
+local Ro = Instance.new("TextLabel")
+local ros = Instance.new("TextButton")
+local co = Instance.new("TextLabel")
+local cos = Instance.new("TextButton")
+local ak = Instance.new("TextLabel")
+local aks = Instance.new("TextButton")
+local ray = Instance.new("TextLabel")
+local rays = Instance.new("TextButton")
+local Boats = Instance.new("Frame")
+local BT = Instance.new("TextLabel")
+local bs = Instance.new("Frame")
+local ya = Instance.new("TextLabel")
+local yas = Instance.new("TextButton")
+local de = Instance.new("TextLabel")
+local des = Instance.new("TextButton")
+local dy = Instance.new("TextLabel")
+local dys = Instance.new("TextButton")
+local sp = Instance.new("TextLabel")
+local sps = Instance.new("TextButton")
+local mil = Instance.new("TextLabel")
+local mils = Instance.new("TextButton")
+local bdash = Instance.new("ImageButton")
+local Sharks = Instance.new("Frame")
+local sdash = Instance.new("ImageButton")
+local ss = Instance.new("Frame")
+local sboost = Instance.new("TextLabel")
+local sbs = Instance.new("TextButton")
+local sw = Instance.new("TextLabel")
+local sws = Instance.new("TextButton")
+local sh = Instance.new("TextLabel")
+local shs = Instance.new("TextButton")
+local ksh = Instance.new("TextLabel")
+local kss = Instance.new("TextButton")
+local gsh = Instance.new("TextLabel")
+local gss = Instance.new("TextButton")
+local st = Instance.new("TextLabel")
+local wmods = Instance.new("Frame")
+local wt = Instance.new("TextLabel")
+local mdash = Instance.new("ImageButton")
+local wmod = Instance.new("Frame")
+local mamm = Instance.new("TextLabel")
+local mas = Instance.new("TextButton")
+local mdam = Instance.new("TextLabel")
+local mds = Instance.new("TextButton")
+local mbdis = Instance.new("TextLabel")
+local bds = Instance.new("TextButton")
+local mbsp = Instance.new("TextLabel")
+local mbsel = Instance.new("TextButton")
 
-if game.CoreGui:FindFirstChild("ScreenGui") then
-  print("SharkBite Pwner already running...")
-  return end
+-- Properties
 
-  if game.CoreGui:FindFirstChild("esp") then
-  else
-    local folder = Instance.new("Folder", game.CoreGui)
-    folder.Name = "esp"
-  end
+SharkBitmeh.Name = "SharkBitmeh"
+SharkBitmeh.Parent = game.CoreGui
+
+Weapons.Name = "Weapons"
+Weapons.Parent = SharkBitmeh
+Weapons.Active = true
+Weapons.BackgroundColor3 = Color3.new(1, 0.235294, 0.309804)
+Weapons.BorderSizePixel = 0
+Weapons.Position = UDim2.new(0.447815508, 0, -0.212713927, 0)
+Weapons.Size = UDim2.new(0, 197, 0, 25)
+Weapons.Draggable = true
+
+WT.Name = "WT"
+WT.Parent = Weapons
+WT.BackgroundColor3 = Color3.new(1, 1, 1)
+WT.BackgroundTransparency = 1
+WT.BorderSizePixel = 2
+WT.Position = UDim2.new(0, 0, 0.0799999982, 0)
+WT.Size = UDim2.new(0, 197, 0, 22)
+WT.Font = Enum.Font.SourceSansLight
+WT.Text = "Weapons (Lobby)"
+WT.TextScaled = true
+WT.TextSize = 15
+WT.TextWrapped = true
+
+wdash.Name = "wdash"
+wdash.Parent = Weapons
+wdash.BackgroundColor3 = Color3.new(1, 1, 1)
+wdash.BackgroundTransparency = 1
+wdash.Position = UDim2.new(0.876074076, 0, 0.159999996, 0)
+wdash.Size = UDim2.new(0, 24, 0, 18)
+wdash.Image = "rbxassetid://190839204"
+
+ws.Name = "ws"
+ws.Parent = Weapons
+ws.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+ws.BackgroundTransparency = 0.30000001192093
+ws.BorderSizePixel = 0
+ws.Position = UDim2.new(0, 0, 1, 0)
+ws.Size = UDim2.new(0, 197, 0, 135)
+
+ha.Name = "ha"
+ha.Parent = ws
+ha.BackgroundColor3 = Color3.new(1, 1, 1)
+ha.BackgroundTransparency = 1
+ha.Position = UDim2.new(0.127000004, 0, 0.0222222228, 0)
+ha.Size = UDim2.new(0, 172, 0, 18)
+ha.Font = Enum.Font.SciFi
+ha.Text = "Harpoon"
+ha.TextColor3 = Color3.new(1, 1, 1)
+ha.TextScaled = true
+ha.TextSize = 14
+ha.TextWrapped = true
+ha.TextXAlignment = Enum.TextXAlignment.Left
+
+has.Name = "has"
+has.Parent = ha
+has.BackgroundColor3 = Color3.new(1, 1, 1)
+has.BackgroundTransparency = 1
+has.Position = UDim2.new(-0.145348832, 0, -7.4505806e-09, 0)
+has.Size = UDim2.new(0, 25, 0, 19)
+has.Font = Enum.Font.SourceSans
+has.Text = ">"
+has.TextColor3 = Color3.new(1, 1, 1)
+has.TextSize = 27
+has.TextWrapped = true
+
+Ro.Name = "Ro"
+Ro.Parent = ws
+Ro.BackgroundColor3 = Color3.new(1, 1, 1)
+Ro.BackgroundTransparency = 1
+Ro.Position = UDim2.new(0.127000004, 0, 0.155555561, 0)
+Ro.Size = UDim2.new(0, 172, 0, 18)
+Ro.Font = Enum.Font.SciFi
+Ro.Text = "Rocket Launcher"
+Ro.TextColor3 = Color3.new(1, 1, 1)
+Ro.TextScaled = true
+Ro.TextSize = 14
+Ro.TextWrapped = true
+Ro.TextXAlignment = Enum.TextXAlignment.Left
+
+ros.Name = "ros"
+ros.Parent = Ro
+ros.BackgroundColor3 = Color3.new(1, 1, 1)
+ros.BackgroundTransparency = 1
+ros.Position = UDim2.new(-0.145348832, 0, -7.4505806e-09, 0)
+ros.Size = UDim2.new(0, 25, 0, 19)
+ros.Font = Enum.Font.SourceSans
+ros.Text = ">"
+ros.TextColor3 = Color3.new(1, 1, 1)
+ros.TextSize = 27
+ros.TextWrapped = true
+
+co.Name = "co"
+co.Parent = ws
+co.BackgroundColor3 = Color3.new(1, 1, 1)
+co.BackgroundTransparency = 1
+co.Position = UDim2.new(0.127370566, 0, 0.288888961, 0)
+co.Size = UDim2.new(0, 172, 0, 18)
+co.Font = Enum.Font.SciFi
+co.Text = "Commando"
+co.TextColor3 = Color3.new(1, 1, 1)
+co.TextScaled = true
+co.TextSize = 14
+co.TextWrapped = true
+co.TextXAlignment = Enum.TextXAlignment.Left
+
+cos.Name = "cos"
+cos.Parent = co
+cos.BackgroundColor3 = Color3.new(1, 1, 1)
+cos.BackgroundTransparency = 1
+cos.Position = UDim2.new(-0.145348832, 0, -7.4505806e-09, 0)
+cos.Size = UDim2.new(0, 25, 0, 19)
+cos.Font = Enum.Font.SourceSans
+cos.Text = ">"
+cos.TextColor3 = Color3.new(1, 1, 1)
+cos.TextSize = 27
+cos.TextWrapped = true
+
+ak.Name = "ak"
+ak.Parent = ws
+ak.BackgroundColor3 = Color3.new(1, 1, 1)
+ak.BackgroundTransparency = 1
+ak.Position = UDim2.new(0.127370566, 0, 0.429629683, 0)
+ak.Size = UDim2.new(0, 172, 0, 18)
+ak.Font = Enum.Font.SciFi
+ak.Text = "AK-47"
+ak.TextColor3 = Color3.new(1, 1, 1)
+ak.TextScaled = true
+ak.TextSize = 14
+ak.TextWrapped = true
+ak.TextXAlignment = Enum.TextXAlignment.Left
+
+aks.Name = "aks"
+aks.Parent = ak
+aks.BackgroundColor3 = Color3.new(1, 1, 1)
+aks.BackgroundTransparency = 1
+aks.Position = UDim2.new(-0.145348832, 0, -7.4505806e-09, 0)
+aks.Size = UDim2.new(0, 25, 0, 19)
+aks.Font = Enum.Font.SourceSans
+aks.Text = ">"
+aks.TextColor3 = Color3.new(1, 1, 1)
+aks.TextSize = 27
+aks.TextWrapped = true
+
+ray.Name = "ray"
+ray.Parent = ws
+ray.BackgroundColor3 = Color3.new(1, 1, 1)
+ray.BackgroundTransparency = 1
+ray.Position = UDim2.new(0.127370566, 0, 0.562963009, 0)
+ray.Size = UDim2.new(0, 172, 0, 18)
+ray.Font = Enum.Font.SciFi
+ray.Text = "Ray Gun"
+ray.TextColor3 = Color3.new(1, 1, 1)
+ray.TextScaled = true
+ray.TextSize = 14
+ray.TextWrapped = true
+ray.TextXAlignment = Enum.TextXAlignment.Left
+
+rays.Name = "rays"
+rays.Parent = ray
+rays.BackgroundColor3 = Color3.new(1, 1, 1)
+rays.BackgroundTransparency = 1
+rays.Position = UDim2.new(-0.145348832, 0, -7.4505806e-09, 0)
+rays.Size = UDim2.new(0, 25, 0, 19)
+rays.Font = Enum.Font.SourceSans
+rays.Text = ">"
+rays.TextColor3 = Color3.new(1, 1, 1)
+rays.TextSize = 27
+rays.TextWrapped = true
+
+Boats.Name = "Boats"
+Boats.Parent = SharkBitmeh
+Boats.Active = true
+Boats.BackgroundColor3 = Color3.new(1, 0.235294, 0.309804)
+Boats.BorderSizePixel = 0
+Boats.Position = UDim2.new(0.447815508, 0, -0.212713927, 0)
+Boats.Size = UDim2.new(0, 197, 0, 25)
+Boats.Draggable = true
+
+BT.Name = "BT"
+BT.Parent = Boats
+BT.BackgroundColor3 = Color3.new(1, 1, 1)
+BT.BackgroundTransparency = 1
+BT.BorderSizePixel = 2
+BT.Position = UDim2.new(0, 0, 0.0799999982, 0)
+BT.Size = UDim2.new(0, 173, 0, 22)
+BT.Font = Enum.Font.SourceSansLight
+BT.Text = "Boats (Boat Selection)"
+BT.TextScaled = true
+BT.TextSize = 15
+BT.TextWrapped = true
+
+bs.Name = "bs"
+bs.Parent = Boats
+bs.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+bs.BackgroundTransparency = 0.30000001192093
+bs.BorderSizePixel = 0
+bs.Position = UDim2.new(-0.00253808498, 0, 0.959999919, 0)
+bs.Size = UDim2.new(0, 197, 0, 135)
+
+ya.Name = "ya"
+ya.Parent = bs
+ya.BackgroundColor3 = Color3.new(1, 1, 1)
+ya.BackgroundTransparency = 1
+ya.Position = UDim2.new(0.126903549, 0, 0.0148148146, 0)
+ya.Size = UDim2.new(0, 172, 0, 18)
+ya.Font = Enum.Font.SciFi
+ya.Text = "Yacht"
+ya.TextColor3 = Color3.new(1, 1, 1)
+ya.TextScaled = true
+ya.TextSize = 14
+ya.TextWrapped = true
+ya.TextXAlignment = Enum.TextXAlignment.Left
+
+yas.Name = "yas"
+yas.Parent = ya
+yas.BackgroundColor3 = Color3.new(1, 1, 1)
+yas.BackgroundTransparency = 1
+yas.Position = UDim2.new(-0.145348832, 0, -7.4505806e-09, 0)
+yas.Size = UDim2.new(0, 25, 0, 19)
+yas.Font = Enum.Font.SourceSans
+yas.Text = ">"
+yas.TextColor3 = Color3.new(1, 1, 1)
+yas.TextSize = 27
+yas.TextWrapped = true
+
+de.Name = "de"
+de.Parent = bs
+de.BackgroundColor3 = Color3.new(1, 1, 1)
+de.BackgroundTransparency = 1
+de.Position = UDim2.new(0.127000004, 0, 0.570777774, 0)
+de.Size = UDim2.new(0, 172, 0, 18)
+de.Font = Enum.Font.SciFi
+de.Text = "Destroyer"
+de.TextColor3 = Color3.new(1, 1, 1)
+de.TextScaled = true
+de.TextSize = 14
+de.TextWrapped = true
+de.TextXAlignment = Enum.TextXAlignment.Left
+
+des.Name = "des"
+des.Parent = de
+des.BackgroundColor3 = Color3.new(1, 1, 1)
+des.BackgroundTransparency = 1
+des.Position = UDim2.new(-0.145348832, 0, -7.4505806e-09, 0)
+des.Size = UDim2.new(0, 25, 0, 19)
+des.Font = Enum.Font.SourceSans
+des.Text = ">"
+des.TextColor3 = Color3.new(1, 1, 1)
+des.TextSize = 27
+des.TextWrapped = true
+
+dy.Name = "dy"
+dy.Parent = bs
+dy.BackgroundColor3 = Color3.new(1, 1, 1)
+dy.BackgroundTransparency = 1
+dy.Position = UDim2.new(0.126903549, 0, 0.148148149, 0)
+dy.Size = UDim2.new(0, 172, 0, 18)
+dy.Font = Enum.Font.SciFi
+dy.Text = "Deluxe Yacht"
+dy.TextColor3 = Color3.new(1, 1, 1)
+dy.TextScaled = true
+dy.TextSize = 14
+dy.TextWrapped = true
+dy.TextXAlignment = Enum.TextXAlignment.Left
+
+dys.Name = "dys"
+dys.Parent = dy
+dys.BackgroundColor3 = Color3.new(1, 1, 1)
+dys.BackgroundTransparency = 1
+dys.Position = UDim2.new(-0.145348832, 0, -7.4505806e-09, 0)
+dys.Size = UDim2.new(0, 25, 0, 19)
+dys.Font = Enum.Font.SourceSans
+dys.Text = ">"
+dys.TextColor3 = Color3.new(1, 1, 1)
+dys.TextSize = 27
+dys.TextWrapped = true
+
+sp.Name = "sp"
+sp.Parent = bs
+sp.BackgroundColor3 = Color3.new(1, 1, 1)
+sp.BackgroundTransparency = 1
+sp.Position = UDim2.new(0.127000004, 0, 0.289000005, 0)
+sp.Size = UDim2.new(0, 172, 0, 18)
+sp.Font = Enum.Font.SciFi
+sp.Text = "Spectre"
+sp.TextColor3 = Color3.new(1, 1, 1)
+sp.TextScaled = true
+sp.TextSize = 14
+sp.TextWrapped = true
+sp.TextXAlignment = Enum.TextXAlignment.Left
+
+sps.Name = "sps"
+sps.Parent = sp
+sps.BackgroundColor3 = Color3.new(1, 1, 1)
+sps.BackgroundTransparency = 1
+sps.Position = UDim2.new(-0.145348832, 0, -7.4505806e-09, 0)
+sps.Size = UDim2.new(0, 25, 0, 19)
+sps.Font = Enum.Font.SourceSans
+sps.Text = ">"
+sps.TextColor3 = Color3.new(1, 1, 1)
+sps.TextSize = 27
+sps.TextWrapped = true
+
+mil.Name = "mil"
+mil.Parent = bs
+mil.BackgroundColor3 = Color3.new(1, 1, 1)
+mil.BackgroundTransparency = 1
+mil.Position = UDim2.new(0.127000004, 0, 0.437000036, 0)
+mil.Size = UDim2.new(0, 172, 0, 18)
+mil.Font = Enum.Font.SciFi
+mil.Text = "Military Boat"
+mil.TextColor3 = Color3.new(1, 1, 1)
+mil.TextScaled = true
+mil.TextSize = 14
+mil.TextWrapped = true
+mil.TextXAlignment = Enum.TextXAlignment.Left
+
+mils.Name = "mils"
+mils.Parent = mil
+mils.BackgroundColor3 = Color3.new(1, 1, 1)
+mils.BackgroundTransparency = 1
+mils.Position = UDim2.new(-0.145348832, 0, -7.4505806e-09, 0)
+mils.Size = UDim2.new(0, 25, 0, 19)
+mils.Font = Enum.Font.SourceSans
+mils.Text = ">"
+mils.TextColor3 = Color3.new(1, 1, 1)
+mils.TextSize = 27
+mils.TextWrapped = true
+
+bdash.Name = "bdash"
+bdash.Parent = Boats
+bdash.BackgroundColor3 = Color3.new(1, 1, 1)
+bdash.BackgroundTransparency = 1
+bdash.Position = UDim2.new(0.876074076, 0, 0.159999996, 0)
+bdash.Size = UDim2.new(0, 24, 0, 18)
+bdash.Image = "rbxassetid://190839204"
+
+Sharks.Name = "Sharks"
+Sharks.Parent = SharkBitmeh
+Sharks.Active = true
+Sharks.BackgroundColor3 = Color3.new(1, 0.235294, 0.309804)
+Sharks.BorderSizePixel = 0
+Sharks.Position = UDim2.new(0.447815508, 0, -0.212713927, 0)
+Sharks.Size = UDim2.new(0, 197, 0, 25)
+Sharks.Draggable = true
+
+sdash.Name = "sdash"
+sdash.Parent = Sharks
+sdash.BackgroundColor3 = Color3.new(1, 1, 1)
+sdash.BackgroundTransparency = 1
+sdash.Position = UDim2.new(0.876074076, 0, 0.159999996, 0)
+sdash.Size = UDim2.new(0, 24, 0, 18)
+sdash.Image = "rbxassetid://190839204"
+
+ss.Name = "ss"
+ss.Parent = Sharks
+ss.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+ss.BackgroundTransparency = 0.30000001192093
+ss.BorderSizePixel = 0
+ss.Position = UDim2.new(0, 0, 0.959999919, 0)
+ss.Size = UDim2.new(0, 197, 0, 135)
+
+sboost.Name = "sboost"
+sboost.Parent = ss
+sboost.BackgroundColor3 = Color3.new(1, 1, 1)
+sboost.BackgroundTransparency = 1
+sboost.Position = UDim2.new(0.127000004, 0, 0.0219999999, 0)
+sboost.Size = UDim2.new(0, 172, 0, 18)
+sboost.Font = Enum.Font.SciFi
+sboost.Text = "Supa Speed"
+sboost.TextColor3 = Color3.new(1, 1, 1)
+sboost.TextScaled = true
+sboost.TextSize = 14
+sboost.TextWrapped = true
+sboost.TextXAlignment = Enum.TextXAlignment.Left
+
+sbs.Name = "sbs"
+sbs.Parent = sboost
+sbs.BackgroundColor3 = Color3.new(1, 1, 1)
+sbs.BackgroundTransparency = 1
+sbs.Position = UDim2.new(-0.145348832, 0, -0.166666672, 0)
+sbs.Size = UDim2.new(0, 25, 0, 19)
+sbs.Font = Enum.Font.SourceSans
+sbs.Text = ">"
+sbs.TextColor3 = Color3.new(1, 1, 1)
+sbs.TextSize = 27
+sbs.TextWrapped = true
+
+sw.Name = "sw"
+sw.Parent = ss
+sw.BackgroundColor3 = Color3.new(1, 1, 1)
+sw.BackgroundTransparency = 1
+sw.Position = UDim2.new(0.127000004, 0, 0.162740737, 0)
+sw.Size = UDim2.new(0, 172, 0, 18)
+sw.Font = Enum.Font.SciFi
+sw.Text = "Great White"
+sw.TextColor3 = Color3.new(1, 1, 1)
+sw.TextScaled = true
+sw.TextSize = 14
+sw.TextWrapped = true
+sw.TextXAlignment = Enum.TextXAlignment.Left
+
+sws.Name = "sws"
+sws.Parent = sw
+sws.BackgroundColor3 = Color3.new(1, 1, 1)
+sws.BackgroundTransparency = 1
+sws.Position = UDim2.new(-0.145348832, 0, -0.166666672, 0)
+sws.Size = UDim2.new(0, 25, 0, 19)
+sws.Font = Enum.Font.SourceSans
+sws.Text = ">"
+sws.TextColor3 = Color3.new(1, 1, 1)
+sws.TextSize = 27
+sws.TextWrapped = true
+
+sh.Name = "sh"
+sh.Parent = ss
+sh.BackgroundColor3 = Color3.new(1, 1, 1)
+sh.BackgroundTransparency = 1
+sh.Position = UDim2.new(0.127000004, 0, 0.296074092, 0)
+sh.Size = UDim2.new(0, 172, 0, 18)
+sh.Font = Enum.Font.SciFi
+sh.Text = "Hammer Head"
+sh.TextColor3 = Color3.new(1, 1, 1)
+sh.TextScaled = true
+sh.TextSize = 14
+sh.TextWrapped = true
+sh.TextXAlignment = Enum.TextXAlignment.Left
+
+shs.Name = "shs"
+shs.Parent = sh
+shs.BackgroundColor3 = Color3.new(1, 1, 1)
+shs.BackgroundTransparency = 1
+shs.Position = UDim2.new(-0.145348832, 0, -0.166666672, 0)
+shs.Size = UDim2.new(0, 25, 0, 19)
+shs.Font = Enum.Font.SourceSans
+shs.Text = ">"
+shs.TextColor3 = Color3.new(1, 1, 1)
+shs.TextSize = 27
+shs.TextWrapped = true
+
+ksh.Name = "ksh"
+ksh.Parent = ss
+ksh.BackgroundColor3 = Color3.new(1, 1, 1)
+ksh.BackgroundTransparency = 1
+ksh.Position = UDim2.new(0.127000004, 0, 0.436814845, 0)
+ksh.Size = UDim2.new(0, 172, 0, 18)
+ksh.Font = Enum.Font.SciFi
+ksh.Text = "Kill the Shark"
+ksh.TextColor3 = Color3.new(1, 1, 1)
+ksh.TextScaled = true
+ksh.TextSize = 14
+ksh.TextWrapped = true
+ksh.TextXAlignment = Enum.TextXAlignment.Left
+
+kss.Name = "kss"
+kss.Parent = ksh
+kss.BackgroundColor3 = Color3.new(1, 1, 1)
+kss.BackgroundTransparency = 1
+kss.Position = UDim2.new(-0.145348832, 0, -0.166666672, 0)
+kss.Size = UDim2.new(0, 25, 0, 19)
+kss.Font = Enum.Font.SourceSans
+kss.Text = ">"
+kss.TextColor3 = Color3.new(1, 1, 1)
+kss.TextSize = 27
+kss.TextWrapped = true
+
+gsh.Name = "gsh"
+gsh.Parent = ss
+gsh.BackgroundColor3 = Color3.new(1, 1, 1)
+gsh.BackgroundTransparency = 1
+gsh.Position = UDim2.new(0.127000004, 0, 0.57014817, 0)
+gsh.Size = UDim2.new(0, 172, 0, 18)
+gsh.Font = Enum.Font.SciFi
+gsh.Text = "God Shark"
+gsh.TextColor3 = Color3.new(1, 1, 1)
+gsh.TextScaled = true
+gsh.TextSize = 14
+gsh.TextWrapped = true
+gsh.TextXAlignment = Enum.TextXAlignment.Left
+
+gss.Name = "gss"
+gss.Parent = gsh
+gss.BackgroundColor3 = Color3.new(1, 1, 1)
+gss.BackgroundTransparency = 1
+gss.Position = UDim2.new(-0.145348832, 0, -0.166666672, 0)
+gss.Size = UDim2.new(0, 25, 0, 19)
+gss.Font = Enum.Font.SourceSans
+gss.Text = ">"
+gss.TextColor3 = Color3.new(1, 1, 1)
+gss.TextSize = 27
+gss.TextWrapped = true
+
+st.Name = "st"
+st.Parent = Sharks
+st.BackgroundColor3 = Color3.new(1, 1, 1)
+st.BackgroundTransparency = 1
+st.BorderSizePixel = 2
+st.Position = UDim2.new(0, 0, 0.0799999982, 0)
+st.Size = UDim2.new(0, 197, 0, 20)
+st.Font = Enum.Font.SourceSansLight
+st.Text = "Shark Settings"
+st.TextScaled = true
+st.TextSize = 15
+st.TextWrapped = true
+
+wmods.Name = "wmods"
+wmods.Parent = SharkBitmeh
+wmods.Active = true
+wmods.BackgroundColor3 = Color3.new(1, 0.235294, 0.309804)
+wmods.BorderSizePixel = 0
+wmods.Position = UDim2.new(0.447815508, 0, -0.212713927, 0)
+wmods.Size = UDim2.new(0, 197, 0, 25)
+wmods.Draggable = true
+
+wt.Name = "wt"
+wt.Parent = wmods
+wt.BackgroundColor3 = Color3.new(1, 1, 1)
+wt.BackgroundTransparency = 1
+wt.BorderSizePixel = 2
+wt.Position = UDim2.new(0, 0, 0.0799999237, 0)
+wt.Size = UDim2.new(0, 197, 0, 20)
+wt.Font = Enum.Font.SourceSansLight
+wt.Text = "Weapon Mods"
+wt.TextScaled = true
+wt.TextSize = 15
+wt.TextWrapped = true
+
+mdash.Name = "mdash"
+mdash.Parent = wmods
+mdash.BackgroundColor3 = Color3.new(1, 1, 1)
+mdash.BackgroundTransparency = 1
+mdash.Position = UDim2.new(0.876074076, 0, 0.159999996, 0)
+mdash.Size = UDim2.new(0, 24, 0, 18)
+mdash.Image = "rbxassetid://190839204"
+
+wmod.Name = "wmod"
+wmod.Parent = wmods
+wmod.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+wmod.BackgroundTransparency = 0.30000001192093
+wmod.BorderSizePixel = 0
+wmod.Position = UDim2.new(0, 0, 0.959999919, 0)
+wmod.Size = UDim2.new(0, 197, 0, 135)
+
+mamm.Name = "mamm"
+mamm.Parent = wmod
+mamm.BackgroundColor3 = Color3.new(1, 1, 1)
+mamm.BackgroundTransparency = 1
+mamm.Position = UDim2.new(0.127000004, 0, 0.0219999999, 0)
+mamm.Size = UDim2.new(0, 172, 0, 18)
+mamm.Font = Enum.Font.SciFi
+mamm.Text = "Inf Ammo"
+mamm.TextColor3 = Color3.new(1, 1, 1)
+mamm.TextScaled = true
+mamm.TextSize = 14
+mamm.TextWrapped = true
+mamm.TextXAlignment = Enum.TextXAlignment.Left
+
+mas.Name = "mas"
+mas.Parent = mamm
+mas.BackgroundColor3 = Color3.new(1, 1, 1)
+mas.BackgroundTransparency = 1
+mas.Position = UDim2.new(-0.145348832, 0, -0.166666672, 0)
+mas.Size = UDim2.new(0, 25, 0, 19)
+mas.Font = Enum.Font.SourceSans
+mas.Text = ">"
+mas.TextColor3 = Color3.new(1, 1, 1)
+mas.TextSize = 27
+mas.TextWrapped = true
+
+mdam.Name = "mdam"
+mdam.Parent = wmod
+mdam.BackgroundColor3 = Color3.new(1, 1, 1)
+mdam.BackgroundTransparency = 1
+mdam.Position = UDim2.new(0.127000004, 0, 0.148000002, 0)
+mdam.Size = UDim2.new(0, 172, 0, 18)
+mdam.Font = Enum.Font.SciFi
+mdam.Text = "Insta-Kill"
+mdam.TextColor3 = Color3.new(1, 1, 1)
+mdam.TextScaled = true
+mdam.TextSize = 14
+mdam.TextWrapped = true
+mdam.TextXAlignment = Enum.TextXAlignment.Left
+
+mds.Name = "mds"
+mds.Parent = mdam
+mds.BackgroundColor3 = Color3.new(1, 1, 1)
+mds.BackgroundTransparency = 1
+mds.Position = UDim2.new(-0.145348832, 0, -0.166666672, 0)
+mds.Size = UDim2.new(0, 25, 0, 19)
+mds.Font = Enum.Font.SourceSans
+mds.Text = ">"
+mds.TextColor3 = Color3.new(1, 1, 1)
+mds.TextSize = 27
+mds.TextWrapped = true
+
+mbdis.Name = "mbdis"
+mbdis.Parent = wmod
+mbdis.BackgroundColor3 = Color3.new(1, 1, 1)
+mbdis.BackgroundTransparency = 1
+mbdis.Position = UDim2.new(0.127000004, 0, 0.437000006, 0)
+mbdis.Size = UDim2.new(0, 172, 0, 18)
+mbdis.Font = Enum.Font.SciFi
+mbdis.Text = "Max Bullet Range"
+mbdis.TextColor3 = Color3.new(1, 1, 1)
+mbdis.TextScaled = true
+mbdis.TextSize = 14
+mbdis.TextWrapped = true
+mbdis.TextXAlignment = Enum.TextXAlignment.Left
+
+bds.Name = "bds"
+bds.Parent = mbdis
+bds.BackgroundColor3 = Color3.new(1, 1, 1)
+bds.BackgroundTransparency = 1
+bds.Position = UDim2.new(-0.145348832, 0, -0.166666672, 0)
+bds.Size = UDim2.new(0, 25, 0, 19)
+bds.Font = Enum.Font.SourceSans
+bds.Text = ">"
+bds.TextColor3 = Color3.new(1, 1, 1)
+bds.TextSize = 27
+bds.TextWrapped = true
+
+mbsp.Name = "mbsp"
+mbsp.Parent = wmod
+mbsp.BackgroundColor3 = Color3.new(1, 1, 1)
+mbsp.BackgroundTransparency = 1
+mbsp.Position = UDim2.new(0.127000004, 0, 0.289000005, 0)
+mbsp.Size = UDim2.new(0, 172, 0, 18)
+mbsp.Font = Enum.Font.SciFi
+mbsp.Text = "High Bullet Speed"
+mbsp.TextColor3 = Color3.new(1, 1, 1)
+mbsp.TextScaled = true
+mbsp.TextSize = 14
+mbsp.TextWrapped = true
+mbsp.TextXAlignment = Enum.TextXAlignment.Left
+
+mbsel.Name = "mbsel"
+mbsel.Parent = mbsp
+mbsel.BackgroundColor3 = Color3.new(1, 1, 1)
+mbsel.BackgroundTransparency = 1
+mbsel.Position = UDim2.new(-0.145348832, 0, -0.166666672, 0)
+mbsel.Size = UDim2.new(0, 25, 0, 19)
+mbsel.Font = Enum.Font.SourceSans
+mbsel.Text = ">"
+mbsel.TextColor3 = Color3.new(1, 1, 1)
+mbsel.TextSize = 27
+mbsel.TextWrapped = true
+
+-- Scripts 
+
+GreatWhite = false
+LocalPlayer = game.Players.LocalPlayer.Name
 
 
-  function Sharkesp()
-    local folder = Instance.new("Folder", game.CoreGui.esp)
-    folder.Name = "sharks"
-    for i,v in pairs(game.Workspace.Sharks:GetChildren()) do
-      if v ~= nil then
-        sharks = {}
-        table.insert(sharks, v.Name)
-        for i = 1, #sharks do
-          sdir = game.Workspace.Sharks[v.Name]
+Weapons:TweenPosition(UDim2.new(0.362894863, 0, 0.13691932, 0), "In")
+Boats:TweenPosition(UDim2.new(0.476935029, 0, 0.13691932, 0), "In")
+Sharks:TweenPosition(UDim2.new(0.590979397, 0, 0.136308074, 0), "In")
+wmods:TweenPosition(UDim2.new(0.705733478, 0, 0.136308074, 0), "In")
 
-          local sesp = Instance.new("BillboardGui", game.CoreGui.esp.sharks)
-          sesp.Name = sdir.Name
-          sesp.Adornee = sdir.Kill
-          sesp.AlwaysOnTop=true
-          sesp.ResetOnSpawn=false
-          sesp.Size = UDim2.new(1,1,1,1)
-
-          local tag = Instance.new("TextLabel", sesp)
-          tag.Size = UDim2.new(5,5,5,5)
-          tag.Text = sdir.OwnerName.Value
-          tag.TextColor3 = Color3.new(255, 0, 0)
-          tag.TextStrokeTransparency = 0
-          tag.BackgroundTransparency = 1
-
-          local cham = Instance.new("BoxHandleAdornment", game.CoreGui.esp.sharks)
-          cham.Name = sdir.Name
-          cham.Size = sdir:WaitForChild("Body").Size
-          cham.Adornee = sdir.Body
-          cham.AlwaysOnTop = true
-          cham.ZIndex = 5
-          cham.Color3 = Color3.new(244,0,0)
-          cham.Transparency = 0.72
-
-          if sdir:FindFirstChild("Fin") then
-            local fin = Instance.new("BoxHandleAdornment", game.CoreGui.esp.sharks)
-            fin.Name = sdir.Name
-            fin.Size = sdir.Fin.Size
-            fin.Adornee = sdir.Fin
-            fin.AlwaysOnTop = true
-            fin.ZIndex = 5
-            fin.Color3 = Color3.new(244,0,0)
-            fin.Transparency = 0.6
-
-            end end end end end
-
-
-            function Survivoresp()
-              local folder = Instance.new("Folder", game.CoreGui.esp)
-              folder.Name = "survivors"
-              for i,v in pairs(game.Players:GetChildren()) do
-                if v.Name ~= LocalPlayer and v.Team.Name == "Survivor" then
-                  survivors = {}
-                  table.insert(survivors, v.Name)
-
-                  for i = 1, #survivors do
-                    local esp = Instance.new("BillboardGui", game.CoreGui.esp.survivors)
-                    esp.Adornee = game.Players[v.Name].Character
-                    esp.AlwaysOnTop=true
-                    esp.ResetOnSpawn=false
-                    esp.Size = UDim2.new(1,1,1,1)
-                    esp.Name = v.Name
-
-                    local tag = Instance.new("TextLabel", esp)
-                    tag.Size = UDim2.new(5,5,5,5)
-                    tag.Text = "Survivor"
-                    tag.TextColor3 = Color3.new(0, 255, 0)
-                    tag.BackgroundTransparency = 1
-                    end end end end
-
-
-
-                    function cleanshark()
-                      game.CoreGui.esp.sharks:Destroy()
-                    end
-
-                    function cleansurv()
-                      game.CoreGui.esp.survivors:Destroy()
-                    end
-
-                    local swin = library:CreateWindow("Sharkbite")
-                    swin:Section("ESP")
-
-                    local p = swin:Toggle("Survivor ESP", {flag = "suresp"}, function(flag)
-
-                    if flag then Survivoresp()
-                  else
-                    cleansurv() end end)
-
-                    local l = swin:Toggle("Shark ESP", {flag = "shesp"}, function(flag)
-                    if flag then Sharkesp()
-                  else
-                    cleanshark()
-                  end
-                  end)
-
-                  swin:Section("Misc")
-
-                  swin:Toggle("Shark TP Farm", {flag = "tpshark"}, function(flag)
-                  end)
-
-
-                  swin:Toggle("Kill Survivors", {flag = "ksur"}, function()
-                  end)
-
-
-                  spawn(function()
-                  while wait() do
-                    pcall(function()
-                    if swin.flags.ksur then
-                      if game.Players.LocalPlayer.Team.Name == "Shark" then
-                        for i,v in pairs(game.Players:GetChildren()) do
-                          if v.Team.Name == "Survivor" then
-                            workspace.Sharks:WaitForChild(tostring("Shark"..LocalPlayer))
-                            v.Character:MoveTo(workspace.Sharks["Shark"..LocalPlayer]:FindFirstChild("Kill").Position)
-                            v.Character:MoveTo(workspace.Sharks["Shark"..LocalPlayer]:FindFirstChild("Kill2").Position)
-                            workspace.Sharks["Shark"..game.Players.LocalPlayer.Name]:MoveTo(v.Character:FindFirstChild("HumanoidRootPart").Position)
-                          end
-                        end
-                      end
-                    end
-                    end)
-                  end
-                  end)
-
-
-
-
-
-
-                  swin:Toggle("AFK", {flag = "afk"}, function(flag)
-                  if flag then
-                    flag = false
-                    wait(1)
-                    flag = true
-                  end
-                  end)
-
-
-
-
-                  function reload()
-                    pcall(function()
-                    if game.Players.LocalPlayer.PlayerGui:FindFirstChild("WeaponDisplay") then
-                      if string.match(game.Players.LocalPlayer.PlayerGui.WeaponDisplay.Frame.Ammo.text, "%d") == "0" then
-                        keypress(0x52)
-                        keyrelease(0x52)
-                      end
-                    end
-                    end)
-                  end
-
-                  function equipgun()
-                    pcall(function()
-                    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-                      if v and v:FindFirstChild("LocalScript") then
-                        game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):EquipTool(v)
-                      end
-                      end
-                    end)
-                  end
-
-
-                  function checkGun()
-                    if not game.Players.LocalPlayer.PlayerGui.WeaponDisplay:FindFirstChild("Frame")
-                    then game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
-                    wait()
-                    equipgun()
-                  end
-                  end
-
-                spawn(function()
-                pcall(function()
-                local loc = game.Players.LocalPlayer
-                local cam = workspace.Camera
-                while wait() do
-                  if swin.flags.afk then
-                    loc.CameraMode = Enum.CameraMode.LockFirstPerson
-                    if loc.Team.Name == "Survivor" then
-                      equipgun()
-                      for i,v in pairs(workspace.Sharks:GetChildren()) do
-                        if workspace.Sharks:FindFirstChild(tostring(v.Name)) then
-                          game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
-                          equipgun()
-                          --checkgun()
-                          cam.CoordinateFrame = CFrame.new(cam.CoordinateFrame.p, v.Body.CFrame.p)
-                          mouse1press()
-                          wait()
-                          mouse1release()
-                          reload()
-                        end
-                      end
-                    end
-                  else loc.CameraMode = Enum.CameraMode.Classic
-                  end
+function onKeyPress(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.RightControl then
+        if SharkBitmeh.Enabled == true then
+            Boats:TweenPosition(UDim2.new(0.447815508, 0, -0.212713927, 0), "Out")
+            Sharks:TweenPosition(UDim2.new(0.447815508, 0, -0.212713927, 0), "Out")
+            Weapons:TweenPosition(UDim2.new(0.447815508, 0, -0.212713927, 0), "Out")
+            wmods:TweenPosition(UDim2.new(0.447815508, 0, -0.212713927, 0), "Out")
+            repeat
+                wait()
+                if Boats.Position == UDim2.new(0.447815508, 0, -0.212713927, 0) then
+            SharkBitmeh.Enabled = false
                 end
-                end)
-                end)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                swin:Toggle("No Barriers", {flag = "barrier"}, function(flag)
-                if flag then
-                  for i,v in pairs(workspace:GetDescendants()) do
-                    if v:IsA("Part") and v.Name ~= "gayboy" then
-                      v.CanCollide = false
-                    end
-                  end
-                else
-                  for i,v in pairs(workspace:GetDescendants()) do
-                    if v:IsA("Part") then
-                      v.CanCollide = true
-                    end
-                  end
-                end
-                end)
-
-
-swin:Toggle("Auto-Chest", {flag = "chest"}, function(flag)
-  if flag then
-    local LocalPlayer = game.Players.LocalPlayer
-    if workspace:FindFirstChild("ChestDrop") then
-      local bpos = LocalPlayer.Character.HumanoidRootPart.CFrame 
-    wait(0.5)
-    LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.ChestDrop.LootChest.Union.CFrame
-    wait(0.5)
-    LocalPlayer.Character.HumanoidRootPart.CFrame = bpos
-  end
-end
-  end)
-
-
-spawn(function()
-workspace.ChildAdded:Connect(function(chest)
-  local LocalPlayer = game.Players.LocalPlayer
-if chest.Name == "ChestDrop" and swin.flags.chest then
-  local bpos = LocalPlayer.Character.HumanoidRootPart.CFrame 
-    wait(0.5)
-    LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.ChestDrop.LootChest.Union.CFrame
-    wait(0.5)
-    LocalPlayer.Character.HumanoidRootPart.CFrame = bpos
-  end
-  end)
-end)
-
-swin:Toggle("RGB Water", {flag = "water"}, function(flag)
-  if not flag then
-    workspace.Terrain.WaterColor = Color3.fromRGB(52, 120, 154)
-  end
-  end)
-
-spawn(function(rgbwater)
-while wait() do
-  if swin.flags.water then
-                  workspace.Terrain.WaterColor = Color3.fromHSV(tick() * 24 % 255/255, 1, 1)
-                  wait()
-                end
-              end
-end)
-
-
-                spawn(function()
-                pcall(function()
-                while wait() do
-                  local lp = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
-                  if swin.flags.tpshark and lp and game.Players.LocalPlayer.Team.Name == "Survivor" then
-                    for i,v in pairs(game.Workspace.Sharks:GetChildren()) do
-						for i1,v1 in pairs(game.Players:GetChildren()) do
-								if v1.Team.Name ~= "Shark" and v.Name == v1.Name.."Shark" then
-							v:Destroy()
-						end
-						end
-                      if v then
-                        v:WaitForChild("Body")
-                        v.Body.CFrame = lp.CFrame + Vector3.new(0,i + 10,100)
-                      end
-                    end
-                  end
-                end
-                end)
-                end)
-                
-                ypcall(function()
-                    if debug then
-                        swin:Button("Infinite Ammo", function()
-                            local plr = game:GetService("Players").LocalPlayer
-game.Players.LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
-function getGun()
-    for i,v in pairs(plr.Backpack:GetChildren()) do
-        if v.Name ~= "Flare Gun" and v:FindFirstChild("LocalScript") then
-            return v.LocalScript
-        end
+                until Boats.Position == UDim2.new(0.447815508, 0, -0.212713927, 0)
+        else
+            SharkBitmeh.Enabled = true
+            Boats:TweenPosition(UDim2.new(0.476935029, 0, 0.13691932, 0), "In")
+            Sharks:TweenPosition(UDim2.new(0.590979397, 0, 0.136308074, 0), "In")
+            Weapons:TweenPosition(UDim2.new(0.362894863, 0, 0.13691932, 0), "In")
+            wmods:TweenPosition(UDim2.new(0.705733478, 0, 0.136308074, 0), "In")
         end
     end
-for i,v in next, getgc() do 
-    if type(v) == "function" and getfenv(v).script and getfenv(v).script == getGun() then 
-        for i2,v2 in next, debug.getupvalues(v) do 
-            if type(v2) == "number" then 
-                debug.setupvalue(v, i2, math.huge)
-            end
-        end
 end
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+
+
+function guns(gun)
+    local remote = Game["Workspace"]["Events"]["Shop"]["ChangeActiveGun"]
+local args = {
+    [1] = gun
+}
+remote:FireServer(unpack(args))
 end
-                        end)
-                        end
-                    end)
 
+function boats(boat)
+    local remote = Game["Workspace"]["Events"]["MatchMaking"]["PartyChange"]
+local args = {
+    [1] = {
+        Guests = {},
+        Owner = LocalPlayer,
+        IsInOtherParty = "",
+        BoatId = boat
+    }
+}
+remote:FireServer(unpack(args))
+end
 
-swin:Button("Remove Ragdoll", function()
-local ragdoll = require(game:GetService("ReplicatedStorage").Ragdoll)
+function gmods(mod)
+    -- Synapse Only
+-- Made by: Mod3rn#1999
+-- Using Racist Dolphin#5199 Dev Console <3
 
-ragdoll.Activate = function() return nil end
+local ps = game:GetService("Players")
+local i = game:GetService("UserInputService")
+local r = game:GetService("RunService")
+local cg = game:GetService("CoreGui")
+local p = ps.LocalPlayer
+local c = p.Character
+local b = p:FindFirstChild("Backpack") or p:WaitForChild("Backpack")
+local mo = p:GetMouse()
+
+p.CharacterAdded:connect(function(char)
+   c = char
 end)
 
-                local o = swin:Button("Flare Gun", function()
-                game.Workspace.Events.GamePasses.EquipFlareGun:FireServer()
-                end)
+local m = getrawmetatable(game)
+make_writeable(m)
 
-                local i = swin:Button("Teleport to Lobby", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.76587367, 286.200226, -27.4438801)
-                end)
+local oldindex = m.__index
+local oldnamecall = m.__namecall
 
-                game.Workspace.Sharks.ChildAdded:Connect(function(shark)
+m.__namecall = function(...)
+local t = {...}
+local method = t[#t]
 
-                if swin.flags.shesp then
-                  shark:WaitForChild("Kill")
-                  local sesp = Instance.new("BillboardGui", game.CoreGui.esp.sharks)
-                  sesp.Name = shark.Name
-                  sesp.Adornee = shark.Kill
-                  sesp.AlwaysOnTop=true
-                  sesp.ResetOnSpawn=false
-                  sesp.Size = UDim2.new(1,1,1,1)
+if method == "Play" then
+local env = getfenv(2)
+if env.script then
+if env.script.Parent ~= nil then
 
+debug.setupvalue(2, mod, math.huge)
+end
+end
+end
 
-                  local tag = Instance.new("TextLabel", sesp)
-                  tag.Size = UDim2.new(10,10,10,10)
-                  tag.Text = shark.OwnerName.Value
-                  tag.TextColor3 = Color3.new(25,0,0)
-                  tag.BackgroundTransparency = 1
+return oldnamecall(...)
+end
+end
 
-                  local cham = Instance.new("BoxHandleAdornment", game.CoreGui.esp.sharks)
-                  cham.Name = shark.Name
-                  cham.Size = shark:WaitForChild("Body").Size
-                  cham.Adornee = shark.Body
-                  cham.AlwaysOnTop = true
-                  cham.ZIndex = 5
-                  cham.Color3 = Color3.new(244,0,0)
-                  cham.Transparency = 0.72
+function speedb(num)
+    local ps = game:GetService("Players")
+local i = game:GetService("UserInputService")
+local r = game:GetService("RunService")
+local cg = game:GetService("CoreGui")
+local p = ps.LocalPlayer
+local c = p.Character
+local b = p:FindFirstChild("Backpack") or p:WaitForChild("Backpack")
+local mo = p:GetMouse()
 
-                  if shark:FindFirstChild("Fin") then
-                    local fin = Instance.new("BoxHandleAdornment", game.CoreGui.esp.sharks)
-                    fin.Name = shark.Name
-                    fin.Size = shark.Fin.Size
-                    fin.Adornee = shark.Fin
-                    fin.AlwaysOnTop = true
-                    fin.ZIndex = 5
-                    fin.Color3 = Color3.new(244,0,0)
-                    fin.Transparency = 0.6
-                  end
+p.CharacterAdded:connect(function(char)
+    c = char
+end)
+
+local m = getrawmetatable(game)
+make_writeable(m)
+
+local oldindex = m.__index
+local oldnamecall = m.__namecall
+
+m.__namecall = function(...)
+    local t = {...}
+    local method = t[#t]
+
+    if method == "FindFirstChild" then
+        if t[2] == "SharkBoost" then
+            local env = getfenv(2)
+                if env.script then
+                    if env.script.Parent ~= nil then
+                    debug.setupvalue(2, "speed", num)
                 end
-                end)
+            end
+        end
+    end
 
-                local Players = game:GetService("Players")
-                local RunService = game:GetService("RunService")
-                local Teams = game:GetService("Teams")
-                survivor = Teams.Survivor
+    return oldnamecall(...)
+end
+end
 
-                survivor.PlayerAdded:Connect(function(character)
+bdash.MouseButton1Down:connect(function()
+    if bs.Size == UDim2.new(0, 197, 0, 135) then
+        bdash.Rotation = 90
+        bs:TweenSize(UDim2.new(0, 197, 0, 0), "In")
+        repeat
+            wait()
+            if bs.Size == UDim2.new(0, 197, 0, 0) then
+                bs.Visible = false
+            end
+        until bs.Size == UDim2.new(0, 197, 0, 0)
+    else
+        bs.Visible = true
+        wait()
+    bs:TweenSize(UDim2.new(0, 197, 0, 135), "Out")
+    bdash.Rotation = 0
+    end
+end)
 
-                RunService.Stepped:wait()
-                if swin.flags.suresp then
-                  if character.Team.Name == "Survivor" then
-                    if character.Name ~= game.Players.LocalPlayer.Name then
-                      local esp = Instance.new("BillboardGui", game.CoreGui.esp.survivors)
-                      esp.Adornee = character.Character
-                      esp.AlwaysOnTop=true
-                      esp.ResetOnSpawn=false
-                      esp.Size = UDim2.new(1,1,1,1)
-                      esp.Name = character.Character.Name
+sdash.MouseButton1Down:connect(function()
+    if ss.Size == UDim2.new(0, 197, 0, 135) then
+        sdash.Rotation = 90
+        ss:TweenSize(UDim2.new(0, 197, 0, 0), "In")
+        repeat
+            wait()
+            if ss.Size == UDim2.new(0, 197, 0, 0) then
+                ss.Visible = false
+            end
+        until ss.Size == UDim2.new(0, 197, 0, 0)
+    else
+        ss.Visible = true
+        wait()
+    ss:TweenSize(UDim2.new(0, 197, 0, 135), "Out")
+    sdash.Rotation = 0
+    end
+end)
 
-                      local tag = Instance.new("TextLabel", esp)
-                      tag.Size = UDim2.new(5,5,5,5)
-                      tag.Text = "Survivor"
-                      tag.TextColor3 = Color3.new(0, 255, 0)
-                      tag.BackgroundTransparency = 1
-                    end
-                  end
-                end
-                end)
+wdash.MouseButton1Down:connect(function()
+    if ws.Size == UDim2.new(0, 197, 0, 135) then
+        wdash.Rotation = 90
+        ws:TweenSize(UDim2.new(0, 197, 0, 0), "In")
+        repeat
+            wait()
+            if ws.Size == UDim2.new(0, 197, 0, 0) then
+                ws.Visible = false
+            end
+        until ws.Size == UDim2.new(0, 197, 0, 0)
+    else
+        ws.Visible = true
+        wait()
+    ws:TweenSize(UDim2.new(0, 197, 0, 135), "Out")
+    wdash.Rotation = 0
+    end
+end)
 
-                survivor.PlayerRemoved:Connect(function(peen)
-                if swin.flags.suresp then
-                  for i,v in pairs(game.CoreGui.esp.survivors:GetChildren()) do
-                    if v.Name == peen.Name then
-                      v:Destroy()
-                    end
-                  end
-                end
-                end)
+mdash.MouseButton1Down:connect(function()
+    if wmod.Size == UDim2.new(0, 197, 0, 135) then
+        mdash.Rotation = 90
+        wmod:TweenSize(UDim2.new(0, 197, 0, 0), "In")
+        repeat
+            wait()
+            if wmod.Size == UDim2.new(0, 197, 0, 0) then
+                wmod.Visible = false
+            end
+        until wmod.Size == UDim2.new(0, 197, 0, 0)
+    else
+        wmod.Visible = true
+        wait()
+    wmod:TweenSize(UDim2.new(0, 197, 0, 135), "Out")
+    mdash.Rotation = 0
+    end
+end)
 
+aks.MouseButton1Click:connect(function()
+guns("AK-47")
+end)
 
-                swin:Button("Destroy", function()
-                game.CoreGui.ScreenGui:Destroy()
-                end)
+cos.MouseButton1Click:connect(function()
+    guns("Commando")
+end)
 
+ros.MouseButton1Click:connect(function()
+    guns("Rocket")
+end)
 
-                function sharkdist()
-                  while wait() do
-                    if swin.flags.shesp then
-                      game.CoreGui.esp:FindFirstChild("sharks")
-                      for i,v in pairs(game.CoreGui.esp.sharks:GetChildren()) do
-                        if v then
-                          if v:IsA("BillboardGui") then
-                            oo = {};
-                            table.insert(oo, v.Name)
-                            for i = 1, #oo do
-                              if workspace.Sharks:FindFirstChild(tostring(v.Name)) and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
-                                local texts = math.ceil((v.Adornee.Position - game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position).magnitude)
-                                local text = tostring(texts)
-                                v.TextLabel.Text = v.Adornee.Parent.OwnerName.Value.."\n["..text.."]"
-                              else
-                                v:Destroy()
-                              end
-                            end
-                          end
-                        end
-                      end
-                    end
-                  end
-                end
+has.MouseButton1Click:connect(function()
+    guns("Harpoon")
+end)
 
-                function checkBox()
-                  while wait() do
-                    if swin.flags.shesp then
-                      for i,v in pairs(game.CoreGui.esp.sharks:GetChildren()) do
-                        if v:IsA("BoxHandleAdornment") then
-                          if not workspace.Sharks:FindFirstChild(tostring(v.Name)) then
-                            v:Destroy()
-                          end
-                        end
-                      end
-                      if swin.flags.suresp then
-                        for i,v in pairs(game.CoreGui.esp.survivors:GetChildren()) do
-                          if game.Players[v.Name].Team.Name ~= "Survivor" then
-                            v:Destroy()
-                          end
-                        end
-                      end
-                    end
-                  end
-                end
+rays.MouseButton1Click:connect(function()
+    guns("Ray Gun")
+end)
 
-                function survdist()
-                  while wait() do
-                    if swin.flags.suresp then
-                      game.CoreGui.esp:FindFirstChild("survivors")
-                      for i,v in pairs(game.CoreGui.esp.survivors:GetChildren()) do
-                        if v then
-                          oo = {};
-                          table.insert(oo, v.Name)
-                          for i = 1, #oo do
-                            pcall(function()
-                            if game.Players[v.Name].Team.Name == "Survivor" then
-                              if game.Players.LocalPlayer.Team.Name == "Shark" then
-                                workspace.Sharks:WaitForChild(tostring("Shark"..LocalPlayer))
-                                workspace.Sharks["Shark"..LocalPlayer]:WaitForChild("Body")
-                                local texts = math.ceil((v.Adornee:FindFirstChild("HumanoidRootPart").Position - workspace.Sharks["Shark"..LocalPlayer]:WaitForChild("Body").Position).magnitude)
-                                local text = tostring(texts)
-                                v.TextLabel.Text = v.Adornee.Name.."\n["..text.."]"
-                              else
-                                local texts = math.ceil((v.Adornee:FindFirstChild("HumanoidRootPart").Position - game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude)
-                                local text = tostring(texts)
-                                v.TextLabel.Text = v.Adornee.Name.."\n["..text.."]"
-                              end
-                            end
-                            end)
-                          end
-                        end
-                      end
-                    end
-                  end
-                end
-                spawn(function() sharkdist() end)
-                spawn(function() survdist() end)
-                spawn(function() checkBox() end)
+des.MouseButton1Click:connect(function()
+    boats(19)
+end)
 
+dys.MouseButton1Click:connect(function()
+    boats(8)
+end)
 
-                spawn(function(rainbow)
-                while wait() do
-                  game.CoreGui:FindFirstChild("ScreenGui")
-                  game.CoreGui.ScreenGui.Container.Sharkbite.Underline.BackgroundColor3 = Color3.fromHSV(tick() * 24 % 255/255, 1, 1)
-                  wait()
-                end
-                end)
+mils.MouseButton1Click:connect(function()
+    boats(12)
+end)
 
-                -- -- This script was generated by Hydroxide
+sps.MouseButton1Click:connect(function()
+    boats(9)
+end)
 
-                -- local oh1 = -0
-                -- local oh2 = Vector3.new(5000000000, 0, 720000000)
-                -- local oh3 = 0.05
-                -- game:GetService("Workspace").Boats.Submarine.Engine.EngineEvent:FireServer(oh1, oh2, oh3)
+yas.MouseButton1Click:connect(function()
+    boats(6)
+end)
+
+mas.MouseButton1Click:connect(function()
+    gmods("maxAmmo")
+end)
+
+bds.MouseButton1Click:connect(function()
+    gmods("distance")
+end)
+
+mbsel.MouseButton1Click:connect(function()
+    gmods("speed")
+end)
+
+mds.MouseButton1Click:connect(function()
+    gmods("damage")
+end)
+
+sbs.MouseButton1Click:connect(function()
+---------------------- Shark Boost
+speedb(999999)
+sbs.TextColor3 = Color3.new(1, 0.2, 0.345098)
+end)
+
+sws.MouseButton1Click:connect(function()
+    local remote = Game["Workspace"]["Events"]["Shop"]["ChangeActiveShark"]
+local args = {
+    [1] = "GreatWhite"
+}
+remote:FireServer(unpack(args))
+sws.TextColor3 = Color3.new(1, 0.2, 0.345098)
+shs.TextColor3 = Color3.new(255, 255, 255)
+end)
+
+shs.MouseButton1Click:connect(function()
+    local remote = Game["Workspace"]["Events"]["Shop"]["ChangeActiveShark"]
+local args = {
+    [1] = "HammerHead"
+}
+remote:FireServer(unpack(args))
+shs.TextColor3 = Color3.new(1, 0.2, 0.345098)
+sws.TextColor3 = Color3.new(255, 255, 255)
+end)
+
+kss.MouseButton1Click:connect(function()
+    -- Creds to RelentlessRaptor#5709
+    for _, v in pairs(game.Players:GetChildren()) do
+        if v.TeamColor == game.Teams.Shark.TeamColor then
+            for i = 1, 10000 do
+                 game.Workspace.Events.Projectiles.HealthChange:FireServer(v.Name, 20000, i)
+            end
+        end
+    end
+kss.TextColor3 = Color3.new(1, 0.2, 0.345098)
+wait(2)
+kss.TextColor3 = Color3.new(255, 255, 255)
+end)
+
+gss.MouseButton1Click:connect(function()
+    -- Creds to RelentlessRaptor#5709
+    for i, v in pairs(game.Players:GetChildren()) do
+        if v.TeamColor == game.Teams.Shark.TeamColor then
+            for i = 1, 10000 do
+                game.Workspace.Events.Projectiles.HealthChange:FireServer(game.Players.LocalPlayer.Name, -200000, i)
+            end
+        end
+    end
+gss.TextColor3 = Color3.new(1, 0.2, 0.345098)
+repeat
+    wait()
+    if game.Players.LocalPlayer.Team ~= game.Teams.Shark then
+        gss.TextColor3 = Color3.new(255, 255, 255)
+    end
+until game.Players.LocalPlayer.Team ~= game.Teams.Shark
+end)
