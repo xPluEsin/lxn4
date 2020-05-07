@@ -1,15 +1,3 @@
-game.StarterGui:SetCore("SendNotification", {
-       Title = "txmsz"
-       Text = "SolCtrl Aimbot";
-})
-game.StarterGui:SetCore("SendNotification", {
-       Title = "txmsz"
-       Text = "SolAlt ESP";
-})
-game.StarterGui:SetCore("SendNotification", {
-       Title = "txmsz"
-       Text = "Q Aimbot Degistirme (Torso, Head)";
-})
 PLAYER  = game.Players.LocalPlayer
 MOUSE   = PLAYER:GetMouse()
 CC      = game.Workspace.CurrentCamera
