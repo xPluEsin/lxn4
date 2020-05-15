@@ -1039,7 +1039,17 @@ PrisonLife.Image = "rbxassetid://2790382281"
 PrisonLife.ScaleType = Enum.ScaleType.Slice
 PrisonLife.SliceCenter = Rect.new(4, 4, 252, 252)
 PrisonLife.MouseButton1Down:Connect(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/1temz/pl/master/prisonlife.lua"))();
+    if is_sirhurt_closure then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1temz/prisonlife/master/sirhurt.lua"))();
+elseif syn then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1temz/prisonlife/master/synapse.lua"))();
+elseif secure_load then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1temz/prisonlife/master/sentinel.lua"))();
+elseif KRNL_LOADED then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1temz/prisonlife/master/krnl.lua"))();
+else
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1temz/prisonlife/master/other.lua"))();
+end
 end)
 
 TextLabel_23.Parent = PrisonLife
